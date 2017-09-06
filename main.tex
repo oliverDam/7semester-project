@@ -1,0 +1,84 @@
+%preamble - package inclusion and set up
+\input{setup/preamble.tex}
+
+%macros - please read this file
+\input{setup/macros.tex}
+
+\begin{document}       % TIP: If you are using TeXstudio you can open
+%\tableofcontents      %      the file by Ctrl+LeftClick on setup/macros.tex
+\pagebreak             %      If the file doesn't exist, you will be asked
+					   %      weather or not you want to create it.
+
+
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||||||                 Example Inputs                  ||||||||
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||||||                                                 ||||||||
+%			 \input{chapters/aFigureSample.tex}			 %|||||||
+%			 \input{chapters/bTableSample.tex} 		     %|||||||
+%			 \input{chapters/cEquationSample.tex}		 %|||||||
+%			 \input{chapters/dTikzSample.tex}            %|||||||
+%			 \input{chapters/eCodeSample.tex}            %|||||||
+%|||||||                                                 ||||||||
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+%%% Prereport %%%
+\setlength\cftaftertoctitleskip{2pt}
+\setlength\cftafterloftitleskip{6pt}
+\setlength\cftafterlottitleskip{6pt}
+%\selectlanguage{danish}
+\title{Ingen ved det}
+
+%%% Frontmatter Settings %%%
+\pagestyle{empty} %disable headers and footers
+\pagenumbering{roman} %use roman page numbering in the frontmatter I II...
+\fancyfoot[RE,LO]{17gr6407} %page number on all pages
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LE,LO,RE,RO]{}
+
+%%% Introductory Formalities %%%
+%\includepdf[pages={1}]{formalities/frontpage.pdf}
+\input{formalities/frontpage.tex}
+\pagestyle{fancy}
+%\include{formalities/kolofon}
+\input{formalities/titleSheet.tex}
+%%% Preface %%%
+%\cleardoublepage
+\input{contents/xFormaliteter/abstract.tex}
+\clearpage
+\input{contents/xFormaliteter/forord.tex}
+
+\pdfbookmark[0]{Table of Contents}{label: tableOfCentents}
+\tableofcontents
+\cleardoublepage
+
+
+%%% Mainmatter Settings %%%
+\pagenumbering{arabic} %use arabic page numbering in the mainmatter
+\fancyfoot[RO,LE]{\thepage \text{ of} \pageref{LastPage}}
+\fancyfoot[RE,LO]{17gr6407}
+\fancyhead[RE,LO]{}
+\fancyhead[RE,LO]{\color{aaublue}\small\nouppercase\leftmark} %even page - chapter title
+\pagestyle{fancy}
+
+
+%---------------------------INPUTS-------------------------------
+
+\part{Postanalysis}
+% INTRO
+\input{contents/bIndledning/aIntro.tex}
+
+\urlstyle{same}
+\printbibliography
+\cleardoublepage
+
+% BILAG
+\begin{appendices}
+	\input{contents/yzxBilag/IdentificeringAfNavneord.tex}
+	\input{contents/yzxBilag/KlasseRelationer.tex}
+\end{appendices}
+
+
+\end{document}
