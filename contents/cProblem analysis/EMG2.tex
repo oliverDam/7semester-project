@@ -2,16 +2,18 @@
 
 The following section will contain an explanation of the two main components when acquiring EMG signals, including different electrode designs and the most common preprocessing methods used in EMG acquisition.
 
+\subsection{Electrode function and selection}
 
-\subsection{Electrode designs}
+When performing EMG the electrodes act as a transducer by converting the differences in ion distribution on the skin surface caused by ion exchange under muscle activity, into an electric current. Electrodes used to aquire EMG signals comes both with and without gel covered surfaces, where the the Myo Band employs dry electrodes. Using dry electrodes will often be more practical in use, while the gel covered electrodes will aquire more exact readings of the signals [http://www.analog.com/media/en/technical-documentation/white-papers/ECG-EEG-EMG_FINAL.pdf , Surface Electromyography (book)]
 
+The most commonly used electrodes for EMG are made of disposable silver-impregnated plastic, and in order to keep the electric potential on the skin surface stable and reduce impedance between the surfaces, they are often covered in a silver chloride gel. Using dry electrodes will result in  a higher surface impedance, which means that the signal contains more noise compared to a gel covered electrode. [Surface Electromyography (book)]
 
-
-%Use ABC of EMG, Surface Electromyography and maybe also some other books..
-
-%How do we get the signals from the surface of the arm to the devices?
-
-
-%Simple preprocessing methods for EMG
 \subsection{Preprocessing of EMG}
 
+In order to achieve a higher signal to noise ratio (SNR) it is common practice to implement some preprocessing methods, including input impedance, differential amplification and filtering. The raw EMG signals has to be preprocessed due to them sensible to noise elements from the surroundings, since the range of the signal is in the order of millivolts to microvolts.[Surface Electromyography (book)]
+
+Input impedance is determined by a simple rule in order to avoid defeating the common mode rejection of the EMG amplifier. The rule states that the input impedance of the EMG amplifier has to be between $10$ and $100$ times higher than the impedance of the skin-electrode interface. [Surface Electromygraphy (book)]
+
+Differential amplification is used in EMG in order to amplify the original signal and remove common signals from two or more electrodes, in order to avoid common noise from more electrodes in the amplified signal. The amplifier has a build in gain as well, which determines the final strength of the signal, and both of these features are implemented in order to avoid the SNR. [Surface Electromyography (book)]
+
+Basic filtering should be implemented in order to avoid electrical noise (50 or 60 Hz). This filter would be implemented as a notch filter, in order to reject the electrical noise and achieve a higher SNR. Furthermore the filtering should include a bandpass filter with a bandwith chosen depending on where the EMG is performed. This is done in order to make sure the final signal doesn't contain irrelevant high and low frequencies. [Surface Electromyography (book)]
