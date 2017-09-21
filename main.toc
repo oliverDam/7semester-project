@@ -1,0 +1,8 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {danish}
+\contentsline {part}{I\hspace {1em}Postanalysis}{1}{part.1}
+\contentsline {section}{\numberline {0.1}Anatomy of the lower arm}{2}{section.0.1}
+\contentsline {section}{\numberline {0.2}Some stuff and such stuff and other stuff too}{3}{section.0.2}
+\contentsline {subsection}{\numberline {0.2.1}Electrode function and selection}{4}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {0.2.2}Preprocessing of EMG}{4}{subsection.0.2.2}
