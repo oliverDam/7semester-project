@@ -1,0 +1,25 @@
+\section{Signal Processing}
+
+%head
+In order to effectively make use of recorded EMG signals, it is necessary to process the signals. This is achieved through several steps, beginning with recording of the raw EMG signal.
+ 
+The raw EMG signal is recorded either with electrodes placed on the skin surface above the muscles which are to be observed called surface EMG (sEMG) or by inserting needle electrodes in the muscles called invasive EMG. Either way the raw EMG signal will contain a lot of noise artefacts, originating from sources such as mechanical movements of the electrodes and background noise. Other noise factors can have an influence on the signal, but these will have to be identified in order to make precautions to eliminate them. 
+When recording sEMG signals some factors should be considers in relation to skin impedance and differential amplification. Human skin is surprisingly resistant to electrical currents with an impedance of up to $100.000 Ohms$ \cite{fish2009}. This can lead to a low common mode rejection ratio of the signal, meaning that recorded common noise cannot be excluded in the differential amplification. The differential amplification works by differentiating the recorded signals of both electrodes, and only amplifying the difference in the signal and rejecting signals which are similar. Thus only signals from the muscle will be amplified and further processed. The common mode rejection ratio describes how well the differentiation amplification successfully rejects common signals.\cite{cram2012} 
+It is defines as following:
+\begin{equation}
+20 \log \subscribt{10} \cdotp (A \backslash B)
+\end{equation}
+
+, where $A$ is the common mode signal and $B$ is the differential mode signal \cite{cram2012}.
+
+Also it is often times the case that the recorded signal covers a wider frequency range than that which is wanted to be observed. In the case of surface EMG recordings which are the focus for this study, the frequency range lies between 20 and 500Hz \cite{cram2012}.
+
+%raw signal
+%overcome skin impedance -> electode placement
+%differential amplification and common mode rejection
+%filtering
+%further signal processing -> feature extraction, regression methods, control methods 
+
+
+
+
