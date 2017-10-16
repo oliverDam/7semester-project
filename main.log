@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6470) (preloaded format=pdflatex 2017.9.27)  29 SEP 2017 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6470) (preloaded format=pdflatex 2017.9.27)  10 OCT 2017 19:29
 entering extended mode
 **./main.tex
 (main.tex
@@ -3709,7 +3709,7 @@ LaTeX Warning: Citation 'jiang2009' on page 2 undefined on input line 13.
 
 LaTeX Warning: Citation 'avella2006' on page 2 undefined on input line 13.
 
-<figures/Anatomy/posteriorSuperficial.png, id=53, 674.52pt x 798.985pt>
+<figures/Anatomy/posteriorSuperficial.png, id=56, 674.52pt x 798.985pt>
 File: figures/Anatomy/posteriorSuperficial.png Graphic file (type png)
 <use figures/Anatomy/posteriorSuperficial.png>
 Package pdftex.def Info: figures/Anatomy/posteriorSuperficial.png  used on inpu
@@ -3719,7 +3719,7 @@ e 24.
 
 LaTeX Warning: Citation 'martini' on page 2 undefined on input line 24.
 
-<figures/Anatomy/posteriorMiddle.png, id=54, 653.44125pt x 778.91pt>
+<figures/Anatomy/posteriorMiddle.png, id=57, 653.44125pt x 778.91pt>
 File: figures/Anatomy/posteriorMiddle.png Graphic file (type png)
 <use figures/Anatomy/posteriorMiddle.png>
 Package pdftex.def Info: figures/Anatomy/posteriorMiddle.png  used on input lin
@@ -3739,7 +3739,7 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 44.
 [2 <./figures/Anatomy/posteriorSuperficial.png> <./figures/Anatomy/posteriorMid
 dle.png>]
-<figures/Anatomy/wrist.png, id=68, 1261.71375pt x 390.45876pt>
+<figures/Anatomy/wrist.png, id=71, 1261.71375pt x 390.45876pt>
 File: figures/Anatomy/wrist.png Graphic file (type png)
 <use figures/Anatomy/wrist.png>
 Package pdftex.def Info: figures/Anatomy/wrist.png  used on input line 48. on i
@@ -3753,7 +3753,7 @@ LaTeX Warning: Citation 'martini' on page 3 undefined on input line 49.
 
 LaTeX Warning: Citation 'martini' on page 3 undefined on input line 49.
 
-<figures/Anatomy/wristFingers.png, id=69, 1259.70625pt x 783.92876pt>
+<figures/Anatomy/wristFingers.png, id=72, 1259.70625pt x 783.92876pt>
 File: figures/Anatomy/wristFingers.png Graphic file (type png)
 <use figures/Anatomy/wristFingers.png>
 Package pdftex.def Info: figures/Anatomy/wristFingers.png  used on input line 5
@@ -3794,33 +3794,82 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 8.
  [4]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 14.
+<figures/myob/armband.png, id=90, 645.41125pt x 347.2975pt>
+File: figures/myob/armband.png Graphic file (type png)
+<use figures/myob/armband.png>
+Package pdftex.def Info: figures/myob/armband.png  used on input line 10. on in
+put line 10.
+Package pdftex.def Info: Requested size: 227.62206pt x 122.48332pt on input lin
+e 10.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 18.
 
 (/usr/local/share/miktex-texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-(contents/cBackground/physiology.tex
+)
+<figures/myob/gestures.png, id=92, 726.715pt x 145.54375pt>
+File: figures/myob/gestures.png Graphic file (type png)
+<use figures/myob/gestures.png>
+Package pdftex.def Info: figures/myob/gestures.png  used on input line 28. on i
+nput line 28.
+Package pdftex.def Info: Requested size: 227.62206pt x 45.58667pt on input line
+ 28.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 33.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 33.
+ [5 <./figures/myob/armband.png> <./figures/myob/gestures.png>]) (contents/cBac
+kground/physiology.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 4.
- [5]) (contents/cBackground/GP.tex
+(babel)             in language  on input line 8.
+
+[6]) (contents/cBackground/GP.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
 
-LaTeX Warning: Citation '.' on page 6 undefined on input line 7.
+LaTeX Warning: Citation '.' on page 7 undefined on input line 7.
 
+) (contents/cBackground/JACO.tex
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+<figures/Jaco/roboticarm.png, id=109, 266.9975pt x 498.86375pt>
+File: figures/Jaco/roboticarm.png Graphic file (type png)
+<use figures/Jaco/roboticarm.png>
+Package pdftex.def Info: figures/Jaco/roboticarm.png  used on input line 6. on 
+input line 6.
+Package pdftex.def Info: Requested size: 136.57462pt x 255.18596pt on input lin
+e 6.
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining danish shorthand "~
@@ -3829,46 +3878,35 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 10.
-[6])
+[7])
 
-LaTeX Warning: Empty bibliography on input line 80.
+LaTeX Warning: Empty bibliography on input line 81.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 81.
-[7]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 81.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 81.
- [8
-
-]
+(babel)             in language  on input line 82.
+[8 <./figures/Jaco/roboticarm.png>]
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
  
 AED: lastpage setting LastPage
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 89.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+(babel)             in language  on input line 90.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 (main.aux
 Package cleveref Info: loaded `danish' language definitions on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 89.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 90.
 
 
 LaTeX Warning: There were undefined references.
@@ -3883,10 +3921,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51703 strings out of 495217
- 1058642 string characters out of 3181635
- 1672265 words of memory out of 3000000
- 54203 multiletter control sequences out of 15000+200000
+ 51737 strings out of 495217
+ 1059348 string characters out of 3181635
+ 1672529 words of memory out of 3000000
+ 54223 multiletter control sequences out of 15000+200000
  633037 words of font info for 102 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,12n,92p,10455b,1815s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3899,12 +3937,12 @@ ktex-texmf/fonts/type1/public/lm/lmbx12.pfb></usr/local/share/miktex-texmf/font
 s/type1/public/lm/lmmi12.pfb></usr/local/share/miktex-texmf/fonts/type1/public/
 lm/lmr10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/lm/lmr12.pfb></u
 sr/local/share/miktex-texmf/fonts/type1/public/lm/lmr17.pfb></usr/local/share/m
-iktex-texmf/fonts/type1/public/lm/lmri10.pfb></usr/local/share/miktex-texmf/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/share/miktex-texmf/fonts/type1/public
-/lm/lmsy8.pfb>
-Output written on main.pdf (12 pages, 1465928 bytes).
+iktex-texmf/fonts/type1/public/lm/lmr8.pfb></usr/local/share/miktex-texmf/fonts
+/type1/public/lm/lmri10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/l
+m/lmsy10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (12 pages, 2077611 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,4 +8,5 @@
 \contentsline {subsection}{\numberline {0.2.2}Preprocessing of EMG}{4}{subsection.0.2.2}
 \contentsline {section}{\numberline {0.3}Myo band arm}{5}{section.0.3}
 \contentsline {section}{\numberline {0.4}What do we measure with EMG?}{6}{section.0.4}
-\contentsline {section}{\numberline {0.5}Gaussian Process Regression}{6}{section.0.5}
+\contentsline {section}{\numberline {0.5}Gaussian Process Regression}{7}{section.0.5}
+\contentsline {section}{\numberline {0.6}JACO$^2$ robotic arm}{7}{section.0.6}
