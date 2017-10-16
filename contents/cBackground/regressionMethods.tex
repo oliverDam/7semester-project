@@ -1,0 +1,69 @@
+\section{Regression methods}
+
+%Linear regression:
+	%linear regression (how well the line fits the data can be decided with goodnes of fit or least squares)
+	%multiple linear regression
+	%principal components regression
+	%bayesian linear regression
+%non-linear regression:
+	%kernel ridge regression
+	%gaussian regression 
+	
+
+%head
+Regression methods are widely used is statistics as a method to determine relationship between variables. It can be used to extract relations to predict future developments or tendencies in a given data set. It is also a commonly used method to evaluate EMG signals to determine different parameters. 
+%There exist many regression methods, but overall to classes of methods can be defined; linear and non-linear, some of which will be covered in this section. 
+
+The most basic form of regression is linear regression, which is a test for linear dependency between two variables. In simple linear regression it is investigated how one, dependent variable, is related to another, independent variable. The term \textit{simple} denotes that only two variables are being considered simultaneously. 
+Performing simple linear regression finds the correlation between the tested variables, and is expressed by the correlation coefficient. This coefficient describes how the two variables relate to each other by how the development of one variable is dependent on the the other. Thus a positive correlation represent that a change in one variable will resolve in a similar change in the other variable as well. On the contrary, a negative correlation imply that change in one variable will resolve in an opposite change in the other variable. If no correlation is present between the two variables no change in either variable will resolve in change in the other, and it can therefore be determined that the two variables has no relation to each other. \cite{zar2009}
+The simple correlation coefficient is calculated as: \cite{zar2009}
+\begin{equation}
+r = \frac{\sum xy}{\sqrt{\sum x^{2} \sum y^{2}}}
+\end{equation}
+
+Furthermore a coefficient of determination can be calculated to express how much of the variability of the dependent variable is accounted for when regressing upon the independent variable. This coefficient is denoted $r^{2}$ and can be calculated by simply squaring the correlation coefficient ($r$). 
+Both $r$ and $r^{2}$ can be used to determine the strength of the relationship between the two tested variables. \cite{zar2009}
+
+
+%fit of a straight line to best fit several data points. This regression method is widely used in studies where it is used to describe a simple relationship between a dependent and independent factor.
+
+A variant of the linear regression is the multiple linear regression, which can be used in cases where the relationship between three or more variables is wished to be investigated. Here it is considered that one of the variables are dependent on two or more independent variables. 
+Multiple linear regression can be used in cases where two or more variables are expected to have a linear correlation to a dependent variable and it is wished to find which of the independent variables who has the biggest influence on the dependent variable, so to say the highest correlation coefficient. 
+Since multiple linear regression is based upon simple linear regression, it is modelled after the equation for simple linear regression known to all: \cite{zar2009}
+\begin{equation}
+Y_i = \alpha + \beta X_i
+\end{equation}
+
+However, as $Y$ can be dependent on more than one other variable at times, another can be added to the equation: \cite{zar2009}
+\begin{equation}
+Y_i = \alpha + \beta_1 X_1i + \beta_2 X_2i
+\end{equation}
+
+When three variables are present in the equation, the visual representation of the regression is in the 3rd dimension, and will no longer be presented as a line in 2D, but as a plane in 3D. Having more than three variables will resolve in a regression in the $m$-dimension, where $m$ is the number of variables. This plane of regression is called the hyperplane. However, regression is not a perfect fit to every sample point, and thus the equation for three or more variables is only complete when the error is also calculated: \cite{zar2009}
+\begin{equation}
+Y_i = \alpha + \beta_1 X_1i + \beta_2 X_2i + \epsilon_i
+\end{equation}
+
+, where the sum of the error ($\epsilon$) is zero and is assumed to be normally distributed.
+
+There exist ofcourse cases where the relationship between more than three variables is wished to be investigated. In such cases, each new variable can be added to the equation, and the final can be expressed in a summed up equation: \cite{zar2009}
+\begin{equation}
+Y_j = \alpha + \sum_{i=1}^{m} \beta_j X_ij + \epsilon_j
+\end{equation}
+
+, where $m$ is the number of variables. There exist no limit to the number of variables which can be tested, however there should always be at least two observations more than the number of variables, so that $n \geq m+2$. Otherwise multiple linear regression is not possible. \cite{zar2009}
+
+
+
+
+%one dependent variable and several independent are to be described and a generalization of the relationship between the variables wish to be found. 
+
+%Principal component regression is based on the principal component analysis, where a very large dataset can be compressed into a few of the most important components to further be analyzed upon. This means that in a dataset of many samples, the ones which are the most responsible or most correlated in a meaningful relationship between the dependent and independent variables, can be isolated to best describe which factors have a result on the relationship.
+
+
+
+
+
+
+
+%tail
