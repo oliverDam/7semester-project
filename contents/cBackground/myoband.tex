@@ -1,10 +1,10 @@
-\section{Myo band arm}
+\section{Myo armband}
 %What does the band consist of?
 %Electrodes, gyroscope and accelerometer
 %Build-in filters and stuff like that?
 %Sampling frequency
 
-Myo band arm is a gesture interactive system developed by Thalmic Labs capable of identifying the movement of hands and arms in order to interact and control different electronic devices.
+Myo armband is a interactive gesture system developed by Thalmic Labs capable of identifying the movements of hand and arm in order to interact and control different electronic devices.
 
 \begin{figure}[H]                    
 	\includegraphics[width=.5\textwidth]{figures/myob/armband}  %<--but is not needed.
@@ -13,37 +13,27 @@ Myo band arm is a gesture interactive system developed by Thalmic Labs capable o
 \end{figure}
 
 
-The main components of the Myo armband illustrated in the figure \ref{fig:armband} are:
-\begin{itemize}
-\item The logo LED gives information about the sync state. The LED is solid when you perform the Sync Gesture successfully and
-the Myo armband is synced to your arm. The LED pulses when the armband is not synced.
-\item The status LED shows the state of the Myo armband. When it lights up in blue once the Myo armband is connected to a device. 
-\item The USB charging port allows to charge the Myo armband battery. 
-\end{itemize}
-The systems counts with sizing clips, these small pieces give a tighter grip which is more appropriated for smaller arms.
+%The main components of the Myo armband illustrated in the figure \ref{fig:armband} are:
+%\begin{itemize}
+%\item The logo LED gives information about the sync state. The LED is solid when you perform the Sync Gesture successfully and
+%the Myo armband is synced to your arm. The LED pulses when the armband is not synced.
+%\item The status LED shows the state of the Myo armband. When it lights up in blue once the Myo armband is connected to a device. 
+%\item The USB charging port allows to charge the Myo armband battery. 
+%\end{itemize}
+%The systems counts with sizing clips, these small pieces give a tighter grip which is more appropriated for smaller arms.
 
-This wearable physical device (arm band positioned in the upper forearm) counts with eight medical grade stainless steel electromyogram (EMG) sensors, responsible of recognizing and performing each gesture. In addition, it has nine axis inertial measurement unit (IMU) which enable the detection of arm movement. IMU includes a three axis gyroscope,  a three axis accelerometer and a three axis magnetometer. An inertial measurement unit is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The magnetometer has the property of measuring magnetism. (something about the actual data the myoband provides). The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part of the placement of the myoband. It gives information about the acceleration expericed relative to free fall and expresses this in g-force. One g-force being when the accelerometer is at rest on the Earth's surface. That is since all points on the surface of the Earth is accelerating upwards relative to an object in free fall near the surface. For the g-force to change from one g-force the accelerometer must be exposed to motion. The gyroscope has the property of ... (It is equipped with an ARM Cortex-M4 microprocessor of low consumption.)
+The Myo armband has eight medical grade stainless steel EMG sensors, responsible of recognizing each gesture. In addition, it has nine axis inertial measurement unit (IMU) which enable the detection of arm movement. The IMU includes a three axis gyroscope, a three axis accelerometer and a three axis magnetometer. An IMU is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The magnetometer has the property of measuring magnetism. (something about the actual data the myoband provides and how many axes a magnometer actually has). The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part where the Myo armband is placed. It gives information about the acceleration expericed relative to free fall and expresses this in g-force. One g-force being when the accelerometer is at rest on the Earth's surface. That is since all points on the surface of the Earth is accelerating upwards relative to an object in free fall near the surface. For the g-force to change from one g-force the accelerometer must be exposed to motion. The gyroscope has the property of measuring angluar velocity. \textbf{SOURCE}
+% ... (It is equipped with an ARM Cortex-M4 microprocessor of low energy consumption.)
 
-\begin{figure}[H]                    
-	\includegraphics[width=.5\textwidth]{figures/myob/gestures}  %<--but is not needed.
-	\caption{Hand gestures detected by proprietary EMG muscle sensors. \cite{}}
-	\label{fig:gestures}  %<--give the figure a label, so you can reference!
-\end{figure}
-It offers five pre-defined gestures as showed in the figure \ref{fig:gestures}, it provides haptic feedback through short, medium or long vibrations to correct moves or activate the system.
+%\begin{figure}[H]                    
+%	\includegraphics[width=.5\textwidth]{figures/myob/gestures}  %<--but is not needed.
+%	\caption{Hand gestures and movements detected by the Myo armband using its own interface from Thalmic Labs. \cite{thalmic webpage}}
+%	\label{fig:gestures}  %<--give the figure a label, so you can reference!
+%\end{figure}
+%It offers five pre-defined gestures as showed in the figure \ref{fig:gestures}, it provides haptic feedback through short, medium or long vibrations to correct moves or activate the system.
 
-The Myo armband is capable of pulling sEMG data at a sample rate of 200Hz while the remaining data (accelerometer, gyroscope and magnetometer) is pulled at a sample rate of  50HZ. The recorded signals can be sent to other devices using Bluetooth 4.0 
-
-Myo band arm supplies two kinds of data:
-\begin{itemize}
-\item Spatial data, provides information about the orientation and movement of the user's arm. There are two types of spatial data:
-\begin{itemize}
-\item Orientation
-%Orientation
-\item Acceleration
-\end{itemize}
-\item Gestural data which gives information about the user's position of their hands.
-
-\end{itemize}
+The Myo armband is capable of pulling sEMG data at a sample rate of 200Hz while the remaining data (accelerometer, gyroscope and magnetometer) is pulled at a sample rate of  50Hz. 
+Thus, the Myo band arm supplies two kinds of data, which is spatial and gestural. The spatial data provieds information about the orientation and movement of the user's arm given by two data types: orientation and acceleration. Thes are provided through the accelerometer and gyroscope. Gestual data provides information about the users hand gestures and is provided through EMG recordings. The recorded signals can be send to other devices using Bluetooth 4.0.
 
 
 %/begin{figure}
