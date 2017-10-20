@@ -29,7 +29,7 @@
 \setlength\cftafterloftitleskip{6pt}
 \setlength\cftafterlottitleskip{6pt}
 %\selectlanguage{danish}
-\title{Ingen ved det}
+\title{Simultaneous and proportional control of reaching and grasping}
 
 %%% Frontmatter Settings %%%
 \pagestyle{empty} %disable headers and footers
@@ -43,12 +43,12 @@
 \input{formalities/frontpage.tex}
 \pagestyle{fancy}
 %\include{formalities/kolofon}
-%-------\input{formalities/titleSheet.tex}
+\input{formalities/titleSheet.tex} 			 % <--- this contains the synopsis!!
 %%% Preface %%%
 %\cleardoublepage
-\input{contents/xFormaliteter/abstract.tex}
+%\input{formalities/abstract.tex}
 \clearpage
-\input{contents/xFormaliteter/forord.tex}
+\input{formalities/forord.tex}
 
 \pdfbookmark[0]{Table of Contents}{label: tableOfCentents}
 \tableofcontents
@@ -65,9 +65,10 @@
 
 
 %---------------------------INPUTS-------------------------------
+\chapter{Introduction}
+% INTRO
 
 \chapter{Background}
-% INTRO
 
 % stuffs
 \input{contents/cBackground/anatomy.tex}
