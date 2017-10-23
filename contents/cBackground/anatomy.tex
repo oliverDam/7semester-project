@@ -7,50 +7,41 @@
 %head
 %To understand how it is possible to use EMG to control robotics or prostheses, especially robotics or prostheses which %represent the human arm, it is necessary to know the anatomy of the human arm.
 % --OR-- 
-In this paper/project there will be a focus on the lower arm as the Myo armband will be used extract information from this part of the body. The anatomy of the lower human arm will briefly be described in this section along with a description of relation between lower arm muscles and hand movements for selected gestures. 
+This project will focus on the lower arm as the Myo armband will be used extract information from this part of the body. The anatomy of the lower human arm will briefly be described in this section along with a description of relation between lower arm muscles and hand movements for selected gestures. 
 
+The human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease. Each movement happen on an axis, and each axis denotes one degree of freedom (DOF). The arm posses six DOFs as shown in figure \ref{fig:armDOF}.
 
-The lower human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease.
+\begin{figure}[H]                                         %   File-type can be specified
+	\includegraphics[width=.4\textwidth]{figures/anatomy/human_arm_dof}  %<--but is not needed.
+	\caption{Visualisation on the arms six degrees of freedom. \cite{http://reset.etsii.upm.es/en/projects/robotic-arm/}}
+	\label{fig:armDOF}  %<--give the figure a label, so you can reference!
+\end{figure}
 
-(something about the number of DOF's in the human arm, and what we define as 1 DOF. Movement in one axis)
+The number of DOFs is defined as the number of possible input parameters to a movable mechanism, where each input controls an independent movement in one axis. Several bodies can work together in relation to each other, but to total number of DOFs will be the number of possible independent movements that can be performed between the bodies. \cite{dicker2003}
 
-This skill is achieved through the use of several muscles which intertwine and make synergies to perform all the different gestures of the hand \cite{jiang2009} \cite{avella2006}. Muscles in the lower arm is arranged i layers, having an outer, middle and inner layer. These muscles are used to rotate the forearm and hand, flex and extend the hand at the wrist as well as adduction and abduction, of both the wrist and fingers. The muscles control extension and flexion of the fingers at each separate joint and the movements of the thumb. 
+The great dexterity of the human arm is achieved through the use of several muscles which intertwine and make synergies to perform all the different gestures of the hand \cite{jiang2009} \cite{avella2006}. Muscles in the lower arm is arranged in layers, having an outer, middle and inner layer. These muscles are used to rotate the forearm, flex and extend the hand at the wrist as well as performing ulnar and radial deviation. The muscles control extension and flexion of the fingers at each separate joint and the movements of the thumb, so that hand can be opened and closed. This enables movement in six DOFs of the arm and several more at the hand and fingers.
 
-%\begin{figure}[H]
-%	\subcaptionbox  %<--use captionbox instead if no global caption is needed
-%	{               %                                \%-%-%-%-%-%-%\
-%		\emph{Posterior view of the outer muscle layer. \cite{martini}}                %\
-%		\label{fig:postSuperior}                                  %\
-%	}                                                                 %\
-%	{                                                                  %\
-%		\includegraphics[width=.46\textwidth]{figures/Anatomy/posteriorSuperficial}         %\
-%	}                                                                    %\
-%	\hspace{5pt}                                                          %\
-%	\subcaptionbox  %<-----------------------------------------------------%\
-%	{                                                                       %\
-%		\emph{Posterior view of the middle muscle layer.\cite{martini}}                          %\
-%		\label{fig:postMiddle}                                     %\
-%	}                                                                           %\
-%	{                                                                            %\
-%		\includegraphics[width=.46\textwidth]{figures/Anatomy/posteriorMiddle}            %|
-%	}                                                                             %|
-%	\caption{Muscles and muscle layers of the forearm.}%<-%-/
-%	\label{fig:musclesForarm}
-%\end{figure}
+The aim for this project is to translate ulnar and radial deviation along with extension and flexion of the wrist via EMG signals to control a robotic arm. Therefore, only selected muscles will be relevant to further investigate. 
 
-NEW PICTURE ABOUT DOFS INSTEAD
+%---THE MOVEMENTS WE ARE GOING TO RECORD IS: flexion/ extension of wrist and adduction/abduction---
 
-The aim for this project is to translate pronation and supination along with extension and flexion of the wrist via EMG signals to control a robotic arm. Therefore, only selected muscles will be relevant to further investigate. 
+PICTURES DEPICTING adduction and abduction and flexion and extension)
 
-(PICTURES DEPICTING suppination and pronation adduction and abduction and flextion and extension)
+Muscles involved with radial and ulnar deviation includes several muscles in the arm. Most of these muscles extend throughout the whole forearm as most of them originates from the distal lateral surfaces of humerus or the proximal portions of radius and ulnar, and extends towards the wrist and fingers to fixate on the metacarpal bones in the wrist and through tendons fixate on the different phalanges bones of the fingers and thumb. Radius and ulnar deviation is depicted in figure \ref{fig:wrist_move}.
+
+\begin{figure}[H]                                         %   File-type can be specified
+	\includegraphics[width=.4\textwidth]{figures/anatomy/wrist_move}  %<--but is not needed.
+	\caption{Flexion, extension and radial and ulnar deviation of the hand. Modified from  \cite{hamilton2008}}
+	\label{fig:wrist_move}  %<--give the figure a label, so you can reference!
+\end{figure}
+
+Several more muscles in addition to those responsible for ulnar and radial deviation are involved with the flexion and extension of the wrist. Like the other muscles, the flexor and extensor muscles also extend through the whole forearm from the distal part of humerus and proximal parts of radius and ulnar to the metacarpal bones in the wrist. Many of these muscles are included in movements of both radial/ulnar deviation and flexion/extension, though flexion/extension have one muscle who is only used for flexion at the wrist, the palmaris longus muscle. This can be explained as more force is usually needed in flexion at the wrist than in extension or radial/ulnar deviation. 
+Though several of the same muscles are included in both types of movement, studies have shown that it is possible to differentiate between recorded EMG signals form these muscles when performing radial/ulnar deviation and flexion/extension at the wrist. \cite{hahne2014}
+
 
 %Muscles involved with pronation of the wrist includes the pronator quadratus and pronator teres muscles. The pronator quadratus muscle is located near the wrist and is fixated on the distal portions of both ulna and radius, from where is forms a wide band across the gap of the two bones. The pronator teres is located near the elbow, where it originates  from the medial distal part of humerus and the medial lateral part of ulna, to reach across the anterior part of the forearm and fixate to the midlateral surface of radius. 
 %There is only one muscle involved in the process of supination of the forearm, the supinator. The supinator muscle sits opposite the pronator teres muscle near the elbow, where it originates from the lateral distal part of humerus and the lateral proximal part of ulna and fixate on the anterolateral surface of radius. 
-%These three are the only muscles responsible for pronation and supination of the forearm. 
-Therein exists a problem in detecting viable EMG signals to properly detect pronation and supination gestures, since the muscles involved does not extend through the forearm as most other muscles in the forearm. 
-%luckily for us both the pronator teres and supinator muscles are in the superficial muscle layer making them easily accessible for EMG detection.
-
-REWRITE TO FOCUS ON EXTENSION AND FLEXION OF WRIST INSTEAD OF FINGERS
+%These three are the only muscles responsible for pronation and supination of the forearm. Therein exists a problem in detecting viable EMG signals to properly detect pronation and supination gestures, since the muscles involved does not extend through the forearm as most other muscles in the forearm.
 
 %Extension and flexion of the fingers include most of the muscles in the lower arm. Most of these muscles extend throughout the whole forearm as most of them originates from the lateral surfaces of humerus or the proximal portions of ulna and radius, and extends towards the wrist and fingers to fixate on the metacarpal bones in the wrist and through tendons fixate on the different phalanges bones of the fingers and thumb. See FIGURE \ref{fig:wrist} and \ref{fig:wristFingers} for a detailed overview of each muscles origin, insertion and action it performs. 
 %
@@ -94,6 +85,4 @@ REWRITE TO FOCUS ON EXTENSION AND FLEXION OF WRIST INSTEAD OF FINGERS
 
 
 %tail
-
-
 
