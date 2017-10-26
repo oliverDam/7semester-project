@@ -1,15 +1,23 @@
-[0] Config.pm:324> INFO - This is Biber 2.1
-[0] Config.pm:327> INFO - Logfile is 'main.blg'
-[98] biber-darwin:276> INFO - === Wed Oct 25, 2017, 16:11:35
-[98] Biber.pm:333> INFO - Reading 'main.bcf'
-[228] Biber.pm:645> INFO - Found 16 citekeys in bib section 0
-[315] Biber.pm:2977> INFO - Processing section 0
-[367] Biber.pm:3115> INFO - Looking for bibtex format file 'setup/bibliography.bib' for section 0
-[382] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[397] bibtex.pm:895> INFO - Found BibTeX data source 'setup/bibliography.bib'
-[741] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[741] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[741] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'en-US'
-[741] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
-[765] bbl.pm:505> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[769] bbl.pm:596> INFO - Output to main.bbl
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'main.blg'
+[35] biber-darwin:303> INFO - === Thu Oct 26, 2017, 09:53:16
+[54] Biber.pm:359> INFO - Reading 'main.bcf'
+[135] Biber.pm:835> INFO - Found 16 citekeys in bib section 0
+[147] Biber.pm:3670> INFO - Processing section 0
+[160] Biber.pm:3840> INFO - Looking for bibtex format file 'setup/bibliography.bib' for section 0
+[170] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[190] bibtex.pm:1292> INFO - Found BibTeX data source 'setup/bibliography.bib'
+[216] Utils.pm:164> WARN - ISBN '1534-4320' in entry 'Fougner2012' is invalid - run biber with '--validate_datamodel' for details.
+[224] Utils.pm:164> WARN - ISBN '1534-4320' in entry 'hahne2014' is invalid - run biber with '--validate_datamodel' for details.
+[226] Utils.pm:164> WARN - ISBN '1534-4320' in entry 'Fougner2011' is invalid - run biber with '--validate_datamodel' for details.
+[228] Utils.pm:164> WARN - ISBN 'ISSN 26307791' in entry 'avella2006' is invalid - run biber with '--validate_datamodel' for details.
+[229] Utils.pm:164> WARN - ISBN '1662-5188 (Electronic)$\backslash$n1662-5188 (Linking)' in entry 'DeRugy2013' is invalid - run biber with '--validate_datamodel' for details.
+[233] Utils.pm:164> WARN - ISBN '0018-9294' in entry 'jiang2009' is invalid - run biber with '--validate_datamodel' for details.
+[241] Utils.pm:164> WARN - ISBN '0957-4174' in entry 'phiny2012' is invalid - run biber with '--validate_datamodel' for details.
+[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[256] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'en-US'
+[256] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[266] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[270] bbl.pm:712> INFO - Output to main.bbl
+[270] Biber.pm:109> INFO - WARNINGS: 7

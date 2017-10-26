@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.5 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,19 +18,41 @@
 
 
 \refsection{0}
-  \sortlist{none}{none}
+  \sortlist[entry]{none/global/}
     \entry{Fougner2012}{article}{}
       \name{author}{5}{}{%
-        {{hash=92d8983af6a7476391b1c16113cbac2a}{Fougner}{F\bibinitperiod}{Anders}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=aabafef0c14f94511b4793a106170b16}{Stavdahl}{S\bibinitperiod}{Oyvind}{O\bibinitperiod}{}{}{}{}}%
-        {{hash=cd7f1e3c065a07a61e5c5233a95bd49e}{Kyberd}{K\bibinitperiod}{Peter\bibnamedelima J.}{P\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=50d4961645399a6d6b49aefcabad3a29}{Losier}{L\bibinitperiod}{Yves\bibnamedelima G.}{Y\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=a1c2d54418927e5d009594af33eed3ff}{Parker}{P\bibinitperiod}{Philip\bibnamedelima A.}{P\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=92d8983af6a7476391b1c16113cbac2a}{%
+           family={Fougner},
+           familyi={F\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=aabafef0c14f94511b4793a106170b16}{%
+           family={Stavdahl},
+           familyi={S\bibinitperiod},
+           given={Oyvind},
+           giveni={O\bibinitperiod}}}%
+        {{hash=cd7f1e3c065a07a61e5c5233a95bd49e}{%
+           family={Kyberd},
+           familyi={K\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=50d4961645399a6d6b49aefcabad3a29}{%
+           family={Losier},
+           familyi={L\bibinitperiod},
+           given={Yves\bibnamedelima G.},
+           giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a1c2d54418927e5d009594af33eed3ff}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Philip\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{33d48a07f491fa34ffe6ad5377a2aebd}
       \strng{fullhash}{5abed9b3e428968cfe8b45391556bde3}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{33d48a07f491fa34ffe6ad5377a2aebd}
+      \strng{authorfullhash}{5abed9b3e428968cfe8b45391556bde3}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The recent introduction of novel multifunction hands as well as new control paradigms increase the demand for advanced prosthetic control systems. In this context, an unambiguous terminology and a good understanding of the nature of the control problem is important for efficient research and communication concerning the subject. Thus, one purpose of this paper is to suggest an unambiguous taxonomy, applicable to control systems for upper limb prostheses and also to prostheses in general. A functionally partitioned model of the prosthesis control problem is also presented along with the taxonomy. In the second half of the paper, the suggested taxonomy has been exploited in a comprehensive literature review on proportional myoelectric control of upper limb prostheses. The review revealed that the methods for system training have not matured at the same pace as the novel multifunction prostheses and more advanced intent interpretation methods. Few publications exist regarding the choice of training method and the composition of the training data set. In this context, the notion of outcome measures is essential. By definition, system training involves optimization, and the quality of the results depends heavily on the choice of appropriate optimization criteria. In order to further promote the development of proportional myoelectric control, these topics need to be addressed.}
@@ -52,16 +74,36 @@
     \endentry
     \entry{Ison2016}{article}{}
       \name{author}{5}{}{%
-        {{hash=6272760becbb866022ccb0335d7be050}{Ison}{I\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=e6fd8bc2baf93c0461855bc6773d5c5b}{Vujaklija}{V\bibinitperiod}{I}{I\bibinitperiod}{}{}{}{}}%
-        {{hash=fd666c9c11a130011addc41cfc79189c}{Whitsell}{W\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
-        {{hash=c30ac9399ecac87e5c059a7d3772652e}{Farina}{F\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=2f43b42fd833d1e77420a8dae7419000}{...}{.\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=6272760becbb866022ccb0335d7be050}{%
+           family={Ison},
+           familyi={I\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e6fd8bc2baf93c0461855bc6773d5c5b}{%
+           family={Vujaklija},
+           familyi={V\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fd666c9c11a130011addc41cfc79189c}{%
+           family={Whitsell},
+           familyi={W\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c30ac9399ecac87e5c059a7d3772652e}{%
+           family={Farina},
+           familyi={F\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2f43b42fd833d1e77420a8dae7419000}{%
+           family={...},
+           familyi={.\bibinitperiod}}}%
       }
       \strng{namehash}{6bd4b4289f3c77ec7b0253f983219e6d}
       \strng{fullhash}{41a61bae73cb1c0309d8859b02b7059a}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{6bd4b4289f3c77ec7b0253f983219e6d}
+      \strng{authorfullhash}{41a61bae73cb1c0309d8859b02b7059a}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on {\ldots}}
@@ -78,19 +120,53 @@
     \endentry
     \entry{hahne2014}{article}{}
       \name{author}{8}{}{%
-        {{hash=51ea35fc2a1df516ea2dcc16fbd11e0d}{Hahne}{H\bibinitperiod}{J.\bibnamedelimi M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{hash=c7013835a6a7f3a816d5c97d28edb347}{Biebmann}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=86d5bc3b3cf89b7d467737367b697e61}{Jiang}{J\bibinitperiod}{Ning}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=e3a03e2384296d2eae093194d45bb0a3}{Rehbaum}{R\bibinitperiod}{Hubertus}{H\bibinitperiod}{}{}{}{}}%
-        {{hash=6d54cc7049c27dd477c5b429e76778ea}{Farina}{F\bibinitperiod}{Dario}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=276c6f336f93e383ee8bac8ce34517d0}{Meinecke}{M\bibinitperiod}{F.\bibnamedelimi C.}{F\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=fee9917ee5f09730ff2877baa5146648}{Muller}{M\bibinitperiod}{K.-R}{K\bibinithyphendelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=4773ff8c747b5bc20c81176dcfb0d10e}{Parra}{P\bibinitperiod}{L.\bibnamedelimi C.}{L\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=51ea35fc2a1df516ea2dcc16fbd11e0d}{%
+           family={Hahne},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c7013835a6a7f3a816d5c97d28edb347}{%
+           family={Biebmann},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=86d5bc3b3cf89b7d467737367b697e61}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e3a03e2384296d2eae093194d45bb0a3}{%
+           family={Rehbaum},
+           familyi={R\bibinitperiod},
+           given={Hubertus},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6d54cc7049c27dd477c5b429e76778ea}{%
+           family={Farina},
+           familyi={F\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+        {{hash=276c6f336f93e383ee8bac8ce34517d0}{%
+           family={Meinecke},
+           familyi={M\bibinitperiod},
+           given={F.\bibnamedelimi C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fee9917ee5f09730ff2877baa5146648}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={K.-R},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=4773ff8c747b5bc20c81176dcfb0d10e}{%
+           family={Parra},
+           familyi={P\bibinitperiod},
+           given={L.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
       \strng{namehash}{bafa5b62011458febad4a411231e8614}
       \strng{fullhash}{6a88ce1eebc8999d96407efa0400e2c0}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{bafa5b62011458febad4a411231e8614}
+      \strng{authorfullhash}{6a88ce1eebc8999d96407efa0400e2c0}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In recent years the number of active controllable joints in electrically powered hand-prostheses has increased significantly. However, the control strategies for these devices in current clinical use are inadequate as they require separate and sequential control of each degree-of-freedom (DoF). In this study we systematically compare linear and nonlinear regression techniques for an independent, simultaneous and proportional myoelectric control of wrist movements with two DoF. These techniques include linear regression, mixture of linear experts (ME), multilayer-perceptron, and kernel ridge regression (KRR). They are investigated offline with electro-myographic signals acquired from ten able-bodied subjects and one person with congenital upper limb deficiency. The control accuracy is reported as a function of the number of electrodes and the amount and diversity of training data providing guidance for the requirements in clinical practice. The results showed that KRR, a nonparametric statistical learning method, outperformed the other methods. However, simple transformations in the feature space could linearize the problem, so that linear models could achieve similar performance as KRR at much lower computational costs. Especially ME, a physiologically inspired extension of linear regression represents a promising candidate for the next generation of prosthetic devices.}
@@ -114,16 +190,38 @@
     \endentry
     \entry{Fougner2011}{article}{}
       \name{author}{5}{}{%
-        {{hash=92d8983af6a7476391b1c16113cbac2a}{Fougner}{F\bibinitperiod}{Anders}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=a97d21be92acaa4e0d94e6c51efd8146}{Scheme}{S\bibinitperiod}{Erik}{E\bibinitperiod}{}{}{}{}}%
-        {{hash=c9e29ad853101ca83af3e01430284acc}{Chan}{C\bibinitperiod}{Adrian\bibnamedelima D.C.}{A\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
-        {{hash=a773dac7516423caaa8ebbc2ea5dbff8}{Englehart}{E\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
-        {{hash=5627b7dee2f502d2acb32f706782c403}{Stavdahl}{S\bibinitperiod}{{Ø}yvind}{Ø\bibinitperiod}{}{}{}{}}%
+        {{hash=92d8983af6a7476391b1c16113cbac2a}{%
+           family={Fougner},
+           familyi={F\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a97d21be92acaa4e0d94e6c51efd8146}{%
+           family={Scheme},
+           familyi={S\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c9e29ad853101ca83af3e01430284acc}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Adrian\bibnamedelima D.C.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a773dac7516423caaa8ebbc2ea5dbff8}{%
+           family={Englehart},
+           familyi={E\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5627b7dee2f502d2acb32f706782c403}{%
+           family={Stavdahl},
+           familyi={S\bibinitperiod},
+           given={{Ø}yvind},
+           giveni={Ø\bibinitperiod}}}%
       }
       \strng{namehash}{33d48a07f491fa34ffe6ad5377a2aebd}
       \strng{fullhash}{b61c828652a81951076860edad475e5a}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{33d48a07f491fa34ffe6ad5377a2aebd}
+      \strng{authorfullhash}{b61c828652a81951076860edad475e5a}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Reported studies on pattern recognition of electromyograms (EMG) for the control of prosthetic devices traditionally focus on classification accuracy of signals recorded in a laboratory. The difference between the constrained nature in which such data are often collected and the unpredictable nature of prosthetic use is an example of the semantic gap between research findings and a viable clinical implementation. In this paper, we demonstrate that the variations in limb position associated with normal use can have a substantial impact on the robustness of EMG pattern recognition, as illustrated by an increase in average classification error from 3.8{\%} to 18{\%}. We propose to solve this problem by: 1) collecting EMG data and training the classifier in multiple limb positions and by 2) measuring the limb position with accelerometers. Applying these two methods to data from ten normally limbed subjects, we reduce the average classification error from 18{\%} to 5.7{\%} and 5.0{\%}, respectively. Our study shows how sensor fusion (using EMG and accelerometers) may be an efficient method to mitigate the effect of limb position and improve classification accuracy.}
@@ -144,15 +242,33 @@
     \endentry
     \entry{avella2006}{article}{}
       \name{author}{4}{}{%
-        {{hash=a033aeabab9190e2202df80b9f19a679}{D'Avella}{D\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=f6eaa45054ad60cf26565778c31d5656}{Portone}{P\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=e0d40c55f23b4f426fb59b55e4198cf4}{Fernandez}{F\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
-        {{hash=fd093947346aea7cb5ed784cbeb5951b}{Lacquaniti}{L\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=a033aeabab9190e2202df80b9f19a679}{%
+           family={D'Avella},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f6eaa45054ad60cf26565778c31d5656}{%
+           family={Portone},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e0d40c55f23b4f426fb59b55e4198cf4}{%
+           family={Fernandez},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fd093947346aea7cb5ed784cbeb5951b}{%
+           family={Lacquaniti},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
       }
       \strng{namehash}{bf393bf263a263ebc8fbeeca66331a52}
       \strng{fullhash}{adb6c22d33fe2ce6fb13e4acd807c9db}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{bf393bf263a263ebc8fbeeca66331a52}
+      \strng{authorfullhash}{adb6c22d33fe2ce6fb13e4acd807c9db}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{How the CNS selects the appropriate muscle patterns to achieve a behavioral goal is an open question. To gain insight into this process, we characterized the spatiotemporal organization of the muscle patterns for fast-reaching movements. We recorded electromyographic activity from up to 19 shoulder and arm muscles during point-to-point movements between a central location and 8 peripheral targets in each of 2 vertical planes. We used an optimization algorithm to identify a set of time-varying muscle synergies, i.e., the coordinated activations of groups of muscles with specific time-varying profiles. For each one of nine subjects, we extracted four or five synergies whose combinations, after scaling in amplitude and shifting in time each synergy independently for each movement condition, explained 73-82{\{}{\%}{\}} of the data variation. We then tested whether these synergies could reconstruct the muscle patterns for point-to-point movements with different loads or forearm postures and for reversal and via-point movements. We found that reconstruction accuracy remained high, indicating generalization across these conditions. Finally, the synergy amplitude coefficients were directionally tuned according to a cosine function with a preferred direction that showed a smaller variability with changes of load, posture, and endpoint than the preferred direction of individual muscles. Thus the complex spatiotemporal characteristics of the muscles patterns for reaching were captured by the combinations of a small number of components, suggesting that the mechanisms involved in the generation of the muscle patterns exploit this low dimensionality to simplify control.}
@@ -176,14 +292,30 @@
     \endentry
     \entry{DeRugy2013}{article}{}
       \name{author}{3}{}{%
-        {{hash=6437a13bbd4715efe7ee4c9b175c32d0}{Rugy}{R\bibinitperiod}{Aymar}{A\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
-        {{hash=c8d35ba9eb222ef048886b838c443a6d}{Loeb}{L\bibinitperiod}{Gerald\bibnamedelima E.}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
-        {{hash=9fa13235d497a6c6c0ce3cd28c02b826}{Carroll}{C\bibinitperiod}{Timothy\bibnamedelima J.}{T\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=6437a13bbd4715efe7ee4c9b175c32d0}{%
+           family={Rugy},
+           familyi={R\bibinitperiod},
+           given={Aymar},
+           giveni={A\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=c8d35ba9eb222ef048886b838c443a6d}{%
+           family={Loeb},
+           familyi={L\bibinitperiod},
+           given={Gerald\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9fa13235d497a6c6c0ce3cd28c02b826}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \strng{namehash}{5b23aa731afd9b8b7877d2a679fc11ed}
       \strng{fullhash}{5b23aa731afd9b8b7877d2a679fc11ed}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{5b23aa731afd9b8b7877d2a679fc11ed}
+      \strng{authorfullhash}{5b23aa731afd9b8b7877d2a679fc11ed}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The observation that the activity of multiple muscles can be well approximated by a few linear synergies is viewed by some as a sign that such low-dimensionalmodules constitute a key component of the neural control system. Here, we argue that the usefulness of muscle synergies as a control principle should be evaluated in terms of errors produced not only in muscle space, but also in task space. We used data from a force-aiming task in two dimensions at the wrist, using an electromyograms (EMG)-driven virtual biomechanics technique that overcomes typical errors in predicting force from recorded EMG, to illustrate through simulation how synergy decomposition inevitably introduces substantial task space errors. Then,we computed the optimal pattern ofmuscle activation that minimizes summed-squared muscle activities, and demonstrated that synergy decomposition produced similar results on real and simulated data. We further assessed the influence of synergy decomposition on aiming errors (AEs) in a more redundant system, using the optimal muscle pattern computed for the elbow-joint complex (i.e., 13 muscles acting in two dimensions). Because EMG records are typically not available from all contributing muscles, we also explored reconstructions from incomplete sets of muscles. The redundancy of a given set of muscles had opposite effects on the goodness of muscle reconstruction and on task achievement; higher redundancy is associated with better EMG approximation (lower residuals), but with higher AEs. Finally, we showed that the number of synergies required to approximate the optimal muscle pattern for an arbitrary biomechanical system increases with task-space dimensionality, which indicates that the capacity of synergy decomposition to explain behavior depends critically on the scope of the original database. These results have implications regarding the viability of muscle synergy as a putative neural controlmechanism, and also as a control algorithm to restore movements.}
@@ -207,12 +339,16 @@
     \endentry
     \entry{reset2017}{misc}{}
       \name{author}{1}{}{%
-        {{hash=526d688f37a86d3c3f27d0c5016eb71d}{Reset}{R\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=526d688f37a86d3c3f27d0c5016eb71d}{%
+           family={Reset},
+           familyi={R\bibinitperiod}}}%
       }
       \strng{namehash}{526d688f37a86d3c3f27d0c5016eb71d}
       \strng{fullhash}{526d688f37a86d3c3f27d0c5016eb71d}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{526d688f37a86d3c3f27d0c5016eb71d}
+      \strng{authorfullhash}{526d688f37a86d3c3f27d0c5016eb71d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Reset: Student's Association}}
@@ -220,17 +356,32 @@
       \field{urlmonth}{10}
       \field{urlyear}{2017}
       \field{year}{2017}
+      \field{urldateera}{ce}
     \endentry
     \entry{dicker2003}{article}{}
       \name{author}{3}{}{%
-        {{hash=3a1035d83d4fc04b021ddf0cc0943319}{Dicker}{D\bibinitperiod}{John\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=6a580df5d571ac99579452ccec7dd132}{Pennock}{P\bibinitperiod}{Gordon\bibnamedelima R}{G\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=154537605bea4c78cbed7695349193d9}{Shigley}{S\bibinitperiod}{Joseph\bibnamedelima E}{J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{hash=3a1035d83d4fc04b021ddf0cc0943319}{%
+           family={Dicker},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6a580df5d571ac99579452ccec7dd132}{%
+           family={Pennock},
+           familyi={P\bibinitperiod},
+           given={Gordon\bibnamedelima R},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=154537605bea4c78cbed7695349193d9}{%
+           family={Shigley},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \strng{namehash}{1d46e2c877b65aef432c588849e7480a}
       \strng{fullhash}{1d46e2c877b65aef432c588849e7480a}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{1d46e2c877b65aef432c588849e7480a}
+      \strng{authorfullhash}{1d46e2c877b65aef432c588849e7480a}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{this book costz {\~{}}500{\$} so imma not gonna buy it. you aint never gon see dis irl.}
@@ -242,14 +393,28 @@
     \endentry
     \entry{jiang2009}{article}{}
       \name{author}{3}{}{%
-        {{hash=86d5bc3b3cf89b7d467737367b697e61}{Jiang}{J\bibinitperiod}{Ning}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=3b50273058e97d3ffa6e7c67beaa47a8}{Englehart}{E\bibinitperiod}{Kevin\bibnamedelima B.}{K\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
-        {{hash=a1c2d54418927e5d009594af33eed3ff}{Parker}{P\bibinitperiod}{Philip\bibnamedelima A.}{P\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=86d5bc3b3cf89b7d467737367b697e61}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3b50273058e97d3ffa6e7c67beaa47a8}{%
+           family={Englehart},
+           familyi={E\bibinitperiod},
+           given={Kevin\bibnamedelima B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a1c2d54418927e5d009594af33eed3ff}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Philip\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{f412bb856c213326048a2fb95a9a2096}
       \strng{fullhash}{f412bb856c213326048a2fb95a9a2096}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{f412bb856c213326048a2fb95a9a2096}
+      \strng{authorfullhash}{f412bb856c213326048a2fb95a9a2096}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A novel signal processing algorithm for the surface electromyogram (EMG) is proposed to extract simultaneous and proportional control information for multiple DOFs. The algorithm is based on a generative model for the surface EMG. The model assumes that synergistic muscles share spinal neural drives, which correspond to the intended activations of different DOFs of natural movements and are embedded within the surface EMG. A DOF-wise nonnegative matrix factorization (NMF) is developed to estimate neural control information from the multichannel surface EMG. It is shown, both by simulation and experimental studies, that the proposed algorithm is able to extract the multidimensional control information simultaneously. A direct application of the proposed method would be providing simultaneous and proportional control of multifunction myoelectric prostheses.}
@@ -270,17 +435,31 @@
     \endentry
     \entry{hamilton2008}{incollection}{}
       \name{author}{3}{}{%
-        {{hash=3fb44fa4fb03bc5ab7b5d1db4c6928b8}{{Hamilton\bibnamedelimb Ph.D.}}{H\bibinitperiod}{Nancy}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=6679da6006cbb80022f9f730e5b28360}{{Weimar\bibnamedelimb Ph.D.}}{W\bibinitperiod}{Wendi}{W\bibinitperiod}{}{}{}{}}%
-        {{hash=5cc8b1d18f28ea11fe005eebe10df724}{{Luttgens\bibnamedelimb Ph.D.}}{L\bibinitperiod}{Kathryn}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=3fb44fa4fb03bc5ab7b5d1db4c6928b8}{%
+           family={{Hamilton Ph.D.}},
+           familyi={H\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6679da6006cbb80022f9f730e5b28360}{%
+           family={{Weimar Ph.D.}},
+           familyi={W\bibinitperiod},
+           given={Wendi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5cc8b1d18f28ea11fe005eebe10df724}{%
+           family={{Luttgens Ph.D.}},
+           familyi={L\bibinitperiod},
+           given={Kathryn},
+           giveni={K\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {The McGraw Hill Companies}%
       }
       \strng{namehash}{042576f6dd19d26c87570cdee05c02df}
       \strng{fullhash}{042576f6dd19d26c87570cdee05c02df}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{042576f6dd19d26c87570cdee05c02df}
+      \strng{authorfullhash}{042576f6dd19d26c87570cdee05c02df}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Kinosiology}
@@ -292,12 +471,18 @@
     \endentry
     \entry{cram2012}{book}{}
       \name{author}{1}{}{%
-        {{hash=de5fca7dcead6943896fa11dcea5f1d1}{Cram}{C\bibinitperiod}{Jeffrey\bibnamedelima R.}{J\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=de5fca7dcead6943896fa11dcea5f1d1}{%
+           family={Cram},
+           familyi={C\bibinitperiod},
+           given={Jeffrey\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
       \strng{namehash}{de5fca7dcead6943896fa11dcea5f1d1}
       \strng{fullhash}{de5fca7dcead6943896fa11dcea5f1d1}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{de5fca7dcead6943896fa11dcea5f1d1}
+      \strng{authorfullhash}{de5fca7dcead6943896fa11dcea5f1d1}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Jones and Bartlett}
@@ -314,19 +499,33 @@
       \verb arXiv:1011.1669v3
       \endverb
       \verb{file}
-      \verb :Users/oliver-d/Google Drev/Uni b{ø}ger/Elektrografi/Surface Electromyography.pdf:pdf
+      \verb :Users/oliver-d/Google Drev/Uni b{\o}ger/Elektrografi/Surface Electromyography.pdf:pdf
       \endverb
     \endentry
     \entry{martini}{book}{}
       \name{author}{3}{}{%
-        {{hash=cbb5f0d97e1fa4519067b0c8be1ebb47}{Martini}{M\bibinitperiod}{Frederic\bibnamedelima H.}{F\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
-        {{hash=4f6a1fce5ad7526a7b2ac8a3c042c01d}{Nath}{N\bibinitperiod}{Judi\bibnamedelima L.}{J\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
-        {{hash=07b843f6a3f80bb3cbc757db36bb45f8}{Bartholomew}{B\bibinitperiod}{Edwin\bibnamedelima F.}{E\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=cbb5f0d97e1fa4519067b0c8be1ebb47}{%
+           family={Martini},
+           familyi={M\bibinitperiod},
+           given={Frederic\bibnamedelima H.},
+           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4f6a1fce5ad7526a7b2ac8a3c042c01d}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Judi\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=07b843f6a3f80bb3cbc757db36bb45f8}{%
+           family={Bartholomew},
+           familyi={B\bibinitperiod},
+           given={Edwin\bibnamedelima F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
       }
       \strng{namehash}{073a47c21aa54048c5db14606e23ff0e}
       \strng{fullhash}{073a47c21aa54048c5db14606e23ff0e}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{073a47c21aa54048c5db14606e23ff0e}
+      \strng{authorfullhash}{073a47c21aa54048c5db14606e23ff0e}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Working Group I contribution to the IPCC's Fifth Assessment Report (AR5) considers new evidence of climate change based on many independent scientific analyses from observations of the climate system, paleoclimate archives, theoretical studies of climate processes and simulations using climate models. It builds upon the Working Group I contribution to the IPCC's Fourth Assessment Report (AR4), and incorporates subsequent new findings of research. As a component of the fifth assessment cycle, the IPCC Special Report on Managing the Risks of Extreme Events to Advance Climate Change Adaptation (SREX) is an important basis for information on changing weather and climate extremes. This Summary for Policymakers (SPM) follows the structure of the Working Group I report. The narrative is supported by a series of overarching highlighted conclusions which, taken together, provide a concise summary. Main sections are introduced with a brief paragraph in italics which outlines the methodological basis of the assessment. The degree of certainty in key findings in this assessment is based on the author teams' evaluations of underlying scientific understanding and is expressed as a qualitative level of confidence (from very low to very high) and, when possible, probabilistically with a quantified likelihood (from exceptionally unlikely to virtually certain). Confidence in the validity of a finding is based on the type, amount, quality, and consistency of evidence (e.g., data, mechanistic understanding, theory, models, expert judgment) and the degree of agreement1. Probabilistic estimates of quantified measures of uncertainty in a finding are based on statistical analysis of observations or model results, or both, and expert judgment2. Where appropriate, findings are also formulated as statements of fact without using uncertainty qualifiers. (See Chapter 1 and Box TS.1 for more details about the specific language the IPCC uses to communicate uncertainty) The basis for substantive paragraphs in this Summary for Policymakers can be found in the chapter sections of the underlying report and in the Technical Summary. These references are given}
@@ -343,18 +542,28 @@
       \verb arXiv:1011.1669v3
       \endverb
       \verb{file}
-      \verb :Users/oliver-d/Google Drev/Uni b{ø}ger/krop og instrumentering/Fundamentals of Human Anatomy and Physiologi 9th edition.pdf:pdf
+      \verb :Users/oliver-d/Google Drev/Uni b{\o}ger/krop og instrumentering/Fundamentals of Human Anatomy and Physiologi 9th edition.pdf:pdf
       \endverb
     \endentry
     \entry{lee2008}{article}{}
       \name{author}{2}{}{%
-        {{hash=08eea252be1424b8ee78c36c738b54d0}{Lee}{L\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=f0e716766f0358ecf8d344f9e420f3a7}{Kruse}{K\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=08eea252be1424b8ee78c36c738b54d0}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f0e716766f0358ecf8d344f9e420f3a7}{%
+           family={Kruse},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{ffe5ceb4e8d973d23acabba5f55d8f4e}
       \strng{fullhash}{ffe5ceb4e8d973d23acabba5f55d8f4e}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{ffe5ceb4e8d973d23acabba5f55d8f4e}
+      \strng{authorfullhash}{ffe5ceb4e8d973d23acabba5f55d8f4e}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Electrocardiography (ECG), electromyography (EMG), and electroencephalography (EEG) systems measure heart, muscle, and brain activity (respectively) over time by measuring electric potentials on the surface of living tissue. Nervous stimuli and muscle contractions can be detected by measuring the ionic current flow in the body. This is accomplished using a biopotential electrode. A negatively charged ion is an anion and a positively charged ion is a cation. The current flow in the human body is due to ion flow, not electrons. A biopotential electrode is a transducer that senses ion distribution on the surface of tissue, and converts the ion current to electron current. An electrolyte solution/jelly is placed on the side of the electrode that comes into contact with tissue; the other side of the electrode consists of conductive metal attached to a lead wire connected to the instrument. A chemical reaction occurs at the interface between the electrolyte and the electrode.}
@@ -371,12 +580,16 @@
     \endentry
     \entry{kinova2017}{misc}{}
       \name{author}{1}{}{%
-        {{hash=2d3adc1c24f6ea4d247b564871d2bb8b}{{KINOVA\bibnamedelimb Robotics}}{K\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=2d3adc1c24f6ea4d247b564871d2bb8b}{%
+           family={{KINOVA Robotics}},
+           familyi={K\bibinitperiod}}}%
       }
       \strng{namehash}{2d3adc1c24f6ea4d247b564871d2bb8b}
       \strng{fullhash}{2d3adc1c24f6ea4d247b564871d2bb8b}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{2d3adc1c24f6ea4d247b564871d2bb8b}
+      \strng{authorfullhash}{2d3adc1c24f6ea4d247b564871d2bb8b}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Assistive Robotics}}
@@ -384,23 +597,38 @@
       \field{urlmonth}{10}
       \field{urlyear}{2017}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \verb{url}
       \verb http://www.kinovarobotics.com/assistive-robotics/products/robot-arms/
       \endverb
     \endentry
     \entry{phiny2012}{article}{}
       \name{author}{3}{}{%
-        {{hash=68114dddee90fd1284201e8cd4969b58}{Phinyomark}{P\bibinitperiod}{Angkoon}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=81476796849d292f1e96e3411d0213e7}{Phukpattaranont}{P\bibinitperiod}{Pornchai}{P\bibinitperiod}{}{}{}{}}%
-        {{hash=5bf6748ddba5b8bbd829c6b13054ebf0}{Limsakul}{L\bibinitperiod}{Chusak}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=68114dddee90fd1284201e8cd4969b58}{%
+           family={Phinyomark},
+           familyi={P\bibinitperiod},
+           given={Angkoon},
+           giveni={A\bibinitperiod}}}%
+        {{hash=81476796849d292f1e96e3411d0213e7}{%
+           family={Phukpattaranont},
+           familyi={P\bibinitperiod},
+           given={Pornchai},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5bf6748ddba5b8bbd829c6b13054ebf0}{%
+           family={Limsakul},
+           familyi={L\bibinitperiod},
+           given={Chusak},
+           giveni={C\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Elsevier Ltd}%
       }
       \strng{namehash}{594e401fd73537b1ec88c1e40de85f30}
       \strng{fullhash}{594e401fd73537b1ec88c1e40de85f30}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{594e401fd73537b1ec88c1e40de85f30}
+      \strng{authorfullhash}{594e401fd73537b1ec88c1e40de85f30}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Feature extraction is a significant method to extract the useful information which is hidden in surface electromyography (EMG) signal and to remove the unwanted part and interferences. To be successful in classification of the EMG signal, selection of a feature vector ought to be carefully considered. However, numerous studies of the EMG signal classification have used a feature set that have contained a number of redundant features. In this study, most complete and up-to-date thirty-seven time domain and frequency domain features have been proposed to be studied their properties. The results, which were verified by scatter plot of features, statistical analysis and classifier, indicated that most time domain features are superfluity and redundancy. They can be grouped according to mathematical property and information into four main types: energy and complexity, frequency, prediction model, and time-dependence. On the other hand, all frequency domain features are calculated based on statistical parameters of EMG power spectral density. Its performance in class separability viewpoint is not suitable for EMG recognition system. Recommendation of features to avoid the usage of redundant features for classifier in EMG signal classification applications is also proposed in this study. ?? 2011 Elsevier Ltd. All rights reserved.}
@@ -423,15 +651,21 @@
     \endentry
     \entry{zar2009}{book}{}
       \name{author}{1}{}{%
-        {{hash=02089783e7757497a38f535abc473111}{{Jerrold\bibnamedelimb H}}{J\bibinitperiod}{Zar}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=02089783e7757497a38f535abc473111}{%
+           family={{Jerrold H}},
+           familyi={J\bibinitperiod},
+           given={Zar},
+           giveni={Z\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Pearson}%
       }
       \strng{namehash}{02089783e7757497a38f535abc473111}
       \strng{fullhash}{02089783e7757497a38f535abc473111}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \strng{authornamehash}{02089783e7757497a38f535abc473111}
+      \strng{authorfullhash}{02089783e7757497a38f535abc473111}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -439,7 +673,7 @@
       \field{title}{{Biostastical Analysis}}
       \field{year}{2009}
       \verb{file}
-      \verb :Users/oliver-d/Google Drev/Uni b{ø}ger/mat fys kem/Biostatestik/[Jerrold{\_}H.{\_}Zar]{\_}Biostatistical{\_}Analysis{\_}(5th{\_}Edit(BookZZ.org).pdf:pdf
+      \verb :Users/oliver-d/Google Drev/Uni b{\o}ger/mat fys kem/Biostatestik/[Jerrold{\_}H.{\_}Zar]{\_}Biostatistical{\_}Analysis{\_}(5th{\_}Edit(BookZZ.org).pdf:pdf
       \endverb
     \endentry
   \endsortlist
