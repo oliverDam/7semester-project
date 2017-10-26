@@ -7,9 +7,8 @@
 %head
 %To understand how it is possible to use EMG to control robotics or prostheses, especially robotics or prostheses which %represent the human arm, it is necessary to know the anatomy of the human arm.
 % --OR-- 
-This project will focus on the lower arm as the Myo armband will be used extract information from this part of the body. The anatomy of the lower human arm will briefly be described in this section along with a description of relation between lower arm muscles and hand movements for selected gestures. 
-
-The human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease. Each movement happen on an axis, and each axis denotes one degree of freedom (DOF). The arm posses six DOFs as shown in \ref{fig:armDOF}.
+This project will focus on the lower arm as the Myo armband will be used extract information from this part of the body. The anatomy of the lower human arm will briefly be described in this section along with a description of relation between lower arm muscles and hand movements for selected gestures.
+The human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease. Each movement happen on an axis, and each axis denotes one degree of freedom (DOF). The arm posses six DOFs as shown in \figref{fig:armDOF}.
 
 \begin{figure}[H]                                         %   File-type can be specified
 	\includegraphics[width=.4\textwidth]{figures/anatomy/human_arm_dof}  %<--but is not needed.
@@ -19,17 +18,12 @@ The human arm is designed to give humans a manoeuvrability and dexterity to coor
 
 The number of DOFs is defined as the number of possible input parameters to a movable mechanism, where each input controls an independent movement in one axis. Several bodies can work together in relation to each other, but to total number of DOFs will be the number of possible independent movements that can be performed between the bodies. \cite{dicker2003}
 
-The great dexterity of the human arm is achieved through the use of several muscles which intertwine and make synergies to perform all the different gestures of the hand \cite{jiang2009} \cite{avella2006}. Muscles in the lower arm is arranged in layers, having an outer, middle and inner layer. These muscles are used to rotate the forearm, flex and extend the hand at the wrist as well as performing ulnar and radial deviation. The muscles control extension and flexion of the fingers at each separate joint and the movements of the thumb, so that hand can be opened and closed. This enables movement in six DOFs of the arm and several more at the hand and fingers.
+The great dexterity of the human arm is achieved through the use of several muscles which intertwine and make synergies to perform all the different gestures of the hand \cite{jiang2009, avella2006}. Muscles in the lower arm is arranged in layers, having an outer, middle and inner layer. These muscles are used to rotate the forearm, flex and extend the hand at the wrist as well as performing ulnar and radial deviation. The muscles control extension and flexion of the fingers at each separate joint and the movements of the thumb, so that hand can be opened and closed. This enables movement in six DOFs of the arm and several more at the hand and fingers.
 
-The aim for this project is to translate ulnar and radial deviation along with extension and flexion of the wrist via EMG signals to control a robotic arm. Therefore, only selected muscles will be relevant to further investigate. 
+The aim for this project is to translate ulnar and radial deviation along with extension and flexion of the wrist via EMG signals to control a robotic arm. Therefore, only selected muscles will be relevant to further investigate.
+Muscles involved with radial and ulnar deviation includes several muscles in the arm. Most of these muscles extend throughout the whole forearm as most of them originates from the distal lateral surfaces of humerus or the proximal portions of radius and ulnar, and extends towards the wrist and fingers to fixate on the metacarpal bones in the wrist and through tendons fixate on the different phalanges bones of the fingers and thumb. Radius and ulnar deviation is depicted in \figref{fig:wrist_move}.
 
-%---THE MOVEMENTS WE ARE GOING TO RECORD IS: flexion/ extension of wrist and adduction/abduction---
-
-PICTURES DEPICTING adduction and abduction and flexion and extension)
-
-Muscles involved with radial and ulnar deviation includes several muscles in the arm. Most of these muscles extend throughout the whole forearm as most of them originates from the distal lateral surfaces of humerus or the proximal portions of radius and ulnar, and extends towards the wrist and fingers to fixate on the metacarpal bones in the wrist and through tendons fixate on the different phalanges bones of the fingers and thumb. Radius and ulnar deviation is depicted in \ref{fig:wrist_move}.
-
-\begin{figure}[H]                                         %   File-type can be specified
+\begin{figure}[H]
 	\includegraphics[width=.4\textwidth]{figures/anatomy/wrist_move}  %<--but is not needed.
 	\caption{Flexion, extension and radial and ulnar deviation of the hand. Modified from  \cite{hamilton2008}}
 	\label{fig:wrist_move}  %<--give the figure a label, so you can reference!
