@@ -1,11 +1,12 @@
-\documentclass[12pt,twoside,a4paper,danish]{report}
+\documentclass[12pt,twoside,a4paper,english]{report}
 
 % Select encoding of your inputs
 \usepackage[utf8]{inputenc}
 
 % Make latex understand and use the typographic
 % rules of the language used in the document.
-\usepackage[danish]{babel}
+%\usepackage[danish]{babel}
+\usepackage[english]{babel}
 
 % Use the vector font Latin Modern which is going
 % to be the default font in latex in the future.
@@ -175,7 +176,7 @@
 
 %-------MISC----------------------------------------
 %%% Enables the use FiXme refferences. Syntax: \fxnote{...} %%%
-\usepackage[footnote, final, english, silent, nomargin]{fixme}
+\usepackage[footnote, draft, english, silent, nomargin]{fixme}		%!!!! DRAFT OR FINAL?!?!?!?!11!! change later!	
 %With "final" instead of "draft" an error will ocure for every FiXme under compilation.
 
 %%% allows use of lorem ipsum (generate i.e. pagagraph 1 to 5 with \lipsum[1-5]) %%%

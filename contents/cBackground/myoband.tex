@@ -8,7 +8,7 @@ Myo armband is a interactive gesture system developed by Thalmic Labs capable of
 
 \begin{figure}[H]                    
 	\includegraphics[width=.5\textwidth]{figures/myob/armband}  %<--but is not needed.
-	\caption{Main components of the Myo armband. \cite{}}
+	\caption{Main components of the Myo armband. \textbf{SOURCE}}
 	\label{fig:armband}  %<--give the figure a label, so you can reference!
 \end{figure}
 
@@ -22,18 +22,21 @@ Myo armband is a interactive gesture system developed by Thalmic Labs capable of
 %\end{itemize}
 %The systems counts with sizing clips, these small pieces give a tighter grip which is more appropriated for smaller arms.
 
-The Myo armband has eight medical grade stainless steel EMG sensors, responsible of recognizing each gesture. In addition, it has nine axis inertial measurement unit (IMU) which enable the detection of arm movement. The IMU includes a three axis gyroscope, a three axis accelerometer and a three axis magnetometer. An IMU is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The magnetometer has the property of measuring magnetism. (something about the actual data the myoband provides and how many axes a magnometer actually has). The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part where the Myo armband is placed. It gives information about the acceleration expericed relative to free fall and expresses this in g-force. One g-force being when the accelerometer is at rest on the Earth's surface. That is since all points on the surface of the Earth is accelerating upwards relative to an object in free fall near the surface. For the g-force to change from one g-force the accelerometer must be exposed to motion. The gyroscope has the property of measuring angluar velocity. \textbf{SOURCE}
+The Myo armband has eight medical grade stainless steel EMG sensors, responsible of recognizing each gesture. These electrodes are dry and therefore not covered in silver chloride gel to reduce impedance between the electrode and skin. However, it has been shown by Mendez et al. SOURCE that the EMG recorded with the Myo armband is a suitable acquisition system for mapping hand gestures compared to conventional EMG acquisition. The only mapping method used in that study was linear discriminant analysis, and it is noted that other mapping methods should be investigated to further validate the quality of mapping the EMG obtained by the Myo armband. 
+
+In addition, it has a nine axis inertial measurement unit (IMU) which enable the detection of arm movement. The IMU includes a three axis accelerometer, a three axis accelerometer and a three axis magnetometer. An IMU is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part where the Myo armband is placed. It gives information about the acceleration experienced relative to free fall and expresses this in g-force. One g-force being when the accelerometer is at rest on the Earth's surface. That is since all points on the surface of the Earth is accelerating upwards relative to an object in free fall near the surface. For the g-force to change from one g-force the accelerometer must be exposed to motion. The gyroscope has the property of measuring angluar velocity. The magnetometer has the property of measuring magnetism. (something about the actual data the myoband provides and how many axes a magnometer actually has). \textbf{SOURCE}
+\textbf{more text on the data types we are going to get from the IMU's} 
 % ... (It is equipped with an ARM Cortex-M4 microprocessor of low energy consumption.)
 
 %\begin{figure}[H]                    
 %	\includegraphics[width=.5\textwidth]{figures/myob/gestures}  %<--but is not needed.
-%	\caption{Hand gestures and movements detected by the Myo armband using its own interface from Thalmic Labs. \cite{thalmic webpage}}
+%	\caption{Hand gestures and movements detected by the Myo armband using its own interface from Thalmic Labs. SOURCE}
 %	\label{fig:gestures}  %<--give the figure a label, so you can reference!
 %\end{figure}
 %It offers five pre-defined gestures as showed in the figure \ref{fig:gestures}, it provides haptic feedback through short, medium or long vibrations to correct moves or activate the system.
 
 The Myo armband is capable of pulling sEMG data at a sample rate of 200Hz while the remaining data (accelerometer, gyroscope and magnetometer) is pulled at a sample rate of  50Hz. 
-Thus, the Myo band arm supplies two kinds of data, which is spatial and gestural. The spatial data provieds information about the orientation and movement of the user's arm given by two data types: orientation and acceleration. Thes are provided through the accelerometer and gyroscope. Gestual data provides information about the users hand gestures and is provided through EMG recordings. The recorded signals can be send to other devices using Bluetooth 4.0.
+Thus, the Myo band arm supplies two kinds of data, which is spatial and gestural. The spatial data provides information about the orientation and movement of the user's arm given by two data types: orientation and acceleration. Thes are provided through the accelerometer and gyroscope. Gestual data provides information about the users hand gestures and is provided through EMG recordings. The recorded signals can be send to other devices using Bluetooth 4.0.
 
 
 %/begin{figure}
