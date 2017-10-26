@@ -1,15 +1,12 @@
 \section{Origin of electromyography}
-
-%HEAD
-write head: head
-also make sure Martin is not lying about origin of the EMG signal (motor unit action potential VS calcium release from the SR)
+This project will use EMG to map the hand gestures mentioned in the previous section. In this section it will be described how the EMG signal is generated and which problems that can occur in detecting it. 
 
 The electric potential detected with electromyography is an action potential causing the muscle to contract. Certain mechanisms are involved for this to happen. The motor unit of the muscle needs to be activated alongside with its associated alpha motor system, which is the lower motor neuron, its axon, and the muscle fibers the motor unit innervates. The muscle fiber is an excitable cell with a resting potential of between -90mV and -70mV. A threshold of approximately -55mV needs to be reached for an action potential to be generated, this is visualised in \figref{fig:action_potential}. The sarcolemma, the membrane covering the muscle fibers, has sodium and potassium ion channels that maintains the resting potential, depolarize the muscle fiber if the threshold is exceeded or repolarize the muscle fiber. \cite{cram2012}
 
 
 \begin{figure}[H]
 	\includegraphics[width=.4\textwidth]{figures/Anatomy/action_potential}  %<--but is not needed.
-	\caption{Illustration of the action potential exceeding the threshold for it to be generated and the following depolarization and repolarization. \cite{martini}}
+	\caption{Illustration of the action potential exceeding the threshold for it to be generated and the following depolarization and repolarization. \cite{konrad2005}}
 	\label{fig:action_potential}  %<--give the figure a label, so you can reference!
 \end{figure}
 
@@ -17,7 +14,7 @@ The lower motor axon is branching out so that it can attach to the muscle fiber 
 
 \begin{figure}[H]
 	\includegraphics[width=.4\textwidth]{figures/Anatomy/EMG_generation}  %<--but is not needed.
-	\caption{Illustration of the action potential exciting the muscle fiber, which causes the release of calcium ions and the muscle to contract. \cite{martini}}
+	\caption{Illustration of the action potential exciting the muscle fiber, which causes the release of calcium ions and the muscle to contract. \cite{konrad2005}}
 	\label{fig:EMG_generation}  %<--give the figure a label, so you can reference!
 \end{figure}
 
