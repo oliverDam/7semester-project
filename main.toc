@@ -8,6 +8,8 @@
 \contentsline {section}{\numberline {2.3}Electromyography acquisition}{5}{section.2.3}
 \contentsline {section}{\numberline {2.4}Myo armband}{6}{section.2.4}
 \contentsline {section}{\numberline {2.5}JACO2 robotic arm}{7}{section.2.5}
-\contentsline {section}{\numberline {2.6}Preprocessing of EMG}{8}{section.2.6}
-\contentsline {section}{\numberline {2.7}Feature extraction}{8}{section.2.7}
-\contentsline {section}{\numberline {2.8}Regression methods}{9}{section.2.8}
+\contentsline {section}{\numberline {2.6}Preprocessing of EMG}{7}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Feature extraction}{8}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.7}Regression methods}{9}{section.2.7}
+\contentsline {section}{\numberline {2.8}Methods}{10}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Experimental procedure}{10}{subsection.2.8.1}
