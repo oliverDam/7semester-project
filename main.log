@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6470) (preloaded format=pdflatex 2017.9.27)  7 NOV 2017 18:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6470) (preloaded format=pdflatex 2017.9.27)  7 NOV 2017 18:32
 entering extended mode
 **./main.tex
 (main.tex
@@ -3820,13 +3820,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51850 strings out of 495217
- 1061994 string characters out of 3181635
+ 51849 strings out of 495217
+ 1061978 string characters out of 3181635
  1679186 words of memory out of 3000000
  54283 multiletter control sequences out of 15000+200000
  657217 words of font info for 114 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,22n,92p,10455b,3045s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,22n,92p,10455b,3043s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/share/miktex-texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/share
 /miktex-texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/share/miktex-texmf/f
 onts/enc/dvips/lm/lm-mathex.enc}{/usr/local/share/miktex-texmf/fonts/enc/dvips/
@@ -3844,9 +3844,9 @@ re/miktex-texmf/fonts/type1/public/lm/lmr8.pfb></usr/local/share/miktex-texmf/f
 onts/type1/public/lm/lmri12.pfb></usr/local/share/miktex-texmf/fonts/type1/publ
 ic/lm/lmss10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/lm/lmsy10.pf
 b>
-Output written on main.pdf (17 pages, 1160613 bytes).
+Output written on main.pdf (17 pages, 1160432 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

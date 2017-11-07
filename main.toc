@@ -12,4 +12,3 @@
 \contentsline {subsection}{\numberline {2.6.1}Feature extraction}{8}{subsection.2.6.1}
 \contentsline {section}{\numberline {2.7}Regression methods}{9}{section.2.7}
 \contentsline {section}{\numberline {2.8}Methods}{10}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Experimental procedure}{10}{subsection.2.8.1}
