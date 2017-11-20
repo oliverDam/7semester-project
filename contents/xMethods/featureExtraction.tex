@@ -1,5 +1,9 @@
 \section{Feature extraction}
-Explanation of how the features are extracted.
+In this section it will be explained which features that are extracted from the EMG data, and which features that behaves more linearly. 
+
+In this project the features mean absolute value and logarithmic variance will be extracted. According to a study by \cite{hahne2014} the logarithmic variance behaves more linearly than features similar to the mean absolute (root means squared). This linear property might yield a better estimation in the recognition of the hand gestures since linear regression is used to as the mapping tool of the hand gestures.
+
+
 
 Comparison of the linear properties of the features mean absolute value and logarithmic variance.
 Visualize it with a polynomial plot of the different hand gestures with the intensities in prolongation of each other. The x-axis will be the normalized EMG signal and the y-axis will be the ideal values(trapeze plateaus).
