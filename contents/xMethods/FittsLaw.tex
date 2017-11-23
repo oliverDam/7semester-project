@@ -1,0 +1,18 @@
+\section{Fitts' Law}
+
+Fitts' Law will be used to quantify the versatility of the regressors. Fitts' Law is a predictive model describing the relation that the time it takes to do a rapid movement to reach a target area, is dependent on the distance to the target area, and the size of the target area. The law demonstrates that the information of any human motor tasks, is finite and only limited by the capabilities of the control system. The control exhibit a negative correlation between speed and accuracy. \cite{Kamavuako2014}
+Fitts' Law calculates an \textit{Index of Difficulty} (ID) by \eqref{eq:Fitts}
+
+\begin{equation} \label{eq:Fitts}
+$ID = log_{2} * (\frac{2D}{W}) \ \ \ \ \ , where ID is Index of Difficulty, D is distance to targes, W is width of target area.
+\end{equation}
+
+To calculate the performance of the human interacting with the control system, the \textit{throughput} (TP) was introduced. IP is calculated by \eqref{eq:TP}.
+
+\begin{equation} \label{eq:TP}
+$TP = \frac{ID}{MT} \ \ \ \ \ , where ID is Index of Difficulty, MT is movement time.
+\end{equation}
+
+MT is the time it would take a subject to move a pointer from origin to the target area.
+
+Fitts' Law will be implemented into the test GUI described in \secref{sec:testGUI}, where it will test the control systems ability to correctly convey the test subjects task of reaching points in the compass-plot. 
