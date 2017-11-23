@@ -1,9 +1,21 @@
 \section{Feature extraction}
 In this section it will be explained which features that are extracted from the EMG data, and which features that behaves more linearly. 
 
-In this project the features mean absolute value and logarithmic variance will be extracted. According to a study by \cite{hahne2014} the logarithmic variance behaves more linearly than features similar to the mean absolute (root means squared). This linear property might yield a better estimation in the recognition of the hand gestures since linear regression is used to as the mapping tool of the hand gestures.
+A commonly used feature in control of prosthetics is the Mean Absolute Value(MAV). The equation of MAV is as follows:
 
+\begin{equation}
+$MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|$
+\end{equation}
 
+As the equation and name indicates MAV is the average of the absolute values of the EMG signal, where N is the length of the signal, and $x_i$ is the signal of i samples. MAV expresses the amplitude of the signal and will be use as a feature in this project.
 
-Comparison of the linear properties of the features mean absolute value and logarithmic variance.
-Visualize it with a polynomial plot of the different hand gestures with the intensities in prolongation of each other. The x-axis will be the normalized EMG signal and the y-axis will be the ideal values(trapeze plateaus).
+According to a study by \cite{hahne2014} the logarithmic variance log($\sigma^2$) behaves more linearly than features similar to the mean absolute (root means squared). This linear property might yield a better estimation in the recognition of the hand gestures since linear regression is used to as the mapping tool of the hand gestures. The equation of the logarithmic variance is as follows:
+
+\begin{equation}
+$log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})$
+\end{equation}
+
+N expresses the length of the signal, $x_i$ is the $i^th$ sample of the signal and \mu is the mean. The logarithmic variance calculates the logarithm of the variance, which is the sum of the squared deviation of a variable from its mean. Thus, how spread the signal is from its average. In the study by \cite{hahne2014}, it is found that the variance behaves non-linearly. Taking the logarithm of the variance linearises the variance, which is the reason for the logarithmic variance to be extracted as a feature in this project.  
+
+%Comparison of the linear properties of the features mean absolute value and logarithmic variance.
+%Visualize it with a polynomial plot of the different hand gestures with the intensities in prolongation of each other. The x-axis will be the normalized EMG signal and the y-axis will be the ideal values(trapeze plateaus).
