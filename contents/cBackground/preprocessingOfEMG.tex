@@ -14,7 +14,7 @@ The raw EMG signals has to be preprocessed due to them being sensible to noise e
 
 Differential amplification is used in EMG in order to amplify the original signal and remove common signals from two or more electrodes, in order to avoid common noise from more electrodes in the amplified signal. The amplifier must have a build in gain as well which determines the final strength of the signal, and both of these features are implemented in order to avoid the SNR. Basic filtering should be implemented in order to avoid electrical noise. 
 %This filter would be implemented as a notch filter, in order to reject the electrical noise and achieve a higher SNR. 
-The filtering should include a bandpass filter with a bandwidth chosen depending on where the EMG is performed. The low-pass filtering will ensure avoiding aliasing in the signal, because is will filter out frequencies higher than the used samplings frequency. The high-pass filter will filter out movement artifact, and thus lowering the baseline. \cram{2012}
+The filtering should include a bandpass filter with a bandwidth chosen depending on where the EMG is performed. The low-pass filtering will ensure avoiding aliasing in the signal, because is will filter out frequencies higher than the used samplings frequency. The high-pass filter will filter out movement artifact, and thus lowering the baseline. \cite{cram2012}
 
 %This is done in order to make sure the final signal does not contain irrelevant high and low frequencies.\cite{cram2012}
 
