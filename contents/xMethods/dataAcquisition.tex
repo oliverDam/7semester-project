@@ -50,4 +50,6 @@ RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
 
 Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor of each movement.
 
+To express that the regressors do not overfit the input data, the RMSE of the test data must be lower than or equal to the training data. It does not necessarily express a great performing model if the RMSE of the training data is high, but a model that performs consistently on new data. However, if the RMSE of the training is reasonably low, and the RMSE of the test data is likely low, the model is said to fit the data well. 
+
 
