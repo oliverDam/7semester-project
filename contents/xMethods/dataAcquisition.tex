@@ -8,7 +8,7 @@ To acquire data a training GUI has been designed and implemented in Matlab. The 
 
 \begin{figure}[H]
 	\includegraphics[width=.4\textwidth]{figures/GUI/GUI_Training.png}
-	\caption{\textbf{WE GONNA NEED A NEW PIC OF THE GUI HERE} The training GUI implemented with Matlab GUI development environment. Control buttons to calculate MVC and perform MVC fraction recordings are placed on the left side. The trapezoid plot with the green dot controlled by the input EMG signal from the subject is shown on the right. The fraction of the MVC can be defined by the slider located under the control buttons.}
+	\caption{The training GUI implemented with Matlab GUI development environment. Control buttons to calculate MVC and perform MVC fraction recordings are placed on the left side. The trapezoid plot with the green dot controlled by the input EMG signal from the subject is shown on the right. The fraction of the MVC can be defined by the slider located under the control buttons.}
 	\label{fig:GUI_Training}
 \end{figure} 
 
@@ -28,7 +28,7 @@ After features has been extracted from the data, the feature data is validated t
 %include if we are fast
 %and t-test to decide if there are any significant outliers and if the features are significantly different from feature data of other movements. The PCA is used to determine the relation between the feature data and identifying data outliers. 
 %What is PCA?
-PCA is an analysis tool used to express a set of correlated variables into non-correlated components, such that the dataset can be expressed using less variables, however more defining variables for the given data set. These variables are called the principal components. Each PC is orthogonal on the former, meaning that they each define the largest variance in an axis, different from axes described by other components. PCA also provides knowledge on which components are the most defining for the data set, so only the most important can be considered. When performing PCA it provides the coefficients of the principal components (PCC), which can be visualised in a plot. This plotting of the coefficients are what is used to evaluate the quality of the feature data. A threshold of 90\% for preserved information is used. 
+PCA is an analysis tool used to express a set of correlated variables into non-correlated components, such that the dataset can be expressed in a reduced dimensionality hyperspace using less variables, however more defining variables for the given data set. These variables are called the principal components. Each PC is orthogonal on the former, meaning that they each define the largest variance in an axis, different from axes described by other components. PCA also provides knowledge on which components are the most defining for the dataset, where the first vectors in the hyperspace being the ones with highest variance, so only the most important can be considered. When performing PCA it provides the coefficients of the principal components (PCC), which can be visualised in a plot. This plotting of the coefficients are what is used to evaluate the quality of the feature data. A threshold of 90\% for preserved information is used. 
 
 PCA is performed for each movement in each limb position and plotted in a three dimensional space. If the PCC's of a movement has significant outliers, or the points are clustered, it will be identified shortly after the feature extraction, and a new recording session for the test subject can be executed to prevent inaccurate training of regressors and time delays. If the data is of high quality, meaning the data points are easily distinguishable from each other, it can be used further on to train the regressors.
 
@@ -38,16 +38,16 @@ PCA is performed for each movement in each limb position and plotted in a three 
 	\label{fig:pcasubplot}
 \end{figure} 
 
-In \figref{fig:pcasubplot} an example of a PCA performed on feature data from one test subject is shown. The left plot of the principal components describe the importance of each identified components, and how much of the variance in the data that is described. Using only the first three components, $93.8\%$ of the full dataset can be described. Only these principal components are used in the plot to the right in \figref{fig:pcasubplot}. Here it can be seen that the clusters are easily distinguishable and have no remarkable outliers. Therefore the data is considered good and can be used in the training of the regressors. 
+In \figref{fig:pcasubplot} an example of a PCA performed on feature data from one test subject is shown. The left plot of the principal components describe the importance of each identified components, and how much of the variance in the data that is described. Using only the first three components, $93.8\%$ of the full dataset can be described. Only these principal components are used in the plot to the right in \figref{fig:pcasubplot}. Here it can be seen that the clusters are easily distinguishable and have no remarkable outliers. Therefore the data is considered good and can be used in the training of the regressors.
 
 
 \section{Accuracy of regressors}
 To measure the accuracy of the regressors the Root Mean Squared Error(RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
 
 \begin{equation}
-$RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
+RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
 \end{equation}
 
-Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor for each movement. 
+Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor of each movement.
 
 
