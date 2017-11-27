@@ -1,5 +1,5 @@
 \section{Origin of electromyography} \label{sec:physiology}
-This project will use EMG to map the hand gestures mentioned in the previous section. In this section it will be described how the EMG signal is generated and which problems that can occur in detecting it. 
+This project will use EMG to map the hand gestures mentioned in the previous section. In this section it will be described how the EMG signal is generated.% and which problems that can occur in detecting it. 
 
 The electric potential detected with electromyography is an action potential causing the muscle to contract. Certain mechanisms are involved for this to happen. The motor unit of the muscle needs to be activated alongside with its associated alpha motor system, which is the lower motor neuron, its axon, and the muscle fibres the motor unit innervates. The muscle fibre is an excitable cell with a resting potential of between -90mV and -70mV. A threshold of approximately -55mV needs to be reached for an action potential to be generated, this is visualised in \figref{fig:action_potential}. The sarcolemma, the membrane covering the muscle fibres, has sodium and potassium ion channels that maintains the resting potential, depolarize the muscle fibre if the threshold is exceeded or repolarize the muscle fibre. \cite{cram2012}
 
@@ -19,6 +19,12 @@ The lower motor axon is branching out so that it can attach to the muscle fibre 
 \end{figure}
 
 Depending on the force that needs to be applied for a given task more or less motor units are activated and therefore more or less muscle fibres are contracted. The bigger the force the more motor units are activated. Furthermore, the number muscle fibres per motor unit varies between muscles in the human anatomy. The finer the movement the higher the innervation, e.g. the lower arm muscles has a higher innervation than those in the quadriceps. \cite{cram2012}
+
+\subsection{EMG states}
+%The EMG signal is a non-linear and non-stationary stochastic process.
+The EMG signal is the result of the addition of different motor unit action potential trains(MUAPTs) and can be divided into two main states, the transient state and the steady state. The transient state is related with the beginning phase of the muscle contraction, while the steady state is the stable phase of the muscle contraction when a constant position is held. \cite{mobarak2014}
+
+Although the steady state only contains a short temporal structure of the patterns involved in the contraction of the muscle \cite{mobarak}, studies has shown that it is possible to achieve online continuous control using steady-state EMG signals. A study by Englehart et al. \cite{} demonstrated that steady-state data classified more precisely than transient state data. This could be due to the fact that a larger amount of meaningful data is contained in this muscle contraction phase \cite{mobarak} For the training of the control system  in this project the steady signal will then be used. %However there are still limitations due the fact that the classifier can not deal with the transient EMG signals. Some clinical applications that combine both data have shown an increase in the recognition system.  
 
 %the extraocular muscle has the highest innervation of 3:1 and the gastrocnemius muscles has one of 2000:1. \cite{cram2012}
 
