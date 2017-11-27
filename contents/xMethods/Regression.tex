@@ -9,11 +9,11 @@ Once the preprocessing and the feature extraction of the EMG data has been done,
 
 In this particular study, a simple linear regression has been applied. The equation is:
 
-\begin{equation}
-	Y_i = \alpha + \beta X_i
+\begin{equation} %\label{eq:simpleLinearRegression}
+Y_i = \alpha + \beta X_i + \epsilon_i
+%\label{reg}
 \end{equation}
-
-Where $Y_i$ is the response, $\alpha$ is the Y intercept, $\beta$ is the regression coefficient or slope, $X_i$ is the predictor and $i$ is the index \cite{zar2009}.
+where, $Y$ is the dependent variable or response, $X$ is the independent variable or the predictor, $\beta$ is the regression coefficient or the slope, and $\alpha$ is the Y intercept,  $\epsilon$ is the error and $i$ is the index.\cite{zar2009}.
 
 %capital letters matlab
 There has been implemented four different regressors, one for each movement under study. MATLAB is able to generate a linear regression model with one of its build-in mathematical functions. In order to accomplish the regressor the given training data set should include the predictions and the responses.
