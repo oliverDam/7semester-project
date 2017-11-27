@@ -30,7 +30,7 @@ After features has been extracted from the data, the feature data is validated t
 %What is PCA?
 PCA is an analysis tool used to express a set of correlated variables into non-correlated components, such that the dataset can be expressed in a reduced dimensionality hyperspace using less variables, however more defining variables for the given data set. These variables are called the principal components. Each PC is orthogonal on the former, meaning that they each define the largest variance in an axis, different from axes described by other components. PCA also provides knowledge on which components are the most defining for the dataset, where the first vectors in the hyperspace being the ones with highest variance, so only the most important can be considered. When performing PCA it provides the coefficients of the principal components (PCC), which can be visualised in a plot. This plotting of the coefficients are what is used to evaluate the quality of the feature data. A threshold of 90\% for preserved information is used. 
 
-PCA is performed for each movement in each limb position and plotted in a three dimensional space. If the PCC's of a movement has significant outliers, or the points are clustered, it will be identified shortly after the feature extraction, and a new recording session for the test subject can be executed to prevent inaccurate training of regressors and time delays. If the data is of high quality, meaning the data points are easily distinguishable from each other, it can be used further on to train the regressors.
+PCA is performed for each movement in each limb position and plotted in a three dimensional space. If the PCC's of a movement has significant outliers, or the points are clustered, it will be identified shortly after the feature extraction, and a new recording session for the test subject can be executed to prevent inaccurate training of regressors and time delays. If the data is of high quality, meaning the clouds of data points are easily distinguishable from each other, it can be used further on to train the regressors.
 
 \begin{figure}[H]
 	\includegraphics[width=.4\textwidth]{figures/Methods/pcasubplot.png} 
@@ -42,6 +42,9 @@ In \figref{fig:pcasubplot} an example of a PCA performed on feature data from on
 
 
 \section{Accuracy of regressors}
+To examine how well the regressors fit the actual data, the output of the regressors build for each feature is superimposed on the actual data. It can then be shown how the regressors perform at which intensities and which movements, and whether other regression methods should be considered to obtain a lower error. 
+
+\\
 To measure the accuracy of the regressors the Root Mean Squared Error(RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
 
 \begin{equation}
