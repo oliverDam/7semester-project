@@ -3,9 +3,25 @@
 %Feature extraction
 
 %regression
-This section will include a description of how the regression methods have been executed. As well as data gathering and processing, the regression model will be implemented in MATLAB.
+%This section will include a description of how the regression methods have been executed. As well as data gathering and processing, the regression model will be implemented in MATLAB.
 
-Once the preprocessing and the feature extraction of the EMG data has been done, it is needed to apply regression methods to determine the relationship between the variables under study, since the objective of a regression methods is mapping the response  as a function of the predictions.\cite{hahne2014}
+Once the preprocessing and the feature extraction of the EMG data has been done, regression will be used as described in \secref{sec:regression}. The implementation follows simple linear regression as shown in \eqref{eq:simpleLinearRegression}. One regressor will be trained for each movement. 
+
+
+The feature data will be constructed into one matrix containing the features for all movements. This will be compared to a matrix containing the normalized data for the movement in the segment for each movem
+
+%THIS FAR WE GOT
+
+
+
+
+
+
+
+ In order to implement this in MatLab the function \textit{fitlm} will be used to build the regressors. 
+
+
+it is needed to apply regression methods to determine the relationship between the variables under study, since the objective of a regression methods is mapping the response as a function of the predictions. \cite{hahne2014}
 
 In this particular study, a simple linear regression has been applied. The equation is:
 
@@ -13,11 +29,12 @@ In this particular study, a simple linear regression has been applied. The equat
 Y_i = \alpha + \beta X_i + \epsilon_i
 %\label{reg}
 \end{equation}
+
 where, $Y$ is the dependent variable or response, $X$ is the independent variable or the predictor, $\beta$ is the regression coefficient or the slope, and $\alpha$ is the Y intercept,  $\epsilon$ is the error and $i$ is the index.\cite{zar2009}.
 
 %capital letters matlab
 There has been implemented four different regressors, one for each movement under study. MATLAB is able to generate a linear regression model with one of its build-in mathematical functions. In order to accomplish the regressor the given training data set should include the predictions and the responses.
- The equation which implements the regressor is given in \ref{regressor}. Where Y contains the outputs or the target, this is the response recorded during the training sesion through the GUI. The values were normalize obtaining an optimal value between 0 and 1. X contains the inputs, in this case, the features extracted from each of the eight channel of the Myo armband. The features extracted from the recorded EMG data were the mean absolute value $\left( MAV\right)$ and  the logarithmic variance. %due to its better performance \cite{hahne2014}. 
+The equation which implements the regressor is given in \ref{regressor}. Where Y contains the outputs or the target, this is the response recorded during the training session through the GUI. The values were normalize obtaining an optimal value between 0 and 1. X contains the inputs, in this case, the features extracted from each of the eight channel of the Myo armband. The features extracted from the recorded EMG data were the mean absolute value $\left( MAV\right)$ and  the logarithmic variance. %due to its better performance \cite{hahne2014}. 
 \begin{equation}
 	Y_i=\begin{bmatrix} 
 	\ norm_1 \\ 

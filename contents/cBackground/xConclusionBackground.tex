@@ -1,4 +1,4 @@
-\section{Ik-State-of-the-Art}
+\section{Overview of previous research}
 
 %This project will focus on the mapping of different hand gestures while having the arm in different positions. This mapping relies on that the generated EMG from the different hand gestures are differentiable. 
 For a prosthetic user a good performing prosthesis must perform hand gestures as well in an elevated limb position as in a seated position to be able to support the user in daily tasks, e.g. taking a cup from a cupboard and pouring water into the cup. However, changes in the EMG occurs when performing the same hand gestures in different limb positions \cite{Fougner2011, avella2006}. These signal alternations can occur for different reasons. Changing limb position can make muscles move under the skin, relative to the placement of the EMG electrodes, resolving in change of the signal source. Muscle contractions in them selves can also make changes to the recorded EMG due to change in the microscopic structure of the muscles caused by overlap of thick and thin filaments. \cite{martini}  
@@ -10,6 +10,15 @@ Several studies have tried to address the problem of limb position and changes i
 Fougner et al. combined EMG recordings and accelerometer data when classifying movements in five different arm positions during eight different hand gestures. Using pattern recognition they found a reduction in classification error from 18\% to 5\% when using both EMG and accelerometer data. \cite{Fougner2011} Jiang et al. used EMG data and recordings of 3D markers places on able-bodied and amputated subjects' arms when performing different hand movements in three different arm positions. They found a decrease in classification error when using training data across different arm positions. They also concluded that the limb position does have a significant effect on the estimation performance for both subject groups, but that results cannot be translated between able-bodied and amputees. \cite{Jiang2013} Krasoulis et al. used linear discriminant analysis to analyse recordings from 22 subjects (20 able-bodied, 2 amputees) performing 40 different movements at the wrist, hand and fingers. The recordings included EMG data along with accelerometer, gyroscope and magnetometer data. They found a significant increase in classification accuracy by 22.6\% when using both EMG and IMU data. \cite{Krasoulis2017} 
 
 Based on previous studies it can be determined that a combination of EMG and IMU's can be used to achieve higher classification accuracy when classifying different hand movements in different limb positions. Thus, this project will focus on the mapping of different hand gestures while having the arm in different positions. As a novel approach this project will also investigate the possibility of using regression methods instead of recognitions methods.  
+
+
+This leads to the following hypotheses:
+\begin{itemize}
+	\item Simultaneous and proportional control of two DOF's of the wrist in different limb positions, can be achieved through the use of linear regression as control system. 
+	\item Combining EMG and IMU's can minimize the limb position effect when using regression as control system. 
+\end{itemize}
+
+
 
 
 
