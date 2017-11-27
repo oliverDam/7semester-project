@@ -10,7 +10,7 @@
 
 
 % The following packages can be found on http:\\www.ctan.org
-%\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{graphics} % for pdf, bitmapped graphics files
 %\usepackage{epsfig} % for postscript graphics files
 %\usepackage{mathptmx} % assumes new font selection scheme installed
 %\usepackage{times} % assumes new font selection scheme installed
@@ -18,8 +18,8 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-	How using the wrong camera fucks up a project 
-}
+	Simultaneous and proportional myoelectric control
+}%final name
 
 %\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
 %         \thanks{*Use the $\backslash$thanks command to put information here}\\
@@ -36,7 +36,7 @@
 %         {\tt\small pmisra@cs.wright.edu}}
 %}
 
-\author{Annabel Bantle, Toby Steven Waterstone, Christian Korfitz Mortensen}% <-this % stops a space
+\author{Simon,Oliver,Martin,Irene}% <-this % stops a space
 
 
 \begin{document}
@@ -51,30 +51,66 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{abstract}
 		
-	Thau should not use thermal camera
+	something
 		
 	\end{abstract}
 	
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{INTRODUCTION}
+In recent years the development of electromyography (EMG) controlled prosthesis have advanced due to an increased interest in the area as well as a higher demand of better control of this prosthesis.\cite{fougner2012}
+In the early years most EMG prosthetics functioned by only controlling one degree of freedom (DOF) by \textit{on-off control}, mostly by linking antagonistic muscles to one DOF. This along with \textit{mode switching} provided users a way to control more than one DOF, but not in a simultaneous way. However, as demands would rise, more complex methods was introduced to the EMG scene, and proportional control was brought in with pattern recognition methods. This effectively enabled simultaneous control of more than one DOF, but gave rise to new problems; a wider range of control would give less accurate movements, and training the pattern recognition methods proved difficult, as the training could over-fit, causing extended use of the prosthetics to degrade in performance. \cite{Ison2016}. It has been proved that regression techniques can be apply as a new mapping method to achieve simultaneous and proportional control of multiple DOFs\cite{hanhe2014}. However there are still difficulties when prosthesis perform outside the clinical training environment\cite{jiang2012}. Fougner et al.\cite{Fougner2011} noticed that majority of studies only take in account one limb position which becomes a problem since muscles create muscle-synergies to perform movements. It has been demonstrated that the variations in limb positions can have an impact on the robustness of EMG pattern recognition. In order to overcome this problem it has been suggested to combine EMG data as well as inertial measurement units (IMU) data in the training sesions of the regressor to obtain simultaneous and proportional control of EMG prosthesis.
+%Hypothesis
+%This study aims at a novel approach to verify if it is possible, applying simple linear regression techniques to achive simultaneous and proportional control of two DOFs in lower-arm prosthesis and mitigate the effect of the different limb positions have on the control of this devices using EMG signals as well as IMU data.	
+
+	\section{METHODS}
 	
-	Although there have been several studies, which have dealt with the occurrences within the capillary network, this area is not completely investigated. Especially not the phenomena of the oscillating changes of the vessel diameter of the capillaries. This phenomena, called vasomotion, which occurs in the microcirculatory system is an auto-regulation mechanism that optimizes blood distribution within the microcirculatory system.
-	With better knowledge about the occurrences during vasomotion, it is possible to improve the treatment of intensive care patients. Particularly for sepsis patients, which are in a high risk of multi organ failure, might be the chance to prevent multi organ failure due to a lack of supply through the microcirculatory system in the organs.
+	\subsection{Experimental Setup}
+EMG data was collected from four able-bodied subjects (three males,one female). The subjects performed four different hand gestures. This study is only focus on two DOF,which are, flexion and extension, radial and ulnar deviation. The order in the execution of the movements was the same for each subject.
+EMG signals were recorded with Myo armband. This device counts with eight medical grade stainless steel surface EMG sensors. Furthermore its nine axis IMU provides information about position and orientation of the arm. The Myo armband was positioned in the right forearm of the subjects (all subjects right handed). The procedure was performed in three different limb positions.\\
+In order to acquire the training data a graphical user interface (GUI) was implemented in MATLAB. Firstly baseline was meassure holding the forearm relaxed and the wrist in a neutral position for the correspond limb position. This measure was substracted from the signal afterwards to be able to remove the present artefacts. 
+
+%baseline,MVC...
 	
-	Previous studies detected that the vasomotric blood flow is quantifiable as temperature micro oscillations in the frequency range of $0,005 - 0,05 Hz$. Based on this, it must be possible to detect a difference in the mean spectrum temperature oscillations in the microcirculatory system, depending on the blood flow in the macrocirculatory system.
-	Therefore a study of vasomotion in the peripheral circulation with infrared thermography is implemented. Thereby the temperature oscillations in the skin, which are used as an indicator for peripheral circulation, are measured by infrared imaging. The aim of this study was to investigate if there are changes in the vasomotric blood flow caused by partial occlusion of the blood supply. The restriction of the blood supply causes an ischemia, which leads to a lack of oxygen. This is used to image one effect of sepsis.
-	This study lays the foundation for further experiments to elaborate the relationship between the pathological changes in the cardiovascular system and the microcircualtation to draw conclusions out of the vasomotric blood flow to improve the treatment of patients with sepsis.
+	%\subsection{Maintaining the Integrity of the Specifications}
 	
-	\section{PROCEDURE FOR PAPER SUBMISSION}
+	%The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
 	
-	\subsection{Selecting a Template (Heading 2)}
+	\subsection{Preprocessing}
 	
-	First, confirm that you have the correct template for your paper size. This template has been tailored for output on the US-letter paper size. Please do not use it for A4 paper since the margin requirements for A4 papers may be different from Letter paper size.
-	
-	\subsection{Maintaining the Integrity of the Specifications}
-	
-	The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
+	\subsection{Feature extraction}
+	The features extracted were Mean absolute value (MAV) as well as logarithmic variance. MAV represent the amplitud of the signal. It is defined as the average of the absolute values of the EMG signal and expresed as:
+	\begin{equation}
+	MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
+	\end{equation}
+	where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
+	The logarithmic variance is a nonlinear transformation of the variance applied to %linealidad
+	\begin{equation} \label{eq:logvar}
+	log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
+	\end{equation}
+	where N expresses the length of the signal, $x_i$ is the $i^th$ sample of the signal and $\mu$ is the mean.
+	\subsection{Regression models}
+	The acquired data was used to train the four different regressors that had been implemented, one for each of the movements under study. Simple linear regression had been applied as is shown in \ref{reg}:
+\begin{equation} \label{eq:simpleLinearRegression}
+Y_i = \alpha + \beta X_i + \epsilon_i
+\label{reg}
+\end{equation}
+where, $Y$ is the dependent variable or response, $X$ is the independent variable or the predictor, $\beta$ is the regression coefficient or the slope, and $\alpha$ is the Y intercept (predicted value of $Y$ at $X = 0$),  $\epsilon$ is the error and $i$ is the index.
+	\subsection{Data validation}
+	In order to evaluate the quality of the features extracted from the EMG signals, Principal Component Analysis (PCA) was applied. This analysis tool was performed for each movement in each limb position and represented in three dimensional space as shown in %figure. 
+	Through this tool is  possible to see significant outliers or if the clusters formed by the features can be easily distinguishable. This was done to avoid inaccurate training of the regressors.
+\begin{figure}[thpb]
+	\centering
+	\framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
+	}}
+	%\includegraphics[scale=1.0]{figurefile}
+	\caption{Inductance of oscillation winding on amorphous
+		magnetic core versus DC bias magnetic field}
+	\label{figurelabel}
+\end{figure}
+	\subsection{Regressor accuracy}
+	To meassure the accuracy of the regressor, Root Mean Squared Error (RMSE) was calculated. RMSE is a calculation of the standard deviation of the residuals, that is, the difference between the estimated and the actual values.
+	%equation
 	
 	\section{MATH}
 	
