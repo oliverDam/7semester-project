@@ -37,7 +37,7 @@ This will be set as input to the training of the regressor, while the estimator 
 \end{bmatrix}
 \end{equation}
 
-Where \textit{normMove} is the desired estimator, \textit{rightFeat} is the desired input feature for the desired movement in all limb positions and \textit{wrongFeat} is the features that should not be recognized by the given regressor. The regressor is implemented through the MatLab function \textit{fitlm}, which use the input matrix and estimator vector to calculate the slope and intercept of the regressor.
+Where \textit{normMove} is the desired estimator, \textit{rightFeat} is the desired input feature for the desired movement in all limb positions and \textit{wrongFeat} is the features that should not be recognized by the given regressor. The regressor is implemented through the Matlab function \textit{fitlm}, which use the input matrix and estimator vector to calculate the slope and intercept of the regressor.
 This procedure is done for each movement, which yields four regressors trained to recognize one movement each. This procedure is done individually for MAV and logarithmic variance features to test the accuracy and performance of the two features. 
 
 
