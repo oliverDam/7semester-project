@@ -7,15 +7,15 @@ Fitts' Law calculates an \textit{Index of Difficulty} (ID) by \eqref{eq:Fitts}
 ID = log_{2} * (\frac{2D}{W})
 \end{equation}
 
-Where ID is Index of Difficulty, D is distance to targes and W is width of target area. However, the system in this study does not provide a reasonable scale for distance and target width, an so Fitts' Law cannot be used as usual. Instead only the time is takes a subject to reach the targets and the number of targets reached will be noted to calculate a performance score. The score will be calculated as shown in \eqref{eq:ourScore}.
+Where ID is Index of Difficulty, D is distance to targes and W is width of target area. However, the system in this study does not provide a reasonable scale for distance and target width. Thus, Fitts' Law cannot be used as usual. Instead only the time is takes a subject to reach the targets and the number of targets reached will be noted to calculate a performance score. The score will be calculated as shown in \eqref{eq:ourScore}.
 
 \begin{equation} \label{eq:ourScore}
 	Score = \frac{time}{targets\ reached}
 \end{equation}
 
-Calculating the performance score like this will result in low scores representing the best performance.
+The equation indicates that the lower the score the better the performance.
 
-The modified Fitts' Law test will be implemented in the test GUI compass-plot, described in \secref{sec:testGUI}. The test will consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii, eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control. 
+This modified Fitts' Law test will be implemented in the test GUI compass-plot, described in \secref{sec:testGUI}. The test will consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii, eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control. 
 During evaluation of the performance score it will be considered which targets were reached. This can provide knowledge on the regressors if there are specific directions in which they perform worse, due to targets not reached in that quadrant. 
 
 
