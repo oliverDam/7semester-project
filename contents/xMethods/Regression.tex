@@ -8,7 +8,7 @@
 Once the preprocessing and the feature extraction of the EMG data has been done, regression will be used as described in \secref{sec:regression}. The implementation follows simple linear regression as shown in \eqref{eq:simpleLinearRegression}. One regressor will be trained for each movement. 
 
 
-The feature data will be constructed into one matrix containing the extracted features for all four movements in the three different limb positions arranged into four segments in the matrix. 
+The feature data will be constructed into one matrix containing the extracted features for all four movements at all intensities including the baseline in the three different limb positions arranged into four segments in the matrix. 
 
 This will be set as input to the training of the regressor, while the estimator is a vector containing the mean of all eight channels of the actual data, normalized in relation to the recorded MVC. This provides data for the movement that the regressor will be trained to recognize. The estimator vector is augmented with zeros for the segments of the movements that the regressor is trained not to recognize. This is shown in \eqref{eq:regressionMatrix}
 
