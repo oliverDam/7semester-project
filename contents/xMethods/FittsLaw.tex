@@ -15,8 +15,16 @@ Where ID is Index of Difficulty, D is distance to targes and W is width of targe
 
 The equation indicates that the lower the score the better the performance.
 
-This modified Fitts' Law test will be implemented in the test GUI compass-plot, described in \secref{sec:testGUI}. The test will consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii, eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control. 
-During evaluation of the performance score it will be considered which targets were reached. This can provide knowledge on the regressors if there are specific directions in which they perform worse, due to targets not reached in that quadrant. 
+This modified Fitts' Law test will be implemented in the test GUI compass-plot, as seen in \figref{fig:PlacesToGo}. 
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{figures/Methods/PlacesToGo.png}  %<--but is not needed.
+	\caption{The compass plot shows the performed movements and the given intensity of the EMG depicted as an arrow originated in origo. The direction of the arrow decides the movement and the length decides the intensity. The test GUI is implemented in the same GUI as the training GUI, but the plot will change once the "target test" button is pressed. The red squares are targets the subject needs to reach. Only one target will be present at a time, but all the targets are depicted in this illustration to show which targets the subjects will be asked to reach.}
+	\label{fig:PlacesToGo}
+\end{figure}
+
+The test will consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii: eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control. 
+During evaluation of the performance score it will be analysed which targets were reached. This can provide knowledge on the regressors if there are specific directions in which they perform worse, due to targets not reached in that quadrant. 
 
 
 %To calculate the performance of the human interacting with the control system, the \textit{throughput} (TP) was introduced. IP is calculated by \eqref{eq:TP}.
