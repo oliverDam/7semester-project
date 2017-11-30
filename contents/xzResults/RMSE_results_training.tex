@@ -1,20 +1,33 @@
 \section{Regression accuracy}
-The plot in \figref{fig:regressionOutputVsInput} depicts the actual data superimposed on the estimated data from the regressors. 
+This section includes an examination of the accuracy of the regressors. This will be examined through superimposition of the regressor outputs on the estimated data, and through RMSE plots. 
+The plot in \figref{fig:SuperPositionTestDataLogVar} depicts the actual data superimposed on the estimated data from the regressors trained with the logarithmic variance features. 
 
 \begin{figure}[H]
-	\includegraphics[width=0.7\textwidth]{figures/results/regressionOutputVsInput}  %<--but is not needed.
-	\caption{Plot of the actual data, red plot, superimposed on the regression outputs from the logarithmic variance and MAV features for the four hand gestures, which is the blue and green plot respectively. Each segmentation of the hand gestures has the same sample size.}
-	\label{fig:regressionOutputVsInput}  %<--give the figure a label, so you can reference!
+	\includegraphics[width=0.7\textwidth]{figures/results/SuperPositionTestDataLogVar}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the logarithmic variance features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:SuperPositionTestDataLogVar}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-A quantitatively examination of the plot shows that regression on MAV features yields a more accurate output than regression on the logarithmic variance feature, whereas both estimates yield inaccurate fitting in the high intensities. However, both estimates yield inaccurate fitting in the high intensities compared to the lower intensities, especially in the ulnar deviation movement.
+The plot in \figref{fig:SuperPositionTestDataMAV} depicts the actual data superimposed on the estimated data from the regressors trained with the MAV features. 
+
+\begin{figure}[H]
+	\includegraphics[width=0.7\textwidth]{figures/results/SuperPositionTestDataMAV}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:SuperPositionTestDataMAV}  %<--give the figure a label, so you can reference!
+\end{figure}
+
+
+A quantitatively examination of the plots shows that each regressor reacts on the movement it is fitted for, and remains inactive when another movement is performed. This accounts for both features. 
+%regression on MAV features yields a more accurate output than regression on the logarithmic variance feature, whereas both estimates yield inaccurate fitting in the high intensities. However, both estimates yield inaccurate fitting in the high intensities compared to the lower intensities, especially in the ulnar deviation movement.
   
 
 
-Calculating the RMSE of the regressors for the MAV and logarithmic variance features of the training data across all subjects, yields the results depicted in \figref{fig:gimmeThemRMSEBars}. The overall mean of the RMSE of MAV is 0.0867 with a standard deviation of $\pm 0.0310$, where the highest mean of a regressor is 0.0410 and the highest standard deviation is $\pm 0.0975$. The overall mean of the RMSE of the logarithmic variance is 0.1047 with a standard deviation of $\pm 0.0273$, where the highest mean of a regressor is 0.0386 and the highest standard deviation is $\pm 0.1097$. MAV then yields a lower mean RMSE than the logarithmic variance, where the logarithmic variance has a lower standard deviation than MAV. 
+Calculating the RMSE of the regressors for the MAV and logarithmic variance features of the training data across all subjects, yields the results depicted in \figref{fig:gimmeThemRMSEBars}. 
 
 \begin{figure}[H]
 	\includegraphics[width=.7\textwidth]{figures/results/gimmeThemRMSEBars}  %<--but is not needed.
 	\caption{Bar plot of the error of MAV and the logarithmic variance features for the four hand gestures. The bar chart illustrates the mean error and the error bar illustrates the standard deviation}
 	\label{fig:gimmeThemRMSEBars}  %<--give the figure a label, so you can reference!
 \end{figure}
+
+The overall mean of the RMSE of MAV is 0.0943 with a standard deviation of $\pm 0.0290$, where the highest mean of a regressor is 0.1088 and the highest standard deviation is $\pm 0.0366$. The overall mean of the RMSE of the logarithmic variance is 0.1107 with a standard deviation of $\pm 0.0298$, where the highest mean of a regressor is 0.1216 and the highest standard deviation is $\pm 0.0402$. MAV then yields a lower mean RMSE and a lower standard deviation than the logarithmic variance - both with the overall RMSE and for the movement with the highest RMSE. 
