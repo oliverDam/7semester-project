@@ -115,33 +115,44 @@ The development of EMG controlled prosthetics have advanced greatly in recent ye
 }
 
 %----------------------------------------------------------------------------------------
-%	RESULTS 1
+%	RESULTS 1	Online training results
 %----------------------------------------------------------------------------------------
 
-\headerbox{Results 1}{name=results,column=2,span=2,row=0}{
+\headerbox{Online Results}{name=results,column=2,span=2,row=0}{
 
+Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as the relation between time and number of targets reached.
 \begin{multicols}{2}
+	 
 \vspace{1em}
-\begin{center}
-\includegraphics[width=0.8\linewidth]{placeholder}
-\captionof{figure}{Figure caption}
-\end{center}
-
-Aliquam auctor, metus id ultrices porta, risus enim cursus sapien, quis iaculis sapien tortor sed odio. Mauris ante orci, euismod vitae tincidunt eu, porta ut neque. Aenean sapien est, viverra vel lacinia nec, venenatis eu nulla. Maecenas ut nunc nibh, et tempus libero. Aenean vitae risus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
-\end{multicols}
-
-%------------------------------------------------
-
-\begin{multicols}{2}
-\vspace{1em}
-Sed fringilla tempus hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut elit sit amet metus lobortis consequat sit amet in libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem magna. Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing. Quisque vestibulum eros eu.
 
 \begin{center}
-\includegraphics[width=0.8\linewidth]{placeholder}
-\captionof{figure}{Figure caption}
+	\includegraphics[width=0.3\linewidth]{TestScore}
+	\captionof{figure}{The mean test score among four subjects when using regressors trained with Log-Var excluding IMU information}
 \end{center}
 
+
+\begin{center}
+	\includegraphics[width=0.3\linewidth]{TestScore}
+	\captionof{figure}{The mean test score among four subjects when using regressors trained with Log-Var excluding IMU information}
+\end{center}
+
+*** text ***
+
 \end{multicols}
+
+placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. 
+
+%%------------------------------------------------
+%
+%\begin{multicols}{2}
+%
+%\begin{center}
+%\includegraphics[width=0.2\linewidth]{TestScore}
+%\captionof{figure}{The mean test score among four subjects when using regressors trained with Log-Var including IMU information}
+%\end{center}
+% 
+%text?
+%\end{multicols}
 }
 
 %----------------------------------------------------------------------------------------
@@ -225,7 +236,7 @@ Sed fringilla tempus hendrerit. Vestibulum ante ipsum primis in faucibus orci lu
 %	MATERIALS AND METHODS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Materials \& Methods}{name=method,column=0,below=objectives,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Methods}{name=method,column=0,below=objectives,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
 Surface EMG data was collected from four able-bodied subjects. Subjects were instructed to performed four different hand gestures. This study only focus on two DOF, which are, flexion and extension, radial and ulnar deviation of the wrist. sEMG signals were recorded with Myo armband, positioned on the right forearm of the subjects while standing.
 
@@ -259,39 +270,43 @@ All data processing is performed in Matlab (2017).
 }
 
 %----------------------------------------------------------------------------------------
-%	RESULTS 2
+%	RESULTS 2 Offline training results
 %----------------------------------------------------------------------------------------
 
-\headerbox{Results 2}{name=results2,column=1,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Offline Results}{name=results2,column=1,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
 
-Donec faucibus purus at tortor egestas eu fermentum dolor facilisis. Maecenas tempor dui eu neque fringilla rutrum. Mauris \emph{lobortis} nisl accumsan.
-
+Results of the superimposition of the regressor outputs on the estimated data.
 \begin{center}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\captionof{table}{Table caption}
+	\includegraphics[width=0.9\linewidth]{gimmeThemRMSEBars}
+	\captionof{figure}{DATA}
 \end{center}
 
-Nulla ut porttitor enim. Suspendisse venenatis dui eget eros gravida tempor. Mauris feugiat elit et augue placerat ultrices. Morbi accumsan enim nec tortor consectetur non commodo.
+The results for the offline test of accuracy of the regressors of both test and training data. This test determines if the training of the regressors have over- or under-fitted to the training data. 
 
 \begin{center}
 \begin{tabular}{l l l}
 \toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
 \midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
+MAV & 0.0943 $\pm 0.0290$ & 0.1088 $\pm 0.0366$ \\
+Log-Var & 0.1107 $\pm 0.0298$ & 0.1216 $\pm 0.0402$ \\
 \bottomrule
 \end{tabular}
-\captionof{table}{Table caption}
+\captionof{table}{RMSE of training data}
+\end{center}
+
+*** maybe put some text here to devide the tables ***
+
+\begin{center}
+\begin{tabular}{l l l}
+\toprule
+\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
+\midrule
+MAV & ??? $\pm ???$ & ??? $\pm ???$ \\
+Log-Var & ??? $\pm ???$ & ??? $\pm ???$ \\
+\bottomrule
+\end{tabular}
+\captionof{table}{RMSE of test data}
 \end{center}
 }
 
