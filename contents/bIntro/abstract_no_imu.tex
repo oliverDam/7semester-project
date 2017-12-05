@@ -1,25 +1,20 @@
 %abstract
 \section{Abstract}
 
-\textbf{Background:} Electromyography (EMG) is widely used as input to control scheme of myoelectric prosthetics. However, EMG signals change with limb position and thus lowers the accuracy in classification.% and very few studies has assessed this problem.
-Most studies have formerly utilized pattern recognition methods to perform classification of movements.  
-%Inclusion of the use of Inertial Measurement Units (IMU) has proved to raise the accuracy in pattern recognition methods. 
-However, pattern recognition provides only control of one degree of freedom (DoF) at a time, and are computational costly. This study will investigate the usability of regression methods to classify movements to make a control scheme for myoelectric prosthetics. The aim is to test and compare two different features' (MAV and Logarithmic variance) performance when used to recognise movements of four movements at the wrist in three different limb positions. 
-
-%propose to use the combination of EMG recordings and accelerometer data in a linear regression model to overcome the slower reaction time of pattern recognition systems and to enable a simultaneous and proportional control scheme. 
+\textbf{Background:} Electromyography (EMG) is widely used as input to control scheme of myoelectric prosthetics. However, EMG signals change with limb position and thus lowers the accuracy in classification.% and very few studies has assessed this problem. 
+Inclusion of the use of Inertial Measurement Units (IMU) has proved to raise the accuracy in pattern recognition methods. However, pattern recognition methods provides only control of one degree of freedom (DoF) at a time, and are computational costly. This study propose to use the combination of EMG recordings and accelerometer data in a linear regression model to overcome the slower reaction time of pattern recognition systems and to enable a simultaneous and proportional control scheme. 
 
 
-\textbf{Methods:} In this study recordings from four able-bodied subjects has been collected, performing four hand movements at the wrist in three different limb positions. The data is evaluated through principal component analysis (PCA) and processed/trained with a linear model to classify the hand movements. Four regressors are trained for each test subject; four with each feature. The regressors are tested in a real-time visual environment on PC measuring time to complete a target-reaching task of eight targets. The performance of the regressors are compared through statistical analysis. The best performing feature regressor are the one who correctly can differentiate movements in different limb positions. 
-%the IMU data and not using IMU data to determine the effect of including IMU data. 
+\textbf{Methods:} In this study recordings from four able-bodied subjects has been collected, performing four hand movements at the wrist in three different limb positions. The data is evaluated through principal component analysis (PCA) and processed/trained with a linear model to classify the hand movements. Eight regressors are trained for each test subject; four with and without using IMU data. The regressors are tested in a real-time visual environment on PC measuring time to complete a target-reaching task of eight targets. The performance of the regressors are compared between using the IMU data and not using IMU data to determine the effect of including IMU data. 
 
 
 %modified Fitts' Law 
 
- 
+
 \textbf{Results:} 
 
 
-\textbf{Conclusion:} Since there is a significant difference in performance of the two features, it can be concluded/discussed that/if the inclusion of inertial measurement information in the training of the regressors can provide additional data on limb position, improving the regressors ability to differentiate between limb positions. In future studies this effect should be further investigated. 
+\textbf{Conclusion:} 
 
 
 \textbf{Keywords:} surface electromyography, inertial measurement unit, simultaneous and proportional myoelectric control, regression, hand motion classification, hand prosthetic
