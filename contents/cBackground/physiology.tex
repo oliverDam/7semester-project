@@ -21,8 +21,10 @@ The lower motor axon is branching out so that it can attach to the muscle fibre 
 Depending on the force that needs to be applied for a given task more or less motor units are activated and therefore more or less muscle fibres are contracted. The bigger the force the more motor units are activated. Furthermore, the number muscle fibres per motor unit varies between muscles in the human anatomy. The finer the movement the higher the innervation, e.g. the lower arm muscles has a higher innervation than those in the quadriceps. \cite{cram2012}
 
 \subsection{EMG states}
-%The EMG signal is a non-linear and non-stationary stochastic process.
-The EMG signal is the result of the addition of different motor unit action potential trains(MUAPTs) and can be divided into two main states, the transient state and the steady state. The transient state is related with the beginning phase of the muscle contraction, while the steady state is the stable phase of the muscle contraction when a constant position is held. \cite{mobarak2014}
+Motor unit action potential (MUAP) can be easily decribed as the addition of the action potentials emerging from the muscle fibers comprising the motor unit. The EMG signal is the result of the inclusion of different MUAP.
+
+ %JACOB COMENT:and can be divided into two main states, the transient state and the steady state.Before write is true for  ramp and hold contraction not for every contraction (training protocol related)
+ The transient state is related with the beginning phase of the muscle contraction, while the steady state is the stable phase of the muscle contraction when a constant position is held. \cite{mobarak2014}
 
 Although the steady state only contains a short temporal structure of the patterns involved in the contraction of the muscle \cite{mobarak}, studies has shown that it is possible to achieve online continuous control using steady-state EMG signals. A study by Englehart et al. \cite{} demonstrated that steady-state data classified more precisely than transient state data. This could be due to the fact that a larger amount of meaningful data is contained in this muscle contraction phase \cite{mobarak} For the training of the control system  in this project the steady signal will then be used. %However there are still limitations due the fact that the classifier can not deal with the transient EMG signals. Some clinical applications that combine both data have shown an increase in the recognition system.  
 
