@@ -8,13 +8,15 @@
 %To understand how it is possible to use EMG to control robotics or prostheses, especially robotics or prostheses which %represent the human arm, it is necessary to know the anatomy of the human arm.
 % --OR-- 
 This project will focus on the lower arm as the Myo armband will be used to extract information from this part of the body. The anatomy of the lower human arm will briefly be described in this section along with a description of relation between lower arm muscles and hand movements for selected gestures.
-The human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease. Each movement happens around an axis, and each axis denotes one degree of freedom (DOF). The arm posses six DOFs as shown in \figref{fig:armDOF}, where the DOF's of the hand is beeing ignored as they will not be relevant for the project.
+The human arm is designed to give humans a manoeuvrability and dexterity to coordinate and execute complicated and precise hand and finger movements with ease. Each movement happens around an axis, and each axis denotes one DOF. The arm has seven DOF's, where the arm is defined as distal to the shoulder joint and proximal to the hand. This means DOF's of the hands and fingers and translation of the shoulder are not included. Thus the DOF's included in this study are at the shoulder; abduction and adduction, flexion and extension, medial and lateral rotation. Extension and flexion at the elbow. Pronation and supination of the lower arm and at the wrist; extension and flexion, radial and ulnar deviation. 
 
-\begin{figure}[H]                                         %   File-type can be specified
-	\includegraphics[width=0.4\textwidth]{figures/anatomy/human_arm_dof}  %<--but is not needed.
-	\caption{Visualisation on the arms six degrees of freedom. \cite{ahmed2017}}
-	\label{fig:armDOF}  %<--give the figure a label, so you can reference!
-\end{figure}
+%as shown in \figref{fig:armDOF}, where the DOF's of the hand is beeing ignored as they will not be relevant for the project.
+%
+%\begin{figure}[H]                                         %   File-type can be specified
+%	\includegraphics[width=0.4\textwidth]{figures/anatomy/human_arm_dof}  %<--but is not needed.
+%	\caption{Visualisation on the arms six degrees of freedom. \cite{ahmed2017}}
+%	\label{fig:armDOF}  %<--give the figure a label, so you can reference!
+%\end{figure}
 
 The number of DOFs is defined as the number of possible input parameters to a movable mechanism, where each input controls an independent movement in one axis. Several bodies can work together in relation to each other, but the total number of DOFs will be the number of possible independent movements that can be performed between the bodies. \cite{dicker2003}
 
