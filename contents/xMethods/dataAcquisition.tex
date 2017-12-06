@@ -12,6 +12,20 @@ To acquire data a training GUI has been designed and implemented in Matlab. The 
 	\label{fig:GUI_Training}
 \end{figure} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% write into the other text!!!!!!!!!
+
+\subsection{EMG states}
+Motor unit action potential (MUAP) can be easily decribed as the addition of the action potentials emerging from the muscle fibers comprising the motor unit. The EMG signal is the result of the inclusion of different MUAP.
+
+%JACOB COMENT:and can be divided into two main states, the transient state and the steady state.Before write is true for  ramp and hold contraction not for every contraction (training protocol related)
+The transient state is related to the beginning phase of the muscle contraction, while the steady state is the stable phase of the muscle contraction when a constant position is held. \cite{mobarak2014}
+
+Although the steady state only contains a short temporal structure of the patterns involved in the contraction of the muscle \cite{mobarak}, studies has shown that it is possible to achieve online continuous control using steady-state EMG signals. A study by Englehart et al. \cite{} demonstrated that steady-state data classified more precisely than transient state data. This could be due to the fact that a larger amount of meaningful data is contained in this muscle contraction phase \cite{mobarak} For the training of the control system  in this project the steady signal will then be used. %However there are still limitations due the fact that the classifier can not deal with the transient EMG signals. Some clinical applications that combine both data have shown an increase in the recognition system. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 The functions of the GUI consists of a baseline measurement button, a MVC measurement button, a data recording button and a fraction of MVC intensity slider. The baseline measurement is acquired for the purpose of being subtracted from the signal, in order to remove the signal artefacts that are present. At the baseline acquisition the subject is resting the lower arm in the given limb position. The MVC is calculated as a mean of the maximum values in each of the eight channels, and is set as a normalized reference point of 1. The MVC is a contraction at the intensity of which the subject can withhold for 15 seconds. The data recording contains the raw data of a given fraction of the MVC. The fraction is decided by setting the slider to the wanted fraction value, before the recording is started. The slider sets the fraction value so the plateau of the trapeze is at the set value. The trapeze depicts an initial resting phase of two seconds with the intensity of 0, a transition phase of two seconds with an ascending slope until the plateau phase is reached, which has a three second duration, and then a final descending transition phase of two seconds and resting phase of one second. Initialization of the recording will show a green dot, which moves with time in relation to the normalized intensity. The green dot is calculated as the mean of the input EMG signal in a 200 ms window with a 100 ms overlap. Meanwhile IMU data for the orientation of the arm is being recorded and saved for later use. %The signal is afterwards normalized with the MVC measurement as the reference point. 
 From this acquired data features will be extracted and used to train regressors for each of the subjects for each of the hand gestures performed.
 
