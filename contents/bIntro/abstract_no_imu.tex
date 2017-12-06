@@ -4,7 +4,7 @@
 \textbf{Background:} Electromyography (EMG) is widely used as input to the control scheme of myoelectric prosthetics. However, EMG signals change with limb position and thus lowers the accuracy in pattern recognition \cite{Fougner2010}.% and very few studies has assessed this problem.
 Most studies have formerly utilized classification for pattern recognition when changing limb position.  
 %Inclusion of the use of Inertial Measurement Units (IMU) has proved to raise the accuracy in pattern recognition methods.
-However, classification provides only control of one degree of freedom (DoF) at a time, is are computational costly. This study will investigate the usability of linear regression to recognize movements to make a control scheme for myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control\cite{hahne2014}\. The aim is to test and compare the performance of two different features (Mean Absolute Value and Logarithmic variance) when used to recognize movements of four movements at the wrist in three different limb positions. 
+However, classification provides only control of one degree of freedom (DoF) at a time, is are computational costly. This study will investigate the usability of linear regression to recognize movements to make a control scheme for myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control\cite{hahne2014}\. The aim is to test and compare the performance of two different features (Mean Absolute Value(MAV) and Logarithmic Variance(LogVar)) when used to recognize movements of four movements at the wrist in three different limb positions. 
 
 
 \textbf{Methods:} In this study recordings from eight able-bodied subjects has been collected. The data is evaluated through principal component analysis (PCA) and trained with a linear regression model of which the Root Mean Square Error is calculated to evaluate the offline performance. One regressor is trained for each wrist movement for each test subject; four with each feature. The regressors are tested online in a visual environment measuring time to complete a target-reaching task of sixteen targets. The performance of the online test is compared between the different limb positions of the same feature and all limb positions of the two features through statistical analysis.
@@ -13,9 +13,9 @@ However, classification provides only control of one degree of freedom (DoF) at 
 
 
 \textbf{Results:} 
-
+Using a one-way ANOVA test the performance scores between the three limb positions, when applying the LogVar trained regressors in the online test, prove significantly different(p-value = 0.0468), and the H0 hypothesis can be rejected. For the MAV trained regressors the H0 hypothesis can not be rejected(p-value = 0.5665) and thus the performance score between all limb positions can not be proven significantly different. When comparing all performance scores from the two feature trained regression control schemes, the ANOVA test proves a significant difference (p = 0.004), where the mean of the LogVar and MAV performance scores is 14.6497 and 9.5664 respectively. 
 
 \textbf{Conclusion:} 
-
+In conclusion, the MAV trained regressors showed no significant difference in control between different limb positions opposed to the LogVar trained regressors. MAV also yielded significantly better results in the online test than LogVar. As implied in \cite{Fougner2010}, inclusion of inertial information might yield a more similar performance across different limb positions when using the LogVar feature to train regressors. 
 
 \textbf{Keywords:} surface electromyography, simultaneous and proportional myoelectric control, lower arm prosthetics, linear regression, machine learning %inertial measurement unit, hand motion classification,
