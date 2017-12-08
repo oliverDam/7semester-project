@@ -23,7 +23,7 @@ Regression methods are widely used in statistics as a method to determine relati
 %In \eqref{eq:simpleLinearRegression} $Y$ is the dependent variable, $X$ is the independent variable, $\beta$ is the regression coefficient in the sampled population, and $\alpha$ is the predicted value of $Y$ at $X = 0$. $\epsilon$ is the error, since the goal of regression is to find an approximation of $Y$ on some function of $X$, thus there will always be some error.
 %
 %Performing simple linear regression finds the correlation between the tested variables, and is expressed by the correlation coefficient. This coefficient describes how the two variables relate to each other by how the development of one variable is dependent on the the other. Thus a positive correlation represent that a change in one variable will resolve in a similar change in the other variable as well. On the contrary, a negative correlation imply that change in one variable will resolve in an opposite change in the other variable. If no correlation is present between the two variables no change in either variable will resolve in change in the other, and it can therefore be determined that the two variables has no relation to each other. \cite{zar2009}
-%The simple correlation coefficient is calculated as: \cite{zar2009}
+%The simple correlation coefficient is calculated as: \cite{zar2009} 
 
 
 %%%%%%%% from here on it is MULTIBLE LINEAR REGRESSION, which we kinda moved away from using (NO)
@@ -48,7 +48,8 @@ When three variables are present in the equation, the visual representation of t
 
 There exist no limit to the number of variables which can be tested, however there should always be at least two observations more than the number of variables, so that $n \geq m+2$. Otherwise multivariate regression is not possible. \cite{zar2009}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THIS FAR!!!!!
+Regression methods finds correlation between tested variables which is expressed by a correlation coefficient. The coefficient describes how the two variables relate to each other by how the development of one variable is dependent on the the other. Thus a positive correlation represent that a change in one variable will resolve in a similar change in the other variable as well. On the contrary, a negative correlation imply that change in one variable will resolve in an opposite change in the other variable. If no correlation is present between the two variables no change in either variable will resolve in change in the other, and it can therefore be determined that the two variables has no relation to each other. \cite{zar2009}
+The simple correlation coefficient is calculated as: \cite{zar2009}
 
 \begin{equation}
 r = \frac{\sum xy}{\sqrt{\sum x^{2} \sum y^{2}}}
@@ -57,8 +58,7 @@ r = \frac{\sum xy}{\sqrt{\sum x^{2} \sum y^{2}}}
 Furthermore a coefficient of determination can be calculated to express how much of the variability of the dependent variable is accounted for when regressing upon the independent variable. This coefficient is denoted $r^{2}$ and can be calculated by simply squaring the correlation coefficient ($r$). The higher the correlation the closer to $1$ the $r^2$ value will be. 
 Both $r$ and $r^{2}$ can be used to determine the strength of the relationship between the two tested variables. \cite{zar2009}
 
-If the obtained regressors for each of the hand gestures are trained properly performing with a low error rate, they will be able to perform independent simultaneous control. Compared to classification, where the control system decides upon a certain class of movement, using regression will allow the control system a more fluent control with a low computation time. \cite{hahne2014}
-
+%If the obtained regressors for each of the hand gestures are trained properly performing with a low error rate, they will be able to perform independent simultaneous control. Compared to classification, where the control system decides upon a certain class of movement, using regression will allow the control system a more fluent control with a low computation time. \cite{hahne2014}
 
 %one dependent variable and several independent are to be described and a generalization of the relationship between the variables wish to be found. 
 
