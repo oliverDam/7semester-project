@@ -10,12 +10,10 @@ ID = log_{2} * (\frac{2D}{W})
 Where ID is Index of Difficulty, D is distance to targes and W is width of target area. However, the system in this study does not provide a reasonable scale for distance and target width. Thus, Fitts' Law cannot be used as usual. Instead only the time is takes a subject to reach the targets and the number of targets reached will be noted to calculate a performance score. The score will be calculated as shown in \eqref{eq:ourScore}.
 
 \begin{equation} \label{eq:ourScore}
-	Score = \frac{time}{targets\ reached}
+	Score = time per reached target
 \end{equation}
 
-The equation indicates that the lower the score the better the performance.
-
-This modified Fitts' Law test will be implemented in the test GUI compass-plot, as seen in \figref{fig:PlacesToGo}. 
+The equation indicates that the lower the score the better the performance. This modified Fitts' Law test will be implemented in the test GUI compass-plot, as seen in \figref{fig:PlacesToGo}. 
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/Methods/PlacesToGo.png}  %<--but is not needed.
@@ -23,8 +21,9 @@ This modified Fitts' Law test will be implemented in the test GUI compass-plot, 
 	\label{fig:PlacesToGo}
 \end{figure}
 
-The test will done online and consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii: eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control. 
-During evaluation of the performance score it will be analysed which targets were reached. This can provide knowledge on the regressors if there are specific directions in which they perform worse, due to targets not reached in that quadrant. 
+The test will done online and consist of reaching 16 targets on time. Each target will be present for 45 seconds. If a target is not reached within that time the test will mark the target as missed and move on to the next target. The targets are oriented around origin in two different radii: eight targets close to origin and eight further away. This is done in order to test the proportional control of the regressors. The targets will be fixed on the axes of the compass-plot and in the diagonals in order to test for simultaneous control.
+The performance of the online test will be compared between the different limb positions of the same feature and all limb positions of the two features through statistical analysis. After the inclusion of inertial information the performance of the control without IMU's will be compared to the control that includes IMU's. 
+In the evaluation of the performance scores it will be measured whether the scores obtained from using regressors trained with MAV and LogVar respectively belongs to a normal distribution. This will provide information of which statistical analysis to use. If the data is normally distributed an ANOVA test will be performed, if not, a Friedman's test will be performed. During evaluation of the performance score it will additionally be analysed which targets were reached. This can provide knowledge on the regressors if there are specific directions in which they perform worse, due to targets not reached in that quadrant.  
 
 
 %To calculate the performance of the human interacting with the control system, the \textit{throughput} (TP) was introduced. IP is calculated by \eqref{eq:TP}.
