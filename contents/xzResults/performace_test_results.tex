@@ -2,9 +2,17 @@
 This section contains the results from the performance test done by the subjects. First of the results from the regressor trained only with EMG data are presented, and afterwards compared to the regressor trained with inclusion of IMU data. 
 
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{figures/results/TestScore.png}  %<--but is not needed.
+	\includegraphics[width=0.7\textwidth]{figures/results/GotItTime}  %<--but is not needed.
 	\caption{Calculated performance scores of the regressors trained with the logarithmic variance feature for the three limb positions. The bar chart illustrates the mean score across all subjects, and the error bar illustrates the standard deviation.}
-	\label{fig:TestScore}
+	\label{fig:GotItTime}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-The mean performance score of the test in the downright limb position across all subjects is 12.2417 with a standard deviation of $\pm 3.0080$. For the forward limb position the mean score is 19.1381 with a standard deviation of $\pm 10.2966$, and for the side limb position the mean score is 13.6479 with a standard deviation of $\pm 7.4756$. 
+A one-sample Kolmogorov-Smirnov test was done on the scores from the MAV and LogVar respectively and showed no normality in both score sets(p = $7 * 10^{-20}$, $8 * 10^{-20}$ ). A Friedman's test was therefore applied for statistical analysis. The performance scores between the three limb positions prove not to be significantly different (p = 0.57), when applying the LogVar trained regressors in the online test, and the $H_0$ hypothesis can not be rejected. For the MAV trained regressors the $H_0$ hypothesis can not be rejected either (p = 0.16), and thus the performance score between all limb positions can not be proven significantly different. When comparing all performance scores from the two feature trained regression control schemes, the Friedman's test proves no significant difference (LogVar: 6.5 s, MAC: 5.5 s; p = 0.13).
+
+
+
+\begin{figure}[H]
+	\includegraphics[width=0.7\textwidth]{figures/results/TargetsReached}  %<--but is not needed.
+	\caption{}
+	\label{fig:TargetsReached}  %<--give the figure a label, so you can reference!
+\end{figure}
