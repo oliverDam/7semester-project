@@ -123,44 +123,46 @@ The aim for this project is expressed in the following hypothesis:
 	
 \begin{multicols}{2}
 	
-	Results of the superimposition of the regressor outputs on the estimated data.
 	\begin{center}
 		\includegraphics[width=1\linewidth]{gimmeThemRMSEBars}
-		\captionof{figure}{DATA}
+		\captionof{figure}{RMSE when using training data.}
 	\end{center}
 	
-	The results for the offline test of accuracy of the regressors of both test and training data. This test determines if the training of the regressors have over- or under-fitted to the training data. 
+	Comparing the RMSE of MAV and LogVar through a Friedman's test indicates a significant difference (p = 0.0007), where LogVar has the higher mean. 
 	
 	\begin{center}
 		\begin{tabular}{l l l}
 			\toprule
-			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
 			\midrule
-			MAV & 0.0943 $\pm 0.0290$ & 0.1088 $\pm 0.0366$ \\
-			LogVar & 0.1107 $\pm 0.0298$ & 0.1216 $\pm 0.0402$ \\
+			MAV & 0.1096 &  $\pm 0.0321$ \\
+			LogVar & 0.1234 & $\pm 0.0281$ \\
 			\bottomrule
 		\end{tabular}
-		\captionof{table}{RMSE of training data}
+		\captionof{table}{Overall mean RMSE when using training data as input in the regression model}
 	\end{center}
 	
 \begin{center}
 	\includegraphics[width=1\linewidth]{RMSEBarPlotNewData}
-	\captionof{figure}{DATA}
+	\captionof{figure}{RMSE when using test data}
 \end{center}
 	
 	\begin{center}
 		\begin{tabular}{l l l}
 			\toprule
-			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
 			\midrule
-			MAV & ??? $\pm ???$ & ??? $\pm ???$ \\
-			LogVar & ??? $\pm ???$ & ??? $\pm ???$ \\
+			MAV & 0.1493 & $\pm 0.0469$ \\
+			LogVar & 0.1850 & $\pm 0.0484$ \\
 			\bottomrule
 		\end{tabular}
-		\captionof{table}{RMSE of test data}
+		\captionof{table}{Overall mean RMSE when using test data as input in the regression model}
 	\end{center}
 
+Comparing the RMSE of MAV and LogVar when using test data again indicated significant difference (p = 0.0082), where LogVar again has the higher mean. The RMSE of the MAV when using training data proves significantly smaller than the RMSE when using test data (p = 0.0002). Similar results are obtained for the LogVar regressor (p = 0.0002).
+
 \end{multicols}
+\vspace{1em}
 
 
 %%------------------------------------------------
@@ -206,13 +208,10 @@ The aim for this project is expressed in the following hypothesis:
 %	CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Contact Information}{name=contact,column=3,aligned=references,above=bottom}{ % This block is as tall as the references block
+\headerbox{Acknowledgement}{name=contact,column=3,aligned=references,above=bottom}{ % This block is as tall as the references block
 
-\begin{description}\compresslist
-\item[Web] www.smh.aau.dk
-\item[Email] 17gr7404@hst.aau.dk
-%\item[Phone] +1 (000) 111 1111
-\end{description}
+The authors would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen and Lotte N.S. Andreasen Struijk. Also a thank you to the test subjects who participated, with an extra applaud to Mikkel Birkedal for his dedication. 
+
 }
 
 %----------------------------------------------------------------------------------------
@@ -300,18 +299,19 @@ The regressors were tested online in a virtual environment, where the time to co
 	
 Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as the relation between time and number of targets reached.
 
-
+\vspace{-0.4cm}
 \begin{center}
-	\includegraphics[width=0.5\linewidth]{gotItMAV}
+	\includegraphics[width=0.7\linewidth]{gotItMAV}
 	\captionof{figure}{The mean test score among seven subjects when using regressors trained with MAV}
 \end{center}
 
+\vspace{-0.6cm}
 \begin{center}
-	\includegraphics[width=0.5\linewidth]{gotItLogVar}
+	\includegraphics[width=0.7\linewidth]{gotItLogVar}
 	\captionof{figure}{The mean test score among seven subjects when using regressors trained with LogVar}
 \end{center}
 	
-Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.5647), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). There was no difference in the time to reach the targets across the two features (LogVar: 6.5 s, MAV: 5.5 s; p = 0.13).
+Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.5647), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). There was no significant difference in the time to reach the targets across the two features (LogVar: 6.5 s, MAV: 5.5 s; p = 0.13).
 
 }
 
