@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[landscape,a0paper,fontscale=0.37]{baposter} % Adjust the font scale/size here (fontscale=0.285)
+\documentclass[landscape,a0paper,fontscale=0.375]{baposter} % Adjust the font scale/size here (fontscale=0.285)
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
@@ -83,16 +83,26 @@ linewidth=2pt % Width of the border lines around content boxes
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 %
-{\includegraphics[height=7em]{AAU_LOGO_RGB_UK.png}} % First university/lab logo on the left
-{\bf Performance test of linear regressors using inertial information combined with sEMG to minimize the limb position effect in proportional and simultaneous control of lower arm prosthetics. \vspace{0.05em}} % Poster title
-{\ Irene Uriarte, Martin Garenfeld, Oliver Damsgaard, Simon Bruun. \hspace{5pt} Aalborg University, School of Medicine and Health} % Author names and institution
-{\includegraphics[height=5em]{AAU_UK_CIRCLE_blue_rgb.png}} % Second university/lab logo on the right
+{\includegraphics[height=2.7em]{group7404.png}} % First university/lab logo on the left
+{\bf \fontsize{1.5cm}{1.5cm} THE \hspace{3pt} EFFECT \hspace{3pt} OF \hspace{3pt} LIMB \hspace{3pt} POSITION \hspace{3pt} ON \hspace{3pt} MYOELECTRIC \hspace{3pt} PROSTHETIC \hspace{3pt} CONTROL\\ \vspace{0.2em} USING \hspace{3pt} LINEAR \hspace{3pt} REGRESSION \vspace{0.5em}} % Poster title %The effect of limb position on myoelectric prosthetic control using linear regression 
+{\ \textit{Irene Uriarte, Martin Garenfeld, Oliver Damsgaard, Simon Bruun.} \hspace{1pt} Aalborg University, School of Medicine and Health \vspace{0.05em}} % Author names and institution
+{\includegraphics[height=7em]{AAU_LOGO_RGB_UK.png}} % Second university/lab logo on the right
 
 %----------------------------------------------------------------------------------------
-%	OBJECTIVES
+%	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Aim}{name=objectives,column=0,row=0}{
+\headerbox{Introduction}{name=introduction,column=0,row=0}{
+	
+	%The development of EMG controlled prosthetics have advanced greatly in recent years. More complex prosthetics are demanded and more advanced control mothods has been developed. Most control methods so far has utilized pattern recognition which only enables control of one degree of freedom at a time. Most studies have conducted tests in only one limb position, not considering the limb position effect on EMG signals. \cite{Fougner2011} This study aims to overcome the limb position effect by combining EMG with inertial information in the training sessions of the regressor to obtain simultaneous and proportional control of EMG prosthesis.
+	Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{Fougner2011}. Most previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hahne2014}. Only the RMS feature was previously tested in variations of limb positions in regression-based control \cite{Hwang2017}. This study investigated the effect of limb position in a linear regression-based control scheme, when using the commonly used Mean Absolute Value (MAV) and Logarithmic Variance (LogVar) feature, where the latter has shown linear properties \cite{hahne2014}.
+}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVES   bottomaligned=objectives
+%----------------------------------------------------------------------------------------
+
+\headerbox{Aim}{name=aim,column=1,row=0}{
 
 The aim for this project are expressed in the following two hypotheses:
 
@@ -103,15 +113,6 @@ The aim for this project are expressed in the following two hypotheses:
 \end{itemize}
 
 \vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
-}
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION
-%----------------------------------------------------------------------------------------
-
-\headerbox{Introduction}{name=introduction,column=1,row=0,bottomaligned=objectives}{
-
-The development of EMG controlled prosthetics have advanced greatly in recent years. More complex prosthetics are demanded and more advanced control mothods has been developed. Most control methods so far has utilized pattern recognition which only enables control of one degree of freedom at a time. Most studies have conducted tests in only one limb position, not considering the limb position effect on EMG signals. \cite{Fougner2011} This study aims to overcome the limb position effect by combining EMG with inertial information in the training sessions of the regressor to obtain simultaneous and proportional control of EMG prosthesis. 
 }
 
 %----------------------------------------------------------------------------------------
@@ -236,44 +237,42 @@ placeholder text. placeholder text. placeholder text. placeholder text. placehol
 %	MATERIALS AND METHODS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Methods}{name=method,column=0,below=objectives,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Methods}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
 Surface EMG data was collected from four able-bodied subjects. Subjects were instructed to performed four different hand gestures. This study only focus on two DOF, which are, flexion and extension, radial and ulnar deviation of the wrist. sEMG signals were recorded with Myo armband, positioned on the right forearm of the subjects while standing.
 
-The sEMG was recorded by eight channels in a frequency range 0-200Hz. IMU data was recorded using the buildt in accelerometer in the Myo armband. sEMG data were filtered through a second-order Butterworth high-pass filter, with cutoff frequency $f_c$=10Hz. 
+The sEMG was recorded by eight channels in a frequency range 0-200Hz. IMU data was recorded using the buildt in accelerometer in the Myo armband. Filtering were done through a second-order Butterworth high-pass filter ($f_c$=10Hz). 
 
-Features are extracted using a sliding-window of 40 samples with an overlapping of the 50\%. Two time domain features are extracted; Mean absolute value (MAV) and logarithmic variance. MAV represent the amplitud of the signal. It is defined as the average of the absolute values of the sEMG signal:
-\vspace{-0.4cm}
+Features are extracted using a sliding-window of 40 samples with an overlapping of the 50\%. Two time domain features are extracted; Mean absolute value (MAV) and logarithmic variance (LogVar). MAV represent the amplitud of the signal. It is defined as the average of the absolute values of the sEMG signal:
+\vspace{-0.2cm}
 \begin{equation}
 MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
-\end{equation} \vspace{-0.4cm}
+\end{equation} \vspace{-0.1cm}
 
 where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
-The logarithmic variance is a nonlinear transformation of the variance applied to %linealidad
-\vspace{-0.65cm}
+LogVar is a nonlinear transformation of the variance %applied to %linealidad
+\vspace{-0.2cm}
 \begin{equation} \label{eq:logvar}
 log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
-\end{equation}\vspace{-0.5cm}
+\end{equation}\vspace{-0.1cm}
 
 where $N$ is the length of the signal, $x_i$ is the $i^th$ sample of the signal and $\mu$ is the mean.
-PCA is applied to qualitatively determine the separability of the feature data. Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
+%PCA is applied to qualitatively determine the separability of the feature data. Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
 The regressors are implemented through simple linear regression:
-\vspace{-0.3cm}
+\vspace{-0.1cm}
 \begin{equation} \label{eq:simpleLinearRegression}
 Y = \alpha + \beta X + \epsilon
-\end{equation} \vspace{-0.5cm}
+\end{equation} \vspace{-0.1cm}
 
 where $Y$ is the dependent variable or response, $X$ is the independent variable or the predictor, $\beta$ is the regression coefficient or the slope, and $\alpha$ is the Y intercept (predicted value of $Y$ at $X = 0$),  $\epsilon$ is the error.
-The regressor accuracy of control is tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data for the intensities of the movements. The regressor accuracy is quantitatively tested through a target reaching task measuring time to reach 16 targets. The scores are compared through stastistical t-test, comparing scores between limb positions and between only using sEMG data and including IMU data. \vspace{0.5cm}
-
-All data processing is performed in Matlab (2017). 
+The regressor accuracy of control is tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data for the intensities of the movements. The regressor accuracy is quantitatively tested through a target reaching task measuring time to reach 16 targets. The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis. \vspace{0.5cm}
 }
 
 %----------------------------------------------------------------------------------------
 %	RESULTS 2 Offline training results
 %----------------------------------------------------------------------------------------
 
-\headerbox{Offline Results}{name=results2,column=1,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Offline Results}{name=results2,column=1,below=aim,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
 
 Results of the superimposition of the regressor outputs on the estimated data.
 \begin{center}
