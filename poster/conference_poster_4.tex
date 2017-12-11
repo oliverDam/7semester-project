@@ -85,7 +85,7 @@ linewidth=2pt % Width of the border lines around content boxes
 %
 {\includegraphics[height=2.7em]{group7404.png}} % First university/lab logo on the left
 {\bf \fontsize{1.5cm}{1.5cm} THE \hspace{3pt} EFFECT \hspace{3pt} OF \hspace{3pt} LIMB \hspace{3pt} POSITION \hspace{3pt} ON \hspace{3pt} MYOELECTRIC \hspace{3pt} PROSTHETIC \hspace{3pt} CONTROL\\ \vspace{0.2em} USING \hspace{3pt} LINEAR \hspace{3pt} REGRESSION \vspace{0.5em}} % Poster title %The effect of limb position on myoelectric prosthetic control using linear regression 
-{\ \textit{Irene Uriarte, Martin Garenfeld, Oliver Damsgaard, Simon Bruun.} \hspace{1pt} Aalborg University, School of Medicine and Health \vspace{0.05em}} % Author names and institution
+{\ \textit{Irene Uriarte, Martin Garenfeld, Oliver Damsgaard, Simon Bruun.} Aalborg University, School of Medicine and Health \vspace{0.05em}} % Author names and institution
 {\includegraphics[height=7em]{AAU_LOGO_RGB_UK.png}} % Second university/lab logo on the right
 
 %----------------------------------------------------------------------------------------
@@ -104,44 +104,64 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{Aim}{name=aim,column=1,row=0}{
 
-The aim for this project are expressed in the following two hypotheses:
+The aim for this project is expressed in the following hypothesis:
 
 %hypotheses
 \begin{itemize}
-	\item Simultaneous and proportional control of two DOF's of the wrist in different limb positions, can be achieve trough the use of linear regression as control system. 
-	\item Combining ssurface EMG and IMU's can minimize the limb position effect when using regression as control system. 
+	\item It is possible to yield similar performance in different limb positions in myoelectric prosthetic control using a linear regression based control scheme.
 \end{itemize}
 
 \vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
 }
 
 %----------------------------------------------------------------------------------------
-%	RESULTS 1	Online training results
+%	RESULTS 1	Offline training results
 %----------------------------------------------------------------------------------------
 
-\headerbox{Online Results}{name=results,column=2,span=2,row=0}{
-
-Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as the relation between time and number of targets reached.
+\headerbox{Offline Results}{name=results,column=2,span=2,row=0}{
+	
+	
 \begin{multicols}{2}
-	 
-\vspace{1em}
-
+	
+	Results of the superimposition of the regressor outputs on the estimated data.
+	\begin{center}
+		\includegraphics[width=1\linewidth]{gimmeThemRMSEBars}
+		\captionof{figure}{DATA}
+	\end{center}
+	
+	The results for the offline test of accuracy of the regressors of both test and training data. This test determines if the training of the regressors have over- or under-fitted to the training data. 
+	
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
+			\midrule
+			MAV & 0.0943 $\pm 0.0290$ & 0.1088 $\pm 0.0366$ \\
+			LogVar & 0.1107 $\pm 0.0298$ & 0.1216 $\pm 0.0402$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE of training data}
+	\end{center}
+	
 \begin{center}
-	\includegraphics[width=0.3\linewidth]{TestScore}
-	\captionof{figure}{The mean test score among four subjects when using regressors trained with Log-Var excluding IMU information}
+	\includegraphics[width=1\linewidth]{RMSEBarPlotNewData}
+	\captionof{figure}{DATA}
 \end{center}
-
-
-\begin{center}
-	\includegraphics[width=0.3\linewidth]{TestScore}
-	\captionof{figure}{The mean test score among four subjects when using regressors trained with Log-Var excluding IMU information}
-\end{center}
-
-*** text ***
+	
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
+			\midrule
+			MAV & ??? $\pm ???$ & ??? $\pm ???$ \\
+			LogVar & ??? $\pm ???$ & ??? $\pm ???$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE of test data}
+	\end{center}
 
 \end{multicols}
 
-placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. placeholder text. 
 
 %%------------------------------------------------
 %
@@ -237,76 +257,62 @@ placeholder text. placeholder text. placeholder text. placeholder text. placehol
 %	MATERIALS AND METHODS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Methods}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Methods and Material}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
-Surface EMG data was collected from four able-bodied subjects. Subjects were instructed to performed four different hand gestures. This study only focus on two DOF, which are, flexion and extension, radial and ulnar deviation of the wrist. sEMG signals were recorded with Myo armband, positioned on the right forearm of the subjects while standing.
+Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with Myo armband, positioned on the right forearm of the subjects while standing.
 
-The sEMG was recorded by eight channels in a frequency range 0-200Hz. IMU data was recorded using the buildt in accelerometer in the Myo armband. Filtering were done through a second-order Butterworth high-pass filter ($f_c$=10Hz). 
+The sEMG was recorded from eight channels with a 200Hz sample rate. Filtering was done with a second-order Butterworth high-pass filter ($f_c$ = 10Hz). 
 
-Features are extracted using a sliding-window of 40 samples with an overlapping of the 50\%. Two time domain features are extracted; Mean absolute value (MAV) and logarithmic variance (LogVar). MAV represent the amplitud of the signal. It is defined as the average of the absolute values of the sEMG signal:
+Features were extracted using a window of 40 samples with 50\% overlap. 
+MAV represent the amplitude of the signal. It is defined as the average of the absolute values of the sEMG signal:
 \vspace{-0.2cm}
 \begin{equation}
 MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
 \end{equation} \vspace{-0.1cm}
 
 where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
-LogVar is a nonlinear transformation of the variance %applied to %linealidad
+LogVar is a nonlinear transformation of the variance: %applied to %linealidad
 \vspace{-0.2cm}
 \begin{equation} \label{eq:logvar}
 log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
-\end{equation}\vspace{-0.1cm}
+\end{equation}\vspace{-0.3cm}
 
-where $N$ is the length of the signal, $x_i$ is the $i^th$ sample of the signal and $\mu$ is the mean.
-%PCA is applied to qualitatively determine the separability of the feature data. Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
-The regressors are implemented through simple linear regression:
+where $N$ is the length of the signal, $x_i$ is the $i^{th}$ sample of the signal and $\mu$ is the mean.
+PCA is applied to qualitatively determine the separability of the feature data. %Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
+The regression models (regressors) are calculated as following:
 \vspace{-0.1cm}
 \begin{equation} \label{eq:simpleLinearRegression}
-Y = \alpha + \beta X + \epsilon
-\end{equation} \vspace{-0.1cm}
+Y = \alpha + \beta X
+\end{equation} \vspace{-0.4cm}
 
-where $Y$ is the dependent variable or response, $X$ is the independent variable or the predictor, $\beta$ is the regression coefficient or the slope, and $\alpha$ is the Y intercept (predicted value of $Y$ at $X = 0$),  $\epsilon$ is the error.
-The regressor accuracy of control is tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data for the intensities of the movements. The regressor accuracy is quantitatively tested through a target reaching task measuring time to reach 16 targets. The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis. \vspace{0.5cm}
+where $Y$ is the estimated output, $X$ is the extracted feature data, $\beta$ is the regression coefficient, and $\alpha$ is the Y intercept.
+
+One regressor was build for each wrist movement for each test subject: four for each feature. The offline regressor accuracy was tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data. The regressors were tested quantitatively by calculating the Root Mean Square Error (RMSE) between the expected movement and the regressor output. This was done for both training and test data to evaluate if the regressor had over- or under-fitted to the training data. 
+The regressors were tested online in a virtual environment, where the time to complete a target-reaching task of sixteen targets was measured. The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis.
+\vspace{0.5cm}
 }
 
 %----------------------------------------------------------------------------------------
-%	RESULTS 2 Offline training results
+%	RESULTS 2 Online training results
 %----------------------------------------------------------------------------------------
 
-\headerbox{Offline Results}{name=results2,column=1,below=aim,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Online Results}{name=results2,column=1,below=aim,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
+	
+Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as the relation between time and number of targets reached.
 
-Results of the superimposition of the regressor outputs on the estimated data.
-\begin{center}
-	\includegraphics[width=0.9\linewidth]{gimmeThemRMSEBars}
-	\captionof{figure}{DATA}
-\end{center}
-
-The results for the offline test of accuracy of the regressors of both test and training data. This test determines if the training of the regressors have over- or under-fitted to the training data. 
 
 \begin{center}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
-\midrule
-MAV & 0.0943 $\pm 0.0290$ & 0.1088 $\pm 0.0366$ \\
-Log-Var & 0.1107 $\pm 0.0298$ & 0.1216 $\pm 0.0402$ \\
-\bottomrule
-\end{tabular}
-\captionof{table}{RMSE of training data}
+	\includegraphics[width=0.5\linewidth]{gotItMAV}
+	\captionof{figure}{The mean test score among seven subjects when using regressors trained with MAV}
 \end{center}
-
-*** maybe put some text here to devide the tables ***
 
 \begin{center}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Feature} & \textbf{Overall mean error} & \textbf{Highest mean error}\\
-\midrule
-MAV & ??? $\pm ???$ & ??? $\pm ???$ \\
-Log-Var & ??? $\pm ???$ & ??? $\pm ???$ \\
-\bottomrule
-\end{tabular}
-\captionof{table}{RMSE of test data}
+	\includegraphics[width=0.5\linewidth]{gotItLogVar}
+	\captionof{figure}{The mean test score among seven subjects when using regressors trained with LogVar}
 \end{center}
+	
+Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.5647), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). There was no difference in the time to reach the targets across the two features (LogVar: 6.5 s, MAV: 5.5 s; p = 0.13).
+
 }
 
 %----------------------------------------------------------------------------------------
