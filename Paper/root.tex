@@ -50,12 +50,13 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{abstract}
-Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{fougner2012}. Most previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. %Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hanhe2014}. %Only the RMS feature was previously tested in variations of limb positions in regression-based control \cite{hwang2017}. 
+Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{fougner2012}. Most of the previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. %Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hanhe2014}. %Only the RMS feature was previously tested in variations of limb positions in regression-based control \cite{hwang2017}. 
 This study investigated the effect of limb position in a linear regression-based control scheme, when using 
 %the commonly used 
 Mean Absolute Value (MAV) and Logarithmic Variance (LogVar) as features. %where the latter has shown linear properties \cite{hanhe2014}.
-Seven (more now) able-bodied subjects were recruited for data acquisition, performing four wrist movements in three different limb positions. One regression model %(regressor) 
-was build for each wrist movement for each test subject: four for each feature. The regressors were tested online in a virtual environment. %where the time to complete a target-reaching task of sixteen targets was measured. %The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis. 
+Seven (more now) able-bodied subjects were recruited for data acquisition, performing four wrist movements in three different limb positions. One regression model was build to recognize the different wrist movements under study, taking into account both features. %One regression model %(regressor) 
+%was build for each wrist movement for each test subject: four for each feature. 
+The regressors were tested online in a virtual environment. %where the time to complete a target-reaching task of sixteen targets was measured. %The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis. 
 %Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different 
 %(p = 0.5647), 
 %when applying the LogVar trained regressors %in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). 
@@ -76,9 +77,10 @@ In recent years the development of EMG controlled prosthesis have advanced due t
 In the early years most EMG prosthetics functioned by only controlling one DOF by \textit{on-off control}, mostly by linking antagonistic muscles to one DOF. %This along with \textit{mode switching} provided users a way to control more than one DOF, but not in a simultaneous way. 
 This control provided a way to control more than one DOF, but not simultaneously. However, as demands would rise, more complex methods were introduced to the EMG scene. Classification methods enabled simultaneous control of more than one DOF, but gave rise to new problems; a wider range of control would give less accurate movements, and training the pattern recognition methods proved difficult, as the training could over-fit, causing extended use of the prosthetics to degrade in performance. \cite{Ison2016}.
  
-It has been proved that regression techniques can be apply as a new mapping method to achieve simultaneous and proportional control of multiple DOFs\cite{hanhe2014}. Regression methods provide a continous value for each DOF based on the recorded EMG signal, while classification methods only decides upon a certain class. %However there are still difficulties when prosthesis perform outside the clinical training environment\cite{jiang2012}.
+It has been proved that regression techniques can be apply as a new mapping method to achieve simultaneous and proportional control of multiple DOFs\cite{hanhe2014}. Regression methods provide a continous value for each DOF based on the recorded EMG signal, while classification methods only decides upon a certain class. However there are still difficulties when prosthesis perform outside the clinical training environment\cite{jiang2012}.
  Fougner et al.\cite{Fougner2011} noticed that majority of studies only take in account one limb position. It has been shown that some muscles are activated based on joint angles \cite{reference}, even though the muscles are not involved in the movement of that joint, which can be explained by muscle-synergies existed between muscles.
-% which becomes a problem since muscles create muscle-synergies to perform movements. It has been demonstrated that the variations in limb positions can have an impact on the robustness of EMG pattern recognition. %To be able to offer a good perform of the prosthesis, these should be able to execute with the same accuracy diverse hand gestures in different limb positions. 
+% which becomes a problem since muscles create muscle-synergies to perform movements. 
+Variations in limb positions can have an impact on the robustness of EMG pattern recognition. %To be able to offer a good perform of the prosthesis, these should be able to execute with the same accuracy diverse hand gestures in different limb positions. 
 In order to overcome this problem it has been suggested to combine EMG data as well as IMU data, to provide limb position information. Nevertheless this combination of data have only been investigated for classification methods. 
 In this study we test the performance of linear regression methods combining EMG and IMU data for a simultaneous and proportional control of two DOFs in a lower-arm prothesis while the arm is located in different limb positions.
 % in the training sesions of the regressor to obtain simultaneous and proportional control of EMG prosthesis. 
@@ -91,8 +93,8 @@ In this study we test the performance of linear regression methods combining EMG
 	
 	\subsection{Experimental Setup}
 EMG data was collected from (define number) able-bodied subjects. The subjects performed four different hand gestures. This study is only focus on two DOF, which are, flexion, extension, radial and ulnar deviation of the wrist. The order in the execution of the movements was the same for each subject. EMG signals were recorded with Myo armband, positioned in the right forearm of the subjects (all subjects right handed). The procedure was performed in three different limb positions. In order to avoid shoulder fatigue a relaxation period was given between trials. The subjects were instructed not to move the fingers during the data acquisition. The process was performed in a standing position. \\ %figure hand and limb positions
- %Myo armband counts with eight medical grade stainless steel surface EMG sensors. %It is capable of pulling EMG data at a sample rate of 200 Hz. 
- %Furthermore its nine axis IMU provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer. 
+ Myo armband counts with eight medical grade stainless steel surface EMG sensors. %It is capable of pulling EMG data at a sample rate of 200 Hz. 
+ Furthermore its nine axis IMU provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer.\\   
  In order to acquire the training data necessary to build the regressor, a graphical user interface (GUI) was implemented in MATLAB. %Firstly baseline was meassure holding the forearm relaxed and the wrist in a neutral position for the corresponding limb position. This measure was substracted from the signal afterwards to be able to remove the present artefacts. Subsequently maximum voluntary contraction (MVC) was meassure. The MVC  was calculated as a mean of the maximum values in each of the eight cannels, and was set as a normalized reference point of 1.
  %The data acquisition was depicted through a trapeze. MVC was set as the desired value before data acquisition. Consequently each hand gesture was performed as a fraction of the MVC. At the begining of the training data collection two second resting phase was given followed by two seconds ascending slope to reach the plateau phase, with a duration of three seconds. Afterwards a descending phase of two seconds and a resting phase of one second finalized the data acquisition. The total acquisition time was ten seconds per hand movement.
 
@@ -120,8 +122,10 @@ EMG data was collected from (define number) able-bodied subjects. The subjects p
 	\end{equation}
 	where N expresses the length of the signal, $x_i$ is the $i^th$ sample of the signal and $\mu$ is the mean.
 	\subsection{Separability of data}
-	In order to evaluate the quality of the features extracted from the EMG signals, Principal Component Analysis (PCA) was applied. 
+Principal Component Analysis (PCA) was applied to be able to evaluate the quality of the features extracted from the EMG signals.
 	%This analysis tool express a set of correlated variables into non-correlated components. In that way, the data set can be expressed in a reduced dimensionality hyperspace using less but most representative variables which are the principal components. Through PCA is  possible to see significant outliers or if the clusters formed by the features can be easily distinguishable. This was done to avoid inaccurate training of the regressors. PCA was performed for each movement in each limb position. %and represented in three dimensional space.figure? 
+	\subsection{Data exclusion}
+	Some of the subjects were not able to perform through the study properly. In order to ensure constant data those subjects were exclude.
 	\subsection{Regression models}
 	The acquired data was used to built the different regressors that had been implemented, one for each movement under study and for both features. Multivariate linear regression as an extension of simple linear regression had been applied as is shown in \ref{reg}:
 \begin{equation}
@@ -157,6 +161,8 @@ EMG data was collected from (define number) able-bodied subjects. The subjects p
 	%Consequently low score results represent the best performance.
 	%To accomplish the modified Fitts' Law test a compass-plot was implemented in the GUI Fig.\ref{figurelabel}. The subjects had to reach 16 targets distributed around the origin in two different radius. This allows to test the proportional control. The targets were fixed in the diagonals of the compass-plot to be able to test simultaneous control. The amount of targets reached in each quadrant gives important information about the regressor performance as well as, providing the weak directions.
 	
+	
+	
 
 	
 	\section{RESULTS}
@@ -164,12 +170,12 @@ EMG data was collected from (define number) able-bodied subjects. The subjects p
 	something!!! 
 	
 	\subsection{Separability of the data} 
-	PCA performance for both features extracted is illustrated in Fig. \ref{PCA_MVA} (MVA) and in Fig. \ref{PCA_logvar} (logarithmic variance).
-	The importance of each component for MAV and logarithmic variance is represented in Fig. \ref{PCA_MVA}(a) and Fig. \ref{PCA_logvar}(a) respectively. On the one hand for the MAV feature making use of the three first components, 93.8\% of the data set can be described. On the other hand for the logarithmic variance feature the 93.97\% of the data set is describe with the three first components. This three PC have been plot for both features Fig. \ref{PCA_MVA}(b) and Fig. \ref{PCA_logvar}(b). There is no presence of remarkable outliers on two data sets and the formed clusters are easily distinguishable.
+	%PCA performance for both features extracted is illustrated in Fig. \ref{PCA_MVA} (MVA) and in Fig. \ref{PCA_logvar} (logarithmic variance).
+	%The importance of each component for MAV and logarithmic variance is represented in Fig. \ref{PCA_MVA}(a) and Fig. \ref{PCA_logvar}(a) respectively. On the one hand for the MAV feature making use of the three first components, 93.8\% of the data set can be described. On the other hand for the logarithmic variance feature the 93.97\% of the data set is describe with the three first components. This three PC have been plot for both features Fig. \ref{PCA_MVA}(b) and Fig. \ref{PCA_logvar}(b). There is no presence of remarkable outliers on two data sets and the formed clusters are easily distinguishable.
 
 
 	\subsection{Regression accuracy} 
-Through a quantitative examination of the figure(figure),is observed that MAV performed slightly better than the logarithmic variance for low intensities. However, both estimates yielded inaccurate fitting in high intensities, especially for ulnar deviation of the wrist. It has been extracted from the results illustrated in (figure), which represent the RMSE of the four different regressos for both features of the training data, than $RMSE_{MAV}$= 0.0867$\pm 0.031$ and $RMSE_{logvar}$= 0.1047$\pm 0.0273$. Overall MAV provided a lower mean but a higher standard deviation compared with logarithmic variance.
+%Through a quantitative examination of the figure(figure),is observed that MAV performed slightly better than the logarithmic variance for low intensities. However, both estimates yielded inaccurate fitting in high intensities, especially for ulnar deviation of the wrist. It has been extracted from the results illustrated in (figure), which represent the RMSE of the four different regressos for both features of the training data, than $RMSE_{MAV}$= 0.0867$\pm 0.031$ and $RMSE_{logvar}$= 0.1047$\pm 0.0273$. Overall MAV provided a lower mean but a higher standard deviation compared with logarithmic variance.
 
 		%\begin{figure}[thpb]
 		%\centering
@@ -202,7 +208,7 @@ Through a quantitative examination of the figure(figure),is observed that MAV pe
 
 	
 	
-	Figure Labels: Use 8 point Times New Roman for Figure labels. Use words rather than symbols or abbreviations when writing Figure axis labels to avoid confusing the reader. As an example, write the quantity ÒMagnetizationÓ, or ÒMagnetization, MÓ, not just ÒMÓ. If including units in the label, present them within parentheses. Do not label axes only with units. In the example, write ÒMagnetization (A/m)Ó or ÒMagnetization {A[m(1)]}Ó, not just ÒA/mÓ. Do not label axes with a ratio of quantities and units. For example, write ÒTemperature (K)Ó, not ÒTemperature/K.Ó
+	%Figure Labels: Use 8 point Times New Roman for Figure labels. Use words rather than symbols or abbreviations when writing Figure axis labels to avoid confusing the reader. As an example, write the quantity ÒMagnetizationÓ, or ÒMagnetization, MÓ, not just ÒMÓ. If including units in the label, present them within parentheses. Do not label axes only with units. In the example, write ÒMagnetization (A/m)Ó or ÒMagnetization {A[m(1)]}Ó, not just ÒA/mÓ. Do not label axes with a ratio of quantities and units. For example, write ÒTemperature (K)Ó, not ÒTemperature/K.Ó
 	
 	\section{CONCLUSIONS}
 	
