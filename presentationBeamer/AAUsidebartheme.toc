@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Methods and Materials}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Data Acquisition}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{GUI}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{GUI}{10}{0}{2}
+\beamer@sectionintoc {3}{Results}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Offline Results}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Offline Results}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Offline Results}{14}{0}{3}
+\beamer@subsectionintoc {3}{4}{Online Results}{15}{0}{3}
+\beamer@subsectionintoc {3}{5}{Online Results}{16}{0}{3}
+\beamer@subsectionintoc {3}{6}{Online Results}{17}{0}{3}
+\beamer@sectionintoc {4}{Discussion}{18}{0}{4}
+\beamer@sectionintoc {5}{Acknowledgement}{19}{0}{5}

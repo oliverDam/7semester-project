@@ -210,7 +210,7 @@ Comparing the RMSE of MAV and LogVar when using test data again indicated signif
 
 \headerbox{Acknowledgement}{name=contact,column=3,aligned=references,above=bottom}{ % This block is as tall as the references block
 
-The authors would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen and Lotte N.S. Andreasen Struijk. Also a thank you to the test subjects who participated, with an extra applaud to Mikkel Birkedal for his dedication. 
+We would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen and Lotte N.S. Andreasen Struijk, and the School of Medicine and Health for providing equipment. Also a thanks to the test subjects who participated.%, with an extra applaud to Mikkel Birkedal for his dedication. 
 
 }
 
@@ -218,35 +218,19 @@ The authors would like to thank our supervisors Strahinja Dosen, Jakob Lund Dide
 %	CONCLUSION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Conclusion}{name=conclusion,column=2,span=2,row=0,below=results,above=references}{
+\headerbox{Discussion}{name=conclusion,column=2,span=2,row=0,below=results,above=references}{
 
 \begin{multicols}{2}
-
-\tikzstyle{decision} = [diamond, draw, fill=blue!20, text width=4.5em, text badly centered, node distance=2cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=5em, text centered, rounded corners, minimum height=4em]
-\tikzstyle{line} = [draw, -latex']
-\tikzstyle{cloud} = [draw, ellipse, fill=red!20, node distance=3cm, minimum height=2em]
-
-\begin{tikzpicture}[node distance = 2cm, auto]
-\node [block] (init) {Initialize Model};
-\node [cloud, left of=init] (Start) {Start};
-\node [cloud, right of=init] (Start2) {Start Two};
-\node [block, below of=init] (init2) {Initialize Two};
-\node [decision, below of=init2] (End) {End};
-\path [line] (init) -- (init2);
-\path [line] (init2) -- (End);
-\path [line, dashed] (Start) -- (init);
-\path [line, dashed] (Start2) -- (init);
-\path [line, dashed] (Start2) |- (init2);
-\end{tikzpicture}
-
-%------------------------------------------------
-
-\begin{itemize}\compresslist
-\item Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh. Phasellus fermentum rutrum elementum. Nam quis justo lectus.
-\item Vestibulum sem ante, hendrerit a gravida ac, blandit quis magna.
-\item Donec sem metus, facilisis at condimentum eget, vehicula ut massa. Morbi consequat, diam sed convallis tincidunt, arcu nunc.
-\item Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
+	
+\begin{itemize}
+	
+	\item The online test results indicate that linear regression can be implemented as control scheme in myoelectric prosthetic control to yield similar performance across variations of limb position. This is opposed to previous studies using classification as control scheme.
+	\item It was found that offline and online performance of the implemented regressors is not necessarily correlated. The offline tests showed overfitting of the regression models, but the online test yielded robust control of wrist movements in all limb positions, which could be a result of the subjects$'$ ability to compensate for a poorer fitting model, when visual feedback is provided. \vspace{2cm} 
+	
+	
+	\item Even though LogVar shows linear properties in previous studies, the online test show no significant difference in performance when compared to MAV. 
+	\item Linear regression has the potential to be used in future control schemes for myoelectric prosthetics for use in daily life tasks. 
+	
 \end{itemize}
 
 \end{multicols}
@@ -297,7 +281,7 @@ The regressors were tested online in a virtual environment, where the time to co
 
 \headerbox{Online Results}{name=results2,column=1,below=aim,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
 	
-Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as the relation between time and number of targets reached.
+Results for the online test of regressor accuracy and control. The test is performed in a modified Fitts' Law test of reaching targets. The score is calculated as time per reached targets.
 
 \vspace{-0.4cm}
 \begin{center}
@@ -311,7 +295,7 @@ Results for the online test of regressor accuracy and control. The test is perfo
 	\captionof{figure}{The mean test score among seven subjects when using regressors trained with LogVar}
 \end{center}
 	
-Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.5647), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). There was no significant difference in the time to reach the targets across the two features (LogVar: 6.5 s, MAV: 5.5 s; p = 0.13).
+Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.1561), when applying the MAV trained regressors in the online test. For the LogVar trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.5647). There was no significant difference in the time to reach the targets across the two features (MAV: 5.5 s, LogVar: 6.5 s; p = 0.13).
 
 }
 
