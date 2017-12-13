@@ -242,7 +242,7 @@ We would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen an
 
 \headerbox{Methods and Material}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
-Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with Myo armband (eight channels, 200Hz sample rate), positioned on the right forearm of the subjects while standing.
+Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with a Myo armband (eight channels, 200Hz sample rate), positioned on the dominant forearm of the subjects while standing.
 
 %The sEMG was recorded from eight channels with a 200Hz sample rate. Filtering was done with a second-order Butterworth high-pass filter ($f_c$ = 10Hz). 
 %
@@ -262,7 +262,7 @@ Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subje
 %
 %where $N$ is the length of the signal, $x_i$ is the $i^{th}$ sample of the signal and $\mu$ is the mean.
 %PCA is applied to qualitatively determine the separability of the feature data. %Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
-The regression models (regressors) are calculated as following:
+The regression models (regressors) were calculated as following:
 \vspace{-0.1cm}
 \begin{equation} \label{eq:simpleLinearRegression}
 Y = \alpha + \beta X
@@ -271,7 +271,7 @@ Y = \alpha + \beta X
 %where $Y$ is the estimated output, $X$ is the extracted feature data, $\beta$ is the regression coefficient, and $\alpha$ is the Y intercept.
 
 One regressor was build for each wrist movement for each test subject: four for each feature. The offline regressor accuracy was tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data. The regressors were tested quantitatively by calculating the Root Mean Square Error (RMSE) between the expected movement and the regressor output. This was done for both training and test data to evaluate if the regressor had over- or under-fitted to the training data. 
-As an alternative to testing the regressors with an actual prosthesis, the regressors were tested online in a virtual environment, where the time to complete a target-reaching task of sixteen targets was measured. 
+As an alternative to testing the regressors with an actual prosthesis, the regressors were tested online in a virtual environment, where the time to complete a target-reaching task of 16 targets was measured. 
 
 \begin{center}
 	\includegraphics[width=0.8\linewidth]{NewPlacesToGo.png}
