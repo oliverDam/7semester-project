@@ -95,7 +95,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Introduction}{name=introduction,column=0,row=0}{
 	
 	%The development of EMG controlled prosthetics have advanced greatly in recent years. More complex prosthetics are demanded and more advanced control mothods has been developed. Most control methods so far has utilized pattern recognition which only enables control of one degree of freedom at a time. Most studies have conducted tests in only one limb position, not considering the limb position effect on EMG signals. \cite{Fougner2011} This study aims to overcome the limb position effect by combining EMG with inertial information in the training sessions of the regressor to obtain simultaneous and proportional control of EMG prosthesis.
-	Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{Fougner2011}. Most previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hahne2014}. Only the RMS feature was previously tested in variations of limb positions in regression-based control \cite{Hwang2017}. This study investigated the effect of limb position in a linear regression-based control scheme, when using the commonly used Mean Absolute Value (MAV) and Logarithmic Variance (LogVar) feature, where the latter has shown linear properties \cite{hahne2014}.
+	Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{Fougner2011}. Most previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hahne2014}. This study investigated the effect of limb position in a linear regression-based control scheme, when using the commonly used Mean Absolute Value (MAV) and Logarithmic Variance (LogVar) feature, where the latter has shown linear properties \cite{hahne2014}.
 }
 
 %----------------------------------------------------------------------------------------
@@ -123,28 +123,39 @@ The aim for this project is expressed in the following hypothesis:
 	
 \begin{multicols}{2}
 	
-	\begin{center}
-		\includegraphics[width=1\linewidth]{gimmeThemRMSEBars}
-		\captionof*{figure}{\textbf{Figure 2:} RMSE when using training data.}
-	\end{center}
+%	\begin{center}
+%		\includegraphics[width=1\linewidth]{gimmeThemRMSEBars}
+%		\captionof*{figure}{\textbf{Figure 2:} RMSE when using training data.}
+%	\end{center}
+%	
+%	Comparing the RMSE of MAV and LogVar through a Friedman's test indicates a significant difference (p = 0.0007), where LogVar has the higher mean. 
+%	
+%	\begin{center}
+%		\begin{tabular}{l l l}
+%			\toprule
+%			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+%			\midrule
+%			MAV & 0.1096 &  $\pm 0.0321$ \\
+%			LogVar & 0.1234 & $\pm 0.0281$ \\
+%			\bottomrule
+%		\end{tabular}
+%		\captionof{table}{Overall mean RMSE when using training data as input in the regression model}
+%	\end{center}
+
+\begin{center}
+	\includegraphics[width=1\linewidth]{NewSuperPoisonMavNewData}
+	\captionof*{figure}{\textbf{Figure 2:} Superimposition of test data and the regressor output for the MAV feature.}
+\end{center} %\vspace{-3.5cm}
+
+\begin{center}
+	\includegraphics[width=1\linewidth]{NewSuperPoisonMavNewData}
+	\captionof*{figure}{\textbf{Figure 3:} Superimposition of test data and the regressor output for the LogVar feature.}
+\end{center} %\vspace{7cm}
 	
-	Comparing the RMSE of MAV and LogVar through a Friedman's test indicates a significant difference (p = 0.0007), where LogVar has the higher mean. 
-	
-	\begin{center}
-		\begin{tabular}{l l l}
-			\toprule
-			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-			\midrule
-			MAV & 0.1096 &  $\pm 0.0321$ \\
-			LogVar & 0.1234 & $\pm 0.0281$ \\
-			\bottomrule
-		\end{tabular}
-		\captionof{table}{Overall mean RMSE when using training data as input in the regression model}
-	\end{center}
 	
 \begin{center}
 	\includegraphics[width=1\linewidth]{RMSEBarPlotNewData}
-	\captionof*{figure}{\textbf{Figure 3:} RMSE when using test data}
+	\captionof*{figure}{\textbf{Figure 4:} RMSE when using test data}
 \end{center}
 	
 	\begin{center}
@@ -227,7 +238,7 @@ We would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen an
 	\item The online test results indicate that linear regression can be implemented as control scheme in myoelectric prosthetic control to yield similar performance across variations of limb position. This is opposed to previous studies using classification as control scheme.
 	\item It was found that offline and online performance of the implemented regressors is not necessarily correlated. The offline tests showed overfitting of the regression models, but the online test yielded robust control of wrist movements in all limb positions, which could be a result of the subjects$'$ ability to compensate for a poorer fitting model, when visual feedback is provided. \vspace{2cm} 
 	
-	
+	\item These findings agree with a recently published study by Hwang et al. \cite{Hwang2017}, who tested other limb postions with the RMS feature.
 	\item Even though LogVar shows linear properties in previous studies, the online test show no significant difference in performance when compared to MAV. 
 	\item Linear regression has the potential to be used in future control schemes for myoelectric prosthetics for use in daily life tasks. 
 	
@@ -242,7 +253,7 @@ We would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen an
 
 \headerbox{Methods and Material}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
-Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with a Myo armband (eight channels, 200Hz sample rate), positioned on the dominant forearm of the subjects while standing.
+Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (Figure 1), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with a Myo armband (eight channels, 200Hz sample rate), positioned on the dominant forearm of the subjects.
 
 %The sEMG was recorded from eight channels with a 200Hz sample rate. Filtering was done with a second-order Butterworth high-pass filter ($f_c$ = 10Hz). 
 %
@@ -270,8 +281,14 @@ Y = \alpha + \beta X
 
 %where $Y$ is the estimated output, $X$ is the extracted feature data, $\beta$ is the regression coefficient, and $\alpha$ is the Y intercept.
 
-One regressor was build for each wrist movement for each test subject: four for each feature. The offline regressor accuracy was tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data. The regressors were tested quantitatively by calculating the Root Mean Square Error (RMSE) between the expected movement and the regressor output. This was done for both training and test data to evaluate if the regressor had over- or under-fitted to the training data. 
-As an alternative to testing the regressors with an actual prosthesis, the regressors were tested online in a virtual environment, where the time to complete a target-reaching task of 16 targets was measured. 
+One regressor was build for each wrist movement for each test subject: four for each feature. The offline regressor accuracy was tested qualitatively through superimposition of the expected and calculated output. 
+
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{mic3.png}
+	\captionof*{figure}{\textbf{Figure 1:} A myoelectric transradial prosthetic.}
+\end{center} \vspace{-0.3cm}
+
+The regressors were tested quantitatively by calculating the Root Mean Square Error (RMSE) between expected and calculated output for both training and test data. Testing of the regressors were done online in a virtual environment, where the time to complete a target-reaching task of 16 targets was measured. 
 
 \begin{center}
 	\includegraphics[width=0.8\linewidth]{NewPlacesToGo.png}
@@ -293,13 +310,13 @@ Results for the online test of regressor accuracy and control. The test is perfo
 \vspace{-0.4cm}
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{gotItMAV}
-	\captionof*{figure}{\textbf{Figure 4:} The mean test score among seven subjects when using regressors trained with MAV}
+	\captionof*{figure}{\textbf{Figure 5:} The mean test score among seven subjects when using regressors trained with MAV}
 \end{center}
 
 \vspace{-0.6cm}
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{gotItLogVar}
-	\captionof*{figure}{\textbf{Figure 5:} The mean test score among seven subjects when using regressors trained with LogVar}
+	\captionof*{figure}{\textbf{Figure 6:} The mean test score among seven subjects when using regressors trained with LogVar}
 \end{center}
 	
 Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.1561), when applying the MAV trained regressors in the online test. For the LogVar trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.5647). There was no significant difference in the time to reach the targets across the two features (MAV: 5.5 s, LogVar: 6.5 s; p = 0.13).
