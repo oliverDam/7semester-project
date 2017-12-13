@@ -125,7 +125,7 @@ The aim for this project is expressed in the following hypothesis:
 	
 	\begin{center}
 		\includegraphics[width=1\linewidth]{gimmeThemRMSEBars}
-		\captionof{figure}{RMSE when using training data.}
+		\captionof*{figure}{\textbf{Figure 2:} RMSE when using training data.}
 	\end{center}
 	
 	Comparing the RMSE of MAV and LogVar through a Friedman's test indicates a significant difference (p = 0.0007), where LogVar has the higher mean. 
@@ -144,7 +144,7 @@ The aim for this project is expressed in the following hypothesis:
 	
 \begin{center}
 	\includegraphics[width=1\linewidth]{RMSEBarPlotNewData}
-	\captionof{figure}{RMSE when using test data}
+	\captionof*{figure}{\textbf{Figure 3:} RMSE when using test data}
 \end{center}
 	
 	\begin{center}
@@ -242,37 +242,44 @@ We would like to thank our supervisors Strahinja Dosen, Jakob Lund Dideriksen an
 
 \headerbox{Methods and Material}{name=method,column=0,below=introduction,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
 
-Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with Myo armband, positioned on the right forearm of the subjects while standing.
+Surface EMG (sEMG) data was collected from seven able-bodied subjects. The subjects were instructed to performed four different hand gestures (flexion, extension, radial deviation and ulnar deviation), in three limb positions (down the side, lifted to the side, lifted forward). sEMG signals were recorded with Myo armband (eight channels, 200Hz sample rate), positioned on the right forearm of the subjects while standing.
 
-The sEMG was recorded from eight channels with a 200Hz sample rate. Filtering was done with a second-order Butterworth high-pass filter ($f_c$ = 10Hz). 
-
-Features were extracted using a window of 40 samples with 50\% overlap. 
-MAV represent the amplitude of the signal. It is defined as the average of the absolute values of the sEMG signal:
-\vspace{-0.2cm}
-\begin{equation}
-MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
-\end{equation} \vspace{-0.1cm}
-
-where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
-LogVar is a nonlinear transformation of the variance: %applied to %linealidad
-\vspace{-0.2cm}
-\begin{equation} \label{eq:logvar}
-log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
-\end{equation}\vspace{-0.3cm}
-
-where $N$ is the length of the signal, $x_i$ is the $i^{th}$ sample of the signal and $\mu$ is the mean.
-PCA is applied to qualitatively determine the separability of the feature data. %Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
+%The sEMG was recorded from eight channels with a 200Hz sample rate. Filtering was done with a second-order Butterworth high-pass filter ($f_c$ = 10Hz). 
+%
+%Features were extracted using a window of 40 samples with 50\% overlap. 
+%MAV represent the amplitude of the signal. It is defined as the average of the absolute values of the sEMG signal:
+%\vspace{-0.2cm}
+%\begin{equation}
+%MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
+%\end{equation} \vspace{-0.1cm}
+%
+%where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
+%LogVar is a nonlinear transformation of the variance: %applied to %linealidad
+%\vspace{-0.2cm}
+%\begin{equation} \label{eq:logvar}
+%log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
+%\end{equation}\vspace{-0.3cm}
+%
+%where $N$ is the length of the signal, $x_i$ is the $i^{th}$ sample of the signal and $\mu$ is the mean.
+%PCA is applied to qualitatively determine the separability of the feature data. %Data is evaluated for differncies in feature data clusters and significant outliers. If the feature clusters are distinguishable from each other and have no significant outliers, the data is of high quality and will be used to train the regressors. Only the first three principal components identified through PCA will be used to train the regressors.
 The regression models (regressors) are calculated as following:
 \vspace{-0.1cm}
 \begin{equation} \label{eq:simpleLinearRegression}
 Y = \alpha + \beta X
-\end{equation} \vspace{-0.4cm}
+\end{equation} \vspace{-0.7cm}
 
-where $Y$ is the estimated output, $X$ is the extracted feature data, $\beta$ is the regression coefficient, and $\alpha$ is the Y intercept.
+%where $Y$ is the estimated output, $X$ is the extracted feature data, $\beta$ is the regression coefficient, and $\alpha$ is the Y intercept.
 
 One regressor was build for each wrist movement for each test subject: four for each feature. The offline regressor accuracy was tested qualitatively through superimposition of the output of the regressors build for each feature onto the actual data. The regressors were tested quantitatively by calculating the Root Mean Square Error (RMSE) between the expected movement and the regressor output. This was done for both training and test data to evaluate if the regressor had over- or under-fitted to the training data. 
-The regressors were tested online in a virtual environment, where the time to complete a target-reaching task of sixteen targets was measured. The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis.
-\vspace{0.5cm}
+As an alternative to testing the regressors with an actual prosthesis, the regressors were tested online in a virtual environment, where the time to complete a target-reaching task of sixteen targets was measured. 
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth]{NewPlacesToGo.png}
+	\captionof*{figure}{\textbf{Figure 1:} The interface for the target reaching task. During testing an arrow originating from origin would show direction and intensity of movement.}
+\end{center} \vspace{-0.3cm}
+
+The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis.
+%\vspace{0.5cm}
 }
 
 %----------------------------------------------------------------------------------------
@@ -286,13 +293,13 @@ Results for the online test of regressor accuracy and control. The test is perfo
 \vspace{-0.4cm}
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{gotItMAV}
-	\captionof{figure}{The mean test score among seven subjects when using regressors trained with MAV}
+	\captionof*{figure}{\textbf{Figure 4:} The mean test score among seven subjects when using regressors trained with MAV}
 \end{center}
 
 \vspace{-0.6cm}
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{gotItLogVar}
-	\captionof{figure}{The mean test score among seven subjects when using regressors trained with LogVar}
+	\captionof*{figure}{\textbf{Figure 5:} The mean test score among seven subjects when using regressors trained with LogVar}
 \end{center}
 	
 Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different (p = 0.1561), when applying the MAV trained regressors in the online test. For the LogVar trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.5647). There was no significant difference in the time to reach the targets across the two features (MAV: 5.5 s, LogVar: 6.5 s; p = 0.13).
