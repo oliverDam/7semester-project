@@ -1,0 +1,17 @@
+Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{fougner2012}. Most of the previous studies have utilized classification for pattern recognition when changing limb position, with a negative effect in performance. %Linear regression is a newer method in control of myoelectric prosthetics, which has proven to yield robust simultaneous and proportional control \cite{hanhe2014}. %Only the RMS feature was previously tested in variations of limb positions in regression-based control \cite{hwang2017}. 
+This study investigated the effect of limb position in a linear regression-based control scheme, when using 
+%the commonly used 
+Mean Absolute Value (MAV) and Logarithmic Variance (LogVar) as features. %where the latter has shown linear properties \cite{hanhe2014}.
+Seven (more now) able-bodied subjects were recruited for data acquisition, performing four wrist movements in three different limb positions. One regression model was build to recognize the different wrist movements under study, taking into account both features. %One regression model %(regressor) 
+%was build for each wrist movement for each test subject: four for each feature. 
+The regressors were tested online in a virtual environment. %where the time to complete a target-reaching task of sixteen targets was measured. %The performance (time per reached target) of the online test was compared between the different limb positions of the same feature and between all limb positions of the two features through statistical analysis. 
+%Using a Friedman's test the performance scores between the three limb positions prove not to be significantly different 
+%(p = 0.5647), 
+%when applying the LogVar trained regressors %in the online test. For the MAV trained regressors the performance score between all limb positions cannot be proven significantly different either (p = 0.1561). 
+%There was no difference in the time to reach the targets across the two features %(LogVar: 6.5 s, MAV: 5.5 s; p = 0.13).
+The results showed that changes in limb position do not affect the control when linear regression model is trained with the %MAV or LogVar 
+features extracted. This is opposed to previous studies using classification as control scheme. Linear regression has the potential to be used in future control schemes for myoelectric prosthetics for use in daily life tasks.\\
+
+
+\textit{\textbf{Keywords---}}surface electromyography, inertial measurement unit, simultaneous and proportional myoelectric control, regression, hand motion classification, hand prosthetic
+
