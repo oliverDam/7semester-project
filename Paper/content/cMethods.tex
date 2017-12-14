@@ -1,27 +1,44 @@
 \subsection{Experimental Setup}
-EMG data was collected from (define number) able-bodied subjects. The subjects performed four different hand gestures. This study is only focus on two DOF, which are, flexion, extension, radial and ulnar deviation of the wrist. The order in the execution of the movements was the same for each subject. EMG signals were recorded with Myo armband, positioned in the right forearm of the subjects (all subjects right handed). The procedure was performed in three different limb positions. In order to avoid shoulder fatigue a relaxation period was given between trials. The subjects were instructed not to move the fingers during the data acquisition. The process was performed in a standing position. \\ %figure hand and limb positions
- Myo armband counts with eight medical grade stainless steel surface EMG sensors. %It is capable of pulling EMG data at a sample rate of 200 Hz. 
- Furthermore its nine axis IMU provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer.\\   
+EMG data was collected from ten able-bodied subjects. The subjects performed four different hand gestures. This study is only focus on two DOF, which are, flexion, extension, radial and ulnar deviation of the wrist. The order in the execution of the movements was the same for each subject. EMG signals were recorded with Myo armband, positioned in the forearm of the dominant hand of the subjects. Myo armband counts with eight medical grade stainless steel surface EMG sensors, with a sampling rate of 200Hz. It counts with nine axis IMU which provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer. %It is capable of pulling EMG data at a sample rate of 200 Hz. 
+%Furthermore its nine axis IMU provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer.\\   
+The procedure was performed in three different limb positions. In order to avoid shoulder fatigue a relaxation period was given between trials. The subjects were instructed to keep the fingers in repose. %move the fingers during the data acquisition. 
+The process was performed in a standing position. \\ %figure hand and limb positions
+ 
  In order to acquire the training data necessary to build the regressor, a graphical user interface (GUI) was implemented in MATLAB. %Firstly baseline was meassure holding the forearm relaxed and the wrist in a neutral position for the corresponding limb position. This measure was substracted from the signal afterwards to be able to remove the present artefacts. Subsequently maximum voluntary contraction (MVC) was meassure. The MVC  was calculated as a mean of the maximum values in each of the eight cannels, and was set as a normalized reference point of 1.
- %The data acquisition was depicted through a trapeze. MVC was set as the desired value before data acquisition. Consequently each hand gesture was performed as a fraction of the MVC. At the begining of the training data collection two second resting phase was given followed by two seconds ascending slope to reach the plateau phase, with a duration of three seconds. Afterwards a descending phase of two seconds and a resting phase of one second finalized the data acquisition. The total acquisition time was ten seconds per hand movement.
+ The data acquisition was depicted through a trapeze. %MVC was set as the desired value before data acquisition. Consequently each hand gesture was performed as a fraction of the MVC. 
+ At the begining of the training data collection two second resting phase was given followed by two seconds ascending slope to reach the plateau phase, with a duration of three seconds. Afterwards a descending phase of two seconds and a resting phase of one second finalized the data acquisition. The total acquisition time was ten seconds per hand movement.
 
 	%\subsection{Maintaining the Integrity of the Specifications}
 	
 	%The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
+	%	\begin{figure}[thpb]
+	%	\centering
+		%\framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
 	
+	%	\includegraphics[scale=0.25]{Figures/Target}
+	%	\caption{Something}
+	%	\label{figurelabel}
+	%\end{figure}
+\begin{figure}[htb]
+	\centering
+	\subfigure[]{\includegraphics[width=70mm]{Figures/Target}}
+	\subfigure[]{\includegraphics[width=70mm]{Figures/limb_pos}}
+	%\subfigure[Lannisters]{\includegraphics[width=80mm]{./lannisters}}
+	\caption{Experimental Setup: (a) Something blabla (b) Different limb positions performed during the study} \label{fig:setup}
+\end{figure}%Finish caption
 	\subsection{Preprocessing}
 	For this study the EMG data acquired were filtered using a second-order Butterworth high-pass filter, cutoff frequency ($f_c$=10Hz), to avoid low frequency movement artefacts in the recorded signal.\\
 	%review two states part trapeze!!
 	%The EMG signal is the result of the addition of different motor unit action potential trains (MUAPTs). Through the data acquisition phase EMG signal can be divided into two main states. The transient state, related with the beginning phase of the muscle contraction and the steady state which is the stable phase of the muscle contraction when a constant position is held \cite{mobarak2014}. Although the steady state only contains a short temporal structure of the patterns involved in the contraction of the muscle \cite{mobarakm2014}, studies has shown that it is possible to achieve online continuous control using steady state EMG signals.This could be due to the fact that a larger amount of meaningful data is contained in this muscle contraction phase \cite{mobarakm2014}. For the training of the control system in this project the steady signal was then used.
 	
 	\subsection{Feature extraction}
-	The features were extracted creating a sliding-window of 40 samples. % with an overlapping of the 50\%. 
+	The features were extracted creating a sliding-window of 40 samples with an overlapping of the 50\%. 
 	Two different time domain features were extracted, MAV as well as LogVar. MAV represent the amplitud of the signal. It is defined as the average of the absolute values of the EMG signal and expresed as:
 	\begin{equation}
 	MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
 	\end{equation}
 	where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
-	The LogVar is a nonlinear transformation of the variance, which has been shown to behaves more linear than other time domain features. \cite{hanhe2014}
+	The LogVar is a nonlinear transformation of the variance, which has been shown linear properties compare to other time domain features. \cite{hanhe2014}
 	\begin{equation} \label{eq:logvar}
 	log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
 	\end{equation}
@@ -30,7 +47,8 @@ EMG data was collected from (define number) able-bodied subjects. The subjects p
 Principal Component Analysis (PCA) was applied to be able to evaluate the quality of the features extracted from the EMG signals.
 	%This analysis tool express a set of correlated variables into non-correlated components. In that way, the data set can be expressed in a reduced dimensionality hyperspace using less but most representative variables which are the principal components. Through PCA is  possible to see significant outliers or if the clusters formed by the features can be easily distinguishable. This was done to avoid inaccurate training of the regressors. PCA was performed for each movement in each limb position. %and represented in three dimensional space.figure? 
 	\subsection{Data exclusion}
-	Some of the subjects were not able to perform through the study properly. In order to ensure constant data those subjects were exclude.
+	One of the subjects was not able to perform through the study properly. In order to ensure constant data those subjects were exclude.
+	(review this)
 	\subsection{Regression models}
 	The acquired data was used to built the different regressors that had been implemented, one for each movement under study and for both features. Multivariate linear regression as an extension of simple linear regression had been applied as is shown in \ref{reg}:
 \begin{equation}
