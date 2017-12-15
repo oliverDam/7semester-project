@@ -5,43 +5,85 @@
 %regression
 %This section will include a description of how the regression methods have been executed. As well as data gathering and processing, the regression model will be implemented in MATLAB.
 
-Once the preprocessing and the feature extraction of the EMG data has been done, regression will be used as described in \secref{sec:regression}. The implementation follows simple linear regression as shown in \eqref{eq:simpleLinearRegression}. One regressor will be trained for each movement. 
+Once the preprocessing and the feature extraction of the EMG data has been done, regression will be used as described in \secref{sec:regressionMethods}. The implementation follows multivariate linear regression as shown in \eqref{eq:multiLinearRegression}. As mentioned in \secref{sec:dataAcquisition} one regressor will be trained for each subject for each of the hand gestures performed. 
 
+For each subject the extracted feature data from the eight sEMG channels will be mapped to estimate a movement. Because multivariate regression is used there will be an estimated output for each of the input variables (each of the eight channels). These outputs are expressed by one hyperplane, which is the output for the regressor. Each subject will then have four regressors trained, one for each movement. 
+To train the regressors an input matrix will be constructed. This matrix will contain all the extracted features from all eight channels, for all recorded movements, for all intensities, in all three limb positions. The matrix will be structured into segments, where each segment contains data from one movement. One segment will be structured as shown in \eqref{eq:segMatrix}, with the feature data of a movement during 30\% contraction in one limb position first, followed by 30\% contraction for the same movement in the second limb position, and so on. This is true for all contraction intensities (30\%, 50\%, 80\%).
 
-The feature data will be constructed into one matrix containing the extracted features for all four movements at all intensities including the baseline in the three different limb positions arranged into four segments in the matrix. 
-
-This will be set as input to the training of the regressor, while the estimator is a vector containing the mean of all eight channels of the actual data, normalized in relation to the recorded MVC. This provides data for the movement that the regressor will be trained to recognize. The estimator vector is augmented with zeros for the segments of the movements that the regressor is trained not to recognize. This is shown in \eqref{eq:regressionMatrix}
-
-\begin{equation} \label{eq:regressionMatrix}
+\begin{equation} \label{eq:segMatrix}
 \begin{bmatrix} 
-\ normMove_1 \\ 
-\ \vdots\\
-\ normMove_n\\
-\ 0_o\\
-\ \vdots\\
-\ 0_p\\
-\end{bmatrix}=
-\alpha +
-\begin{bmatrix}
-\ \beta_1\\
-\ \vdots\\
-\ \beta_8\\
-\end{bmatrix} \cdot
-\begin{bmatrix} 
-\ rightFeat_{1,1} \cdots rightFeat_{1,8} \\ 
-\ \vdots \qquad \ddots \qquad \vdots \\
-\ rightFeat_{n,1} \cdots rightFeat_{n,8} \\
-\ wrongFeat_{o,1} \cdots wrongFeat_{o,8} \\
-\ \vdots \qquad \ddots \qquad \vdots \\
-\ wrongFeat_{p,1} \cdots wrongFeat_{p,8} \\
+\ Flex30Down_{1,1}, Flex30Down_{1,2} \cdots Flex30Down_{1,8} \\ 
+\ \vdots \qquad \qquad \qquad \ddots \qquad \qquad \qquad \vdots \\
+\ Flex30Down_{n,1}, Flex30Down_{n,2} \cdots Flex30Down_{n,8} \\
+\ Flex30Side_{o,1}, Flex30Side_{o,2} \cdots Flex30Side_{o,8} \\
+\ \vdots \qquad \qquad \qquad \ddots \qquad \qquad \qquad \vdots \\
+\ Flex30Side_{p,1}, Flex30Side_{p,2} \cdots Flex30Side_{p,8} \\
+\ Flex30Up_{q,1}, Flex30Up_{q,2} \cdots Flex30Up_{q,8} \\
+\ \vdots \qquad \qquad \qquad \ddots \qquad \qquad \qquad \vdots \\
+\ Flex30Up_{r,1}, Flex30Up_{r,2} \cdots Flex30Up_{r,8} \\
+\ Flex50Down_{s,1}, Flex50Down_{s,2} \cdots Flex50Down_{s,8} \\
+\ \vdots \qquad \qquad \qquad \ddots \qquad \qquad \qquad \vdots \\
+\ \vdots \qquad \qquad \qquad \ddots \qquad \qquad \qquad \vdots \\
+\ Flex80Up_{t,1}, Flex80Up_{t,2} \cdots Flex80Up_{t,8} \\
 \end{bmatrix}
 \end{equation}
 
-Where \textit{normMove} is the desired estimator, \textit{rightFeat} is the desired input feature for the desired movement in all limb positions and \textit{wrongFeat} is the features that should not be recognized by the given regressor. The regressor is implemented through the Matlab function \textit{fitlm}, which use the input matrix and estimator vector to calculate the slope and intercept of the regressor.
-This procedure is done for each movement, which yields four regressors trained to recognize one movement each. This procedure is done individually for MAV and logarithmic variance features to test the accuracy and performance of the two features. 
+The input matrix will then consist of four segments, one for each movement in all three limb positions, as shown in \eqref{eq:featDataMatrix}:
 
+\begin{equation} \label{eq:featDataMatrix}
+\begin{bmatrix} 
+\ Flex_{1,1}, Flex_{1,2} \cdots Flex_{1,8} \\ 
+\ \vdots \qquad \ddots \qquad \vdots \\
+\ Flex_{n,1}, Flex_{n,2} \cdots Flex_{n,8} \\
+\ Exte_{o,1}, Exte_{o,2} \cdots Exte_{o,8} \\
+\ \vdots \qquad \ddots \qquad \vdots \\
+\ Exte_{p,1}, Exte_{p,2} \cdots Exte_{p,8} \\
+\ Radi_{q,1}, Radi_{q,2} \cdots Radi_{q,8} \\
+\ \vdots \qquad \ddots \qquad \vdots \\
+\ Radi_{r,1}, Radi_{r,2} \cdots Radi_{r,8} \\
+\ Ulna_{s,1}, Ulna_{s,2} \cdots Ulna_{s,8} \\
+\ \vdots \qquad \ddots \qquad \vdots \\
+\ Ulna_{t,1}, Ulna_{t,2} \cdots Ulna_{t,8} \\
+\end{bmatrix}
+\end{equation}
 
-When implementing the IMU data three extra columns will be added to the input matrix, because the accelerometer provided a three axis output during recordings. New regressors will be trained using these data also and compared to the regressors trained with only the EMG feature data. 
+%The feature data will be constructed into one matrix containing the extracted features for all four movements at all intensities including the baseline in the three different limb positions arranged into four segments in the matrix. 
+
+This matrix \eqref{eq:featDataMatrix} including the baseline recordings, will be set as input to the training of the regressor. The output for training the regressors are set to the desired values for the performed movement. The desired values are the mean of the data from all eight channels when the subject traced the trapezoid during data acquisition, as shown on \figref{fig:GUI_Training} in \secref{sec:dataAcquisition}. The data is scaled in relation to the MVC for the subject and are structured in a vector with segments of data for each movement similar to that of the matrix \eqref{eq:featDataMatrix} containing the feature data. When training a regressor for a movement, the desired values for the segments in the output vector corresponding to the movements that are not being trained, are augmented with zeros. This ensures that the trained regressor will estimate zero when recognising movements other than the one movement it is trained to recognise. 
+
+%, while the estimator is a vector containing the mean of all eight channels of the actual data, normalized in relation to the recorded MVC. This provides data for the movement that the regressor will be trained to recognize. The estimator vector is augmented with zeros for the segments of the movements that the regressor is trained not to recognize. This is shown in \eqref{eq:regressionMatrix}
+%
+%\begin{equation} \label{eq:regressionMatrix}
+%\begin{bmatrix} 
+%\ normMove_1 \\ 
+%\ \vdots\\
+%\ normMove_n\\
+%\ 0_o\\
+%\ \vdots\\
+%\ 0_p\\
+%\end{bmatrix}=
+%\alpha +
+%\begin{bmatrix}
+%\ \beta_1\\
+%\ \vdots\\
+%\ \beta_8\\
+%\end{bmatrix} \cdot
+%\begin{bmatrix} 
+%\ rightFeat_{1,1} \cdots rightFeat_{1,8} \\ 
+%\ \vdots \qquad \ddots \qquad \vdots \\
+%\ rightFeat_{n,1} \cdots rightFeat_{n,8} \\
+%\ wrongFeat_{o,1} \cdots wrongFeat_{o,8} \\
+%\ \vdots \qquad \ddots \qquad \vdots \\
+%\ wrongFeat_{p,1} \cdots wrongFeat_{p,8} \\
+%\end{bmatrix}
+%\end{equation}
+%
+%Where \textit{normMove} is the desired estimator, \textit{rightFeat} is the desired input feature for the desired movement in all limb positions and \textit{wrongFeat} is the features that should not be recognized by the given regressor. 
+
+The regressor is implemented through the Matlab function \textit{fitlm}, which use the input matrix and estimator vector to calculate the slope and intercept of the regressor, according to \eqref{eq:multiLinearRegression} in \secref{sec:regressionMethods}.
+This procedure is done for each movement, which yields four regressors trained to recognize one movement each. This procedure is done individually for MAV and LogVar, to compare the accuracy and performance between the two features. 
+
+When implementing the IMU data three extra columns are added to the input matrix, because the accelerometer provides a three axis output during recordings. The raw accelerometer data is used. New regressors are trained for each subject similar to the described procedure, including the IMU data and is compared to the regressors trained with only the EMG feature data. 
 
 
 %
