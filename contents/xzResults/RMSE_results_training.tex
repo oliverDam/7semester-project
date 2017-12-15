@@ -105,6 +105,7 @@ It is seen that regressors trained for different movements reacts on the same mo
 		\captionof{table}{RMSE for the implemented MAV regressor}
 	\end{center}
 	
+
 	
 	\begin{center}
 		\begin{tabular}{l l l}
@@ -135,6 +136,6 @@ It is seen that regressors trained for different movements reacts on the same mo
 			\captionof{table}{P-Values for comparison of the features}
 		\end{center}
 		
-
+It was found that the P-value of a Friedman's statistical test showed a significant difference (p = 0.0044) between the RMSE for the MAV and LogVar regressors with the training data as input, where LogVar has the higher mean. When examining the RMSE for the regressors with unknown test data consisting of 50\% contractions of all movements in all limb positions, it was shown that there is no significant difference (p = 0.1138) between the offline performance of the two regressors. When comparing the offline tests with training data and 50\% test data, it was shown that there's a significant difference for both LogVar (p = 0.000002) and LogVar (p = 0.0001), where the mean is higher for the unknown 50\% data in both cases.
 
 \textbf{LOOK AT ME: We should do statistics to see if the RMSE of training differs from the test RMSE}

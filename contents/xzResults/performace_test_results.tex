@@ -22,8 +22,20 @@ This section contains the results from the performance test done by the subjects
 		\end{tabular}
 		\captionof{table}{Test scores for the different limb for MAV and LogVar regressors}
 	\end{center}
+	
+	\begin{center}
+		\begin{tabular}{l l}
+			\toprule
+			\textbf{Feature} & \textbf{P-Value}\\
+			\midrule
+			MAV & 0.8948 \\
+			LogVar & 0.2359 \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{P-Values for comparison of the score in different limb positions with MAV and LogVar}
+	\end{center}
 
-A one-sample Kolmogorov-Smirnov test was done on the scores from the MAV and LogVar respectively and showed no normality in both score sets(p = $7 * 10^{-20}$, $8 * 10^{-20}$ ). A Friedman's test was therefore applied for statistical analysis. The performance scores between the three limb positions prove not to be significantly different (p = 0.57), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions can not be proven significantly different either(p = 0.16). When comparing all performance scores from the two feature trained regression control schemes, the Friedman's test proves no significant difference (LogVar: 6.5 s, MAC: 5.5 s; p = 0.13).
+A one-sample Kolmogorov-Smirnov test was done on the scores from the MAV and LogVar respectively and showed no normality in both score sets(p = $7 * 10^{-20}$, $8 * 10^{-20}$ ). A Friedman's test was therefore applied for statistical analysis. The performance scores between the three limb positions prove not to be significantly different (p = 0.2359), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions can not be proven significantly different either (p = 0.8948). 
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{figures/results/TargetsReached}  %<--but is not needed.
@@ -47,7 +59,21 @@ A one-sample Kolmogorov-Smirnov test was done on the scores from the MAV and Log
 		\captionof{table}{Targets reached in the target test with the MAV and LogVar regressors.}
 	\end{center}
 
-A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no significant difference in targets reached between limb positions and between all limb positions for the two features, which is similar to the Friedman's test results for the time per reached target.
+	\begin{center}
+		\begin{tabular}{l l}
+			\toprule
+			\textbf{Feature} & \textbf{P-Value}\\
+			\midrule
+			MAV & 0.0212 \\
+			LogVar & 0.4220 \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{P-Values for comparison of the number of reached targets in different limb positions with MAV and LogVar}
+	\end{center}
+	
+The Friedman's statistical test shows a significant difference (p = 0.0212) between the number of targets reached in the different limb positions for the MAV regressor, where the worst performance was found when the test subjects pointed their arm forward (mean = 15.1111). There was no significant difference (p = 0.4220) between the limb positions for the LogVar regressor.
+
+%A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no significant difference in targets reached between limb positions and between all limb positions for the two features, which is similar to the Friedman's test results for the time per reached target.
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{figures/results/GotItTimeIMU}  %<--but is not needed.
@@ -70,6 +96,20 @@ A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no s
 		\end{tabular}
 		\captionof{table}{Test scores for the different limb for MAV and LogVar regressors with IMU included.}
 	\end{center}
+	
+		\begin{center}
+			\begin{tabular}{l l}
+				\toprule
+				\textbf{Feature} & \textbf{P-Value}\\
+				\midrule
+				MAV & 0.0319 \\
+				LogVar & 0.4594 \\
+				\bottomrule
+			\end{tabular}
+			\captionof{table}{P-Values for comparison of the score in different limb positions with MAV and LogVar with IMU data included}
+		\end{center}
+
+The test with IMU data included shows a significant difference (p = 0.0319) between the test score in different limb positions for the MAV regressor with the worst performing position was with the arm pointed forward (mean = 6.1094), while there is no difference proven in the LogVar test (p = 0.4594).
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{figures/results/TargetsReachedIMU}  %<--but is not needed.
@@ -92,7 +132,21 @@ A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no s
 		\end{tabular}
 		\captionof{table}{RMSE for the implemented LogVar regressor}
 	\end{center}
-
+	
+	\begin{center}
+		\begin{tabular}{l l}
+			\toprule
+			\textbf{Compared Features} & \textbf{P-Value}\\
+			\midrule
+			MAV & 0.2957 \\
+			LogVar & 0.0037 \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{P-Values for comparison of the number of targets reached in different limb positions with MAV and LogVar with IMU data included}
+	\end{center}
+	
+The number of targets reached in the different limb positions can be proven to be significantly different (p = 0.0037) for the LogVar feature with IMU data included, where the lowest number of targets reached (mean = 13.5556) was found when the subjects pointed their arm forward. There was no significant difference found for the MAV regressor with IMU data included (p = 0.2957).
+	
 \subsection{Comparison of regressors with and without IMU data}
 
 \begin{figure}[H]
@@ -104,7 +158,7 @@ A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no s
 \begin{center}
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+		\textbf{Feature} & \textbf{Mean score} & \textbf{Standard deviation}\\
 		\midrule
 		MAV & 6.5219 & $\pm 3.2253$ \\
 		MAV w. IMU & 5.5066 & $\pm 2.8477$ \\
@@ -118,16 +172,18 @@ A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no s
 \begin{center}
 	\begin{tabular}{l l}
 		\toprule
-		\textbf{Feature} & \textbf{P-Value}\\
+		\textbf{Compared features} & \textbf{P-Value}\\
 		\midrule
-		LogVar w. IMU and MAV w. IMU & 0.5637 \\
-		LogVar and MAV & 0.0833 \\
-		LogVar w. IMU and LogVar & 0.5637 \\
-		MAV w. IMU and MAV & 0.1779 \\
+		LogVar w. IMU, MAV w. IMU & 0.5637 \\
+		LogVar, MAV & 0.0833 \\
+		LogVar w. IMU, LogVar & 0.5637 \\
+		MAV w. IMU, MAV & 0.1779 \\
 		\bottomrule
 	\end{tabular}
 	\captionof{table}{P-Values for comparison of the overall scores of the target tests}
 \end{center}
+
+When comparing all performance scores from the two feature trained regression control schemes without IMU, the Friedman's test proves no significant difference (LogVar: 7.1284 s, MAV: 6.5219 s; p = 0.0833). There is no significant difference to be found between LogVar and MAV with IMU data included (LogVar w. IMU: 7.4646, MAV w. IMU: 5.5066, p = 0.5637), and no difference was found between features with and without IMU for either MAV (wo. IMU: 6.5219, w. IMU: 5.5066, p = 0.1779) or LogVar (wo. IMU: 7.1284, w. IMU: 7.4646, p = 0.5637).
 
 
 \begin{figure}[H]
@@ -154,13 +210,15 @@ A qualitative examination of the box plot in \ref{fig:TargetsReached} shows no s
 \begin{center}
 	\begin{tabular}{l l}
 		\toprule
-		\textbf{Feature} & \textbf{P-Value}\\
+		\textbf{Compared Features} & \textbf{P-Value}\\
 		\midrule
-		LogVar w. IMU and MAV w. IMU & 0.0017 \\
-		LogVar and MAV & 1 \\
-		LogVar w. IMU and LogVar & 0.0016 \\
-		MAV w. IMU and MAV & 0.0124 \\
+		LogVar w. IMU, MAV w. IMU & 0.0017 \\
+		LogVar, MAV & 1 \\
+		LogVar w. IMU, LogVar & 0.0016 \\
+		MAV w. IMU, MAV & 0.0124 \\
 		\bottomrule
 	\end{tabular}
 	\captionof{table}{P-Values for comparison targets reached in the target tests}
 \end{center}
+
+A significant difference was found between LogVar and MAV when IMU was included (LogVar w. IMU: 14.1481, MAV w. IMU: 15.5185, p = 0.0017), and the same was found when including IMU data for both MAV (wo. IMU: 15.2963, w. IMU: 15.5185, p = 0.0124) and LogVar (wo. IMU: 15.2593, w. IMU: 14.1481, p = 0.0016). The performance was similar when comparing the overall number of targets reached for LogVar and MAV (p = 1).
