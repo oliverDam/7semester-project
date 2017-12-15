@@ -1,15 +1,43 @@
 \section{Discussion}
 
+\subsection{Offline and online training}
+Offline and online training was done for both MAV and LogVar without IMU data included, with a significant difference between the two features when testing with training data (p = 0.0044) but no difference when testing with new data (p = 0.1138). Overall it was found that there were no apparent correlation between offline and online testing. This could be caused by the subjects ability to adjust to a poor fitted model when given the visual feedback while performing the target test. This finding corresponds to the findings in other studies \cite{jiang2010}.
+
+\subsection{Comparison of features}
+In the results it was found that there was no significant difference between the performance of LogVar and MAV when it comes to the scores for the target test both with (p = 0.5637) and without (p = 0.0833) IMU data included. Based on previous studies showing LogVar as a feature with linear properties, it would be expected that this feature would perform better in a linear regression model, than a feature which to the authors knowledge has not been proven to be linear. On the contrary it was shown that a significantly higher number of targets was reached with a linear regression models based on the MAV feature with IMU included, compared to the LogVar regression model with IMU included (p = 0.0017). When IMU data wasn't included, there was no difference between the number of targets reached in the test (p = 1).
+
+Further studies within this field should consider examining other features, while studying the effect of combining several features in order to yield better performance independent of the limb position.
+
+\subsection{Inclusion of IMU data}
+The IMU data included in this study was based on a single accelerometer, where it was expected that the Myo band would give a similar output as long as the subjects were performing both training and testing from the same starting position. Inclusion of the IMU data was shown to yield the same results when it comes to the test score, with no significant difference for either MAV (p = 0.1779) or LogVar (p = 0.5637) when comparing regression models build with and without accelerometer inputs. It was found that the inclusion of the IMU data yielded significantly worse results for the LogVar regression model (p = 0.0016), while it led to a significant improvement of the MAV regression model (p = 0.0124) when examining the number of reached targets. The inclusion of IMU data could be a subject of further investigation, as the results might be improved by implementing a system capable of measuring the angles of the joints, in order to create a more versatile and usable regression model outside the clinical environment.  
+
+\subsection{Stability in limb positions}
+When excluding IMU data, there was no significant difference between the target score for either LogVar (p = 0.2359) or MAV (p = 0.8948) in the different limb positions, while there was a difference between the number of reached targets for MAV (0.0212) but no difference for LogVar (p = 0.4220). This outcome shows that both MAV and LogVar yields rather stable performance in different limb positions when used to create linear regression based control schemes.
+
+When including IMU data the MAV based regression model was shown to have a significant difference between the score of different limb positions (p = 0.0319), while LogVar did not show any difference (p = 0.4594). While the time taken to reach targets were shown to be different depending on limb positions when using MAV, the number of targets reached was improved, so that the number of reached targets with MAV were not shown to be significantly different (p = 0.2957). The LogVar feature based regression models were shown to have a difference between reached targets when using IMU data (p = 0.0037).
+
+Overall the LogVar regression models were observed as being the most unstable in the different limb positions when looking at the test subjects performance in the target test. This might be a result of the LogVar feature being based on the change of the signal, as this could lead to problems with crosstalk when the arm is not in a relaxed state. The MAV was observed as being more stable, with the subjects being able to create more controlled movements as well as having the possibility to adjust the position of the arrow when trying to get back to the middle of the test GUI. Based on the findings of this study, it would be recommended to examine features based on the amplitude rather than the variance in future studies within this area.
+
+\subsection{Limitations of the study}
+This study was based on data from 12 test subjects, where three had to be excluded. One subject was excluded due to misunderstanding the given instructions and thereby creating an unusable set of training and test data, which limited the control of the regression models giving him a mean score above 25 seconds per target and average number of reached targets below 10 for all tests.
+
+Two other subjects were excluded as the recorded intensities were not high enough to differ between the baseline and the intended movement. This caused the regression models to interpret the baseline in the target test as movements being performed at between 30\% and 70\% of the MVC.
+
+To improve the validity of the study more test subjects should be included in further studies within this field. Subjects with transradial amputations should also be taken into consideration if the regression based control schemes were to be considered for future use in myoelectric prosthetic devices. 
+
+Using the Myo band for data acquisition led to certain limitations in the sample rate, as the device is only capable of recording signals between 0 and 200Hz. This leads to the final signal being recorded between 0 and 100Hz, where everything above 100Hz is affected by aliasing. Along with frequency limitations, the Myo band restricted the number and placement of electrodes to eight channels placed at the same distance from the elbow, where it might be possible to yield better results with a different electrode placement and number. Further studies should implement regular EMG electrodes in order to obtain a more usable and clear signal, that represents the entire frequency band of EMG signals.
+
+
 \begin{itemize}
-	\item inclusion of more subjects
-	\item sample rate of the myo armband - exclusion of test subjects
-	\item even though LogVar shows linearity in a previous study, it does not perform better in linear regression than a presumably non-linear feature
-	\item Both features does not show significant difference in control in different limb positions
-	\item Whatever the inclusion of IMU shows
-	\item It is possible to use regression as control method to yield no significantly different performance in variations of limb positions
-	\item Use other regression methods and other features to analyse if it will result in better performance
-	\item why does the inclusion of IMU improve the performance
-	\item No connection between offline and online tests, which also is shown in previous studies
-	\item reasonable control can be archived when donning/doffing(we train the regressors with data, take of the myo armband, and do the testing with the myo armband placed slightly elsewhere)
+%	\item inclusion of more subjects
+%	\item sample rate of the myo armband - exclusion of test subjects
+%	\item even though LogVar shows linearity in a previous study, it does not perform better in linear regression than a presumably non-linear feature
+%	\item Both features does not show significant difference in control in different limb positions
+%	\item Whatever the inclusion of IMU shows
+%	\item It is possible to use regression as control method to yield no significantly different performance in variations of limb positions
+%	\item Use other regression methods and other features to analyse if it will result in better performance
+%	\item why does the inclusion of IMU improve the performance
+%	\item No connection between offline and online tests, which also is shown in previous studies
+%	\item reasonable control can be archived when donning/doffing(we train the regressors with data, take of the myo armband, and do the testing with the myo armband placed slightly elsewhere)
 	
 \end{itemize}
