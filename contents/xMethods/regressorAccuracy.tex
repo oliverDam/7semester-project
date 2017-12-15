@@ -8,12 +8,14 @@ To examine how well the regressors fit the actual data, the output of the regres
 
 
 \subsection{Root Mean Square Error}
-To measure the accuracy of the regressors the Root Mean Square Error(RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
+To measure the accuracy of the regressors the Root Mean Square Error(RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE is a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
 
 \begin{equation}
 RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
 \end{equation}
 
-Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor of each movement.
+Where N is the length of the signal, $y_i$ is the $i^{th}$ variable of the actual data and $\hat{y_i}$ is the $i^{th}$ output of the regressor. The RMSE will be done for the regressor of each movement.
 
-To express that the regressors do not overfit the input data, the RMSE of the test data must be lower than or equal to the training data. It does not necessarily express a great performing model if the RMSE of the training data is high, but a model that performs consistently on new data. However, if the RMSE of the training is reasonably low, and the RMSE of the test data is likely low, the model is said to fit the data well. 
+To express that the regressors do not over- or under-fit the input data, the RMSE of new test data must be lower than or equal to the data used to train the regressors. The best results for RMSE is as close to zero as possible. 
+
+%It does not necessarily express a great performing model if the RMSE of the training data is high, but a model that performs consistently on new data. However, if the RMSE of the training is reasonably low, and the RMSE of the test data is likely low, the model is said to fit the data well. 

@@ -31,6 +31,36 @@ Calculating the RMSE of the regressors for the MAV and LogVar features of the tr
 	\label{fig:gimmeThemRMSEBars}  %<--give the figure a label, so you can reference!
 \end{figure}
 
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+			\midrule
+			Extension & 0.1030 & $\pm 0.0210$ \\
+			Flexion & 0.1102 & $\pm 0.0296$ \\
+			Radial Deviation & 0.1206 & $\pm 0.0298$ \\
+			Ulnar Deviation & 0.1143 & $\pm 0.0334$ \\
+			Overall & 0.1059 & $\pm 0.0306$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE for the implemented MAV regressor}
+	\end{center}
+	
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+			\midrule
+			Extension & 0.1157 & $\pm 0.0469$ \\
+			Flexion & 0.1102 & $\pm 0.0241$ \\
+			Radial Deviation & 0.1142 & $\pm 0.0256$ \\
+			Ulnar Deviation & 0.1312 & $\pm 0.0310$ \\
+			Overall & 0.1178 & $\pm 0.0272$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE for the implemented LogVar regressor}
+	\end{center}
+
 The overall mean of the RMSE of MAV is 0.0943 with a standard deviation of $\pm 0.0290$, where the highest mean of a regressor is 0.1088 and the highest standard deviation is $\pm 0.0366$. The overall mean of the RMSE of LogVar is 0.1107 with a standard deviation of $\pm 0.0298$, where the highest mean of a regressor is 0.1216 and the highest standard deviation is $\pm 0.0402$. MAV then yields a lower mean RMSE and a lower standard deviation than LogVar - both with the overall RMSE and for the movement with the highest RMSE.
 
 
@@ -60,5 +90,52 @@ It is seen that regressors trained for different movements reacts on the same mo
 	\label{fig:RMSEBarPlotNewData}  %<--give the figure a label, so you can reference!
 \end{figure}
 
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+			\midrule
+			Extension & 0.1646 & $\pm 0.0753$ \\
+			Flexion & 0.1391 & $\pm 0.0841$ \\
+			Radial Deviation & 0.2018 & $\pm 0.0424$ \\
+			Ulnar Deviation & 0.1743 & $\pm 0.0905$ \\
+			Overall & 0.1700 & $\pm 0.0759$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE for the implemented MAV regressor}
+	\end{center}
+	
+
+	
+	\begin{center}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+			\midrule
+			Extension & 0.1552 & $\pm 0.0514$ \\
+			Flexion & 0.1680 & $\pm 0.0508$ \\
+			Radial Deviation & 0.1681 & $\pm 0.0540$ \\
+			Ulnar Deviation & 0.2078 & $\pm 0.0621$ \\
+			Overall & 0.1748 & $\pm 0.0563$ \\
+			\bottomrule
+		\end{tabular}
+		\captionof{table}{RMSE for the implemented LogVar regressor}
+	\end{center}
+	
+		\begin{center}
+			\begin{tabular}{l l}
+				\toprule
+				\textbf{Feature} & \textbf{P-Value}\\
+				\midrule
+				LogVar and MAV & 0.0044 \\
+				LogVar new data and MAV new data & 0.1138 \\
+				LogVar new data and LogVar & 0.0001 \\
+				MAV new data and MAV & 0.000002 \\
+				\bottomrule
+			\end{tabular}
+			\captionof{table}{P-Values for comparison of the features}
+		\end{center}
+		
+It was found that the P-value of a Friedman's statistical test showed a significant difference (p = 0.0044) between the RMSE for the MAV and LogVar regressors with the training data as input, where LogVar has the higher mean. When examining the RMSE for the regressors with unknown test data consisting of 50\% contractions of all movements in all limb positions, it was shown that there is no significant difference (p = 0.1138) between the offline performance of the two regressors. When comparing the offline tests with training data and 50\% test data, it was shown that there's a significant difference for both LogVar (p = 0.000002) and LogVar (p = 0.0001), where the mean is higher for the unknown 50\% data in both cases.
 
 \textbf{LOOK AT ME: We should do statistics to see if the RMSE of training differs from the test RMSE}
