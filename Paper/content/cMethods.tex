@@ -1,14 +1,28 @@
 \subsection{Subjects}
-For the experiment 12 able-bodied subjects were recruited(10 male, 2 female - 11 right-handed, 1 left-handed) by contacting fellow undergraduate biomedical engineering students at Aalborg University. All subjects participated in the entire experiment, and was initially informed of the research aim, and instructed in the procedures during the experiment. Entire data content from 3 subjects was excluded. The cause for exclusion for 1 subject was due to data that did not correspond with the instructed movements, and the remaining 2 was due to baseline data being similar in amplitude compared to EMG amplitude of high contraction movements. All subjects participated voluntarily, and did not receive any monetary reimbursement. 
+For the experiment 12 able-bodied subjects were recruited(10 male, 2 female - 11 right-handed, 1 left-handed) by contacting fellow undergraduate biomedical engineering students at Aalborg University. All subjects participated in the entire experiment, and was initially informed of the research aim, and instructed about the procedures during the experiment. Entire data content from three subjects was excluded. The cause for exclusion for one subject was due to data that did not correspond with the instructed movements, and the remaining two was due to baseline data being similar in amplitude compared to EMG amplitude of high contraction movements. All subjects participated voluntarily, and did not receive any monetary reimbursement. 
 
 \subsection{Data acquisition}
 EMG signals and inertial information were recorded with the Myo armband from Thalmic Labs - a 8 channel dry electrode armband with a 200 Hz EMG sampling rate and 50 Hz IMU sampling rate. The Myo armband has been suggested as a suitable data acquisition system for pattern classification \cite{Mendez2017}, but not for a regression-based control scheme yet. 
 The armband was placed around the thickest part of the dominant forearm, approximately 1/4 of the length towards the wrist distal of the elbow. For a close contact between the forearm and armband, clips was used to tighten the fit if necessary. All data acquisition, processing, data analysis and testing was performed in MATLAB and MATLAB's Graphical User Interface Development Environment.
 
-In the training data acquisition the subjects were instructed to perform four different wrist movements of 2 DOF's(flexion, extension and radial deviation, ulnar deviation) depicted in figure \ref{fig:wristmovement} in three different limb positions(relaxed along the torso, 90 degrees out of the side of the torso and 135 degrees up in front of the torso) depicted in figure \ref{fig:limbpositions}. Each movement was performed in four different EMG intensities of the Maximum Voluntary Contraction(MVC) in each limb position(baseline, 30 \%, 50 \% and 80 \%). To ensure that correct fractions of the EMG intensity were recorded, a Graphical User Interface(GUI) was build to provide online feedback for the subject. Initially the MVC was recorded, scaled to 1 and set as reference point for the following trials. A trapeze was drawn for each data acquisition trial, where the plateau depicted the desired fraction of the MVC. A cursor visualized the EMG signal, and moved continuously with time. The vertical position of the cursor was calculated as the mean of the absolute EMG signal across all channels in a 200 ms window, and scaled according to the MVC. The subject adjusted the height of the cursor by varying the EMG intensity, and was instructed to follow the trapeze as precise as possible. Especially in the plateau phase since only the steady state EMG was used for data analysis. \textbf{Justify that steady state is sufficient to use for control.} The duration of each data acquisition trial was 10 s, where the plateau phase was 3 s. To avoid fatigue the subjects had a 10 s break between trials. Accelerometer data was additionally recorded in each trial. All trials were performed while standing.
+In the training data acquisition the subjects were instructed to perform four different wrist movements of 2 DOF's depicted in figure \ref{fig:wristmovement} in three different limb positions depicted in figure \ref{fig:limbpositions}. Each movement was performed in four different EMG intensities of the Maximum Voluntary Contraction(MVC) in each limb position(baseline, 30 \%, 50 \% and 80 \%). To ensure that correct fractions of the EMG intensity were recorded, a Graphical User Interface(GUI) was build to provide online feedback for the subject. Initially the MVC was recorded, scaled to 1 and set as reference point for the following trials. A trapeze was drawn for each data acquisition trial, where the plateau depicted the desired fraction of the MVC. A cursor visualized the EMG signal, and moved continuously with time. The vertical position of the cursor was calculated as the mean of the absolute EMG signal across all channels in a 200 ms window, and scaled according to the MVC. The subject adjusted the height of the cursor by varying the EMG intensity, and was instructed to follow the trapeze as precise as possible. Especially in the plateau phase since only the steady state EMG was used for data analysis. \textbf{Justify that steady state is sufficient to use for control.} The duration of each data acquisition trial was 10 s, where the plateau phase was 3 s. To avoid fatigue the subjects had a 10 s break between trials. Accelerometer data was additionally recorded in each trial. All trials were performed while standing.
 Additional 50 \% of MVC EMG data was acquired for each wrist movement in all limb positions for offline testing.
 
 The recorded EMG data was filtered using a $2^{nd}$ order Butterworth high-pass filter with a 10 Hz cut-off to remove movement artefacts. 
+
+\begin{figure}[thpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Figures/wristmovement}  %<--but is not needed.
+	\caption{Illustration of the two DOF's performed (P1: flexion, P2: extension and P3: radial deviation, P4: ulnar deviation)}
+	\label{fig:wristmovement}  %<--give the figure a label, so you can reference!
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Figures/limb_pos}  %<--but is not needed.
+	\caption{Illustration of the limb positions performed. P1: relaxed along the torso, P2: 90 degrees horizontally of the torso and P3: 135 degrees vertically of the torso}
+	\label{fig:limbpositions}  %<--give the figure a label, so you can reference!
+\end{figure}
 
 \subsection{Feature extraction}
 Features were extracted in a 200 ms window with a 50 \% overlap, which is an acceptable segmentation for preserving information of the signal in static contractions \cite{Farfan2010}.
@@ -28,10 +42,12 @@ where N is the length of the signal, and $x_i$ is the signal of $i$ samples.
 
 MAV directly increases or decreases with change in EMG amplitude. No study has examined whether MAV contains linear properties, but EMG signals has heteroscedastic properties \cite{rasool2012} and the MAV feature might therefore not contain direct linear properties.
 
-The extracted features for the individual wrist movements were examined through a Principal Component Analysis, to evaluate, whether the different movements were distinguishable or new training data should be acquired.
+The Mean Value(MV) was extracted from the accelerometer data, similarly to a previous study \cite{Krasoulis2015} testing the effect of limb position using classification as control scheme. 
+
+The extracted EMG features for the individual wrist movements were examined through a Principal Component Analysis, to evaluate, whether the different movements were distinguishable or new training data should be acquired.
 
 \subsection{Regression model}
-One regressor was trained for each wrist movement for both features; four regressors trained for each feature. Each regressor was trained based on multivariate linear regression and calculated as given by equation \ref{eq:linearregression}:
+One regressor was trained for each wrist movement for both features; four regressors trained for each feature, and four for each feature where accelerometer data was included. Each regressor was trained based on multivariate linear regression and calculated as given by equation \ref{eq:linearregression}:
 
 \begin{equation} \label{eq:linearregression}
 \hat{Y} = \alpha + \beta_1 X_{1} + \beta_2 X_{2} + ... + \beta_i X_{i}
@@ -39,8 +55,8 @@ One regressor was trained for each wrist movement for both features; four regres
 
 Where $\hat{Y}$ is the estimated value, $X_i$ are the predictors, $\beta_i$ are the regression coefficients in the sampled population, and $\alpha$ is the predicted value of $Y$ at $X_{i} = 0$. $\beta_i$ and $\alpha$ is fitted for each regressor using the extracted feature data for each channel as $X_i$, and the mean of the absolute values of the actual EMG across all channels scaled in relation to the MVC is set as the $\hat{Y}$. The features for all wrist movements are included as $X_i$ in the training of each regressor. However, only the desired wrist movement the regressor is fitted for, is trained with the actual estimated values. The remaining predictors are given 0 as estimated values. This procedure was applied for the regressors to more precisely recognize the performed movement. The features for all intensities in all limb positions were used in the training of the regressors.
 
-\subsection{Offline test}
-The accuracy of the regressors was examined both qualitatively and quantitatively when using both training and test data. A qualitative test was performed by superimposing the regressor output on the actual data. The superimposition illustrated whether the right regressor reacted on the performed movement, and how accurate it responded compared to the actual data. For the quantitative analysis the Root Mean Square Error(RMSE) was calculated to compare through statistical analysis, which feature had the lowest error, and whether the regressors were overfitted when tested with new input data. The RMSE was calculated as given by equation \ref{eq:rmse}:
+\subsection{Offline testing}
+The accuracy of the regressors was examined both qualitatively and quantitatively when using both training and test data. A qualitative test was performed by superimposing the regressor output on the actual data. The superimposition illustrated whether the right regressor reacted on the performed movement, and how accurate it responded compared to the actual data. For the quantitative analysis the Root Mean Square Error(RMSE) was calculated to compare through statistical analysis, which feature had the lowest error, and whether the regressors were overfitted when tested with new input data. Furthermore, the accuracy of the regressors trained with inclusion of accelerometer data was compared to the regressors trained only using EMG feature data. The RMSE was calculated as given by equation \ref{eq:rmse}:
 
 \begin{equation}\label{eq:rmse}
 RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
@@ -49,9 +65,17 @@ Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual 
 
 It was decided, which statistical analysis to apply, through A Kolmogorov-Smirnov test that assesses whether the data populations were normal distributed. An ANOVA test was applied if the data population belonged to a normal distribution, if not a Friedman's test was applied, which is the non-parametric correspondent to an ANOVA test.
 
-\subsection{Online test}
+\subsection{Online testing}
+To investigate the effect of limb position in the regression control scheme an online virtual environment was developed, depicted in figure \ref{fig:tagets}
 
+	\begin{figure}[thpb]
+		\centering
+		\includegraphics[scale=0.25]{Figures/Target}
+		\caption{A vector originated from origo depicted the EMG signal, where the length of the vector represented the EMG intensity, and direction was based on the movement performed. The wrist flexion-extension was mapped to the x-axis, and the radial-ulnar deviation was mapped to y-axis. The vector returned to the target located around origo when no contraction was made. For the subject to reach the targets in the diagonals, a simultaneous movement must be performed. One target was shown at a time. When a target was reached, the vector had to return to the centred target for a new to appear. This gave the subject the same starting point when reaching each outer target. The procedure was performed until all targets had appeared. If a target was not reached within 30 s, it would dissappear, and the vector had to return to the centred target.}
+		\label{figurelabel}
+	\end{figure}
 
+ The time to complete a target-reaching task of sixteen targets was measured. 12 tests were performed by each subject; one in each limb position for each feature for the regressors trained with and without included accelerometer data. The performance score was calculated as the mean of time per reached target. Time to reach the centred target was not included in the performance score. Performance scores of the online test was compared between the different limb positions of the same feature, between all limb positions of the two features and between performance score obtained when using regressors trained with and without inclusion of accelerometer data. The same comparison was additionally applied for the amount of targets reached. The statistical analysis applied was again based on whether the populations were normal distributed or not.
 %\subsection{Experimental Setup}
 %EMG data was collected from ten able-bodied subjects. The subjects performed four different hand gestures. This study is only focus on two DOF, which are, flexion, extension, radial and ulnar deviation of the wrist. The order in the execution of the movements was the same for each subject. EMG signals were recorded with Myo armband, positioned in the forearm of the dominant hand of the subjects. Myo armband counts with eight medical grade stainless steel surface EMG sensors, with a sampling rate of 200Hz. It counts with nine axis IMU which provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer. %It is capable of pulling EMG data at a sample rate of 200 Hz. 
 %%Furthermore its nine axis IMU provides information about position and orientation of the arm combining three axis accelerometer, three axis gyroscope and three axis magnetometer.\\   
@@ -111,17 +135,17 @@ It was decided, which statistical analysis to apply, through A Kolmogorov-Smirno
 %\end{equation}
 %	where $Y$ is the dependent variable, $X_i$ are the independent variables, $\beta_i$ is the regression coefficient in the sampled population, $\alpha$ is the predicted value of $Y$ at $X = 0$ and $\epsilon$ is the error.
 %	
-	\subsection{Regressor accuracy}
-	Superimposition\\
-	In order to examine the performance of the regressors the estimations of the regressor and the actual data for the two different features extracted had been superimposed. Thereby the behave of the regressor can be shown at different intensities and movements. Consequently whether other regression methods should be considered to obtain a lower error.\\
-	RMSE\\
-	To meassure the accuracy of the regressor, Root Mean Squared Error (RMSE) was calculated. RMSE is a calculation of the standard deviation of the residuals, that is, the difference between the estimated and the actual values.
-	%equation
-	\begin{equation}
-	RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
-	\end{equation}
-	Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor of each movement.\\
-	
+%	\subsection{Regressor accuracy}
+%	Superimposition\\
+%	In order to examine the performance of the regressors the estimations of the regressor and the actual data for the two different features extracted had been superimposed. Thereby the behave of the regressor can be shown at different intensities and movements. Consequently whether other regression methods should be considered to obtain a lower error.\\
+%	RMSE\\
+%	To meassure the accuracy of the regressor, Root Mean Squared Error (RMSE) was calculated. RMSE is a calculation of the standard deviation of the residuals, that is, the difference between the estimated and the actual values.
+%	%equation
+%	\begin{equation}
+%	RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}
+%	\end{equation}
+%	Where N is the length of the signal, $y_i$ is the $i^th$ variable of the actual data and $\hat{y_i}$ is the $i^th$ output of the regressor. The RMSE will be done for the regressor of each movement.\\
+%	
 	%Fitts Law\\
 	%A modified version of Fitts' Law had been used to quantify the performance of the trained regressors. Fitts' Law describes that, the time it takes to do a rapid movement to reach a target area, is dependent on the distance to the target area, and the size of the target area. The law demonstrates that the information of any human motor tasks, is finite and only limited by the capabilities of the control system. The control exhibit a negative correlation between speed and accuracy. \cite{Kamavuako2014}
 	%Fitts' Law calculates an \textit{Index of Difficulty} (ID) by \ref{eq:Fitts}
