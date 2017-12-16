@@ -83,7 +83,7 @@ This matrix \eqref{eq:featDataMatrix} including the baseline recordings, will be
 The regressor is implemented through the Matlab function \textit{fitlm}, which use the input matrix and estimator vector to calculate the slope and intercept of the regressor, according to \eqref{eq:multiLinearRegression} in \secref{sec:regressionMethods}.
 This procedure is done for each movement, which yields four regressors trained to recognize one movement each. This procedure is done individually for MAV and LogVar, to compare the accuracy and performance between the two features. 
 
-When implementing the IMU data three extra columns are added to the input matrix, because the accelerometer provides a three axis output during recordings. The raw accelerometer data is used. New regressors are trained for each subject similar to the described procedure, including the IMU data and is compared to the regressors trained with only the EMG feature data. 
+When implementing the IMU data three extra columns are added to the input matrix, because the accelerometer provides a three axis output during recordings. The Mean Value (MV) is extracted from the accelerometer data. New regressors are trained for each subject similar to the described procedure, including the IMU data and is compared to the regressors trained with only the EMG feature data. 
 
 
 %
