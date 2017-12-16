@@ -46,6 +46,8 @@
 		\end{center}
 	\end{table}
 	
+	Analysing the RMSE of the regression models' response to the training data, it was found that there's a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.0159, std = 0.0306).
+	
 	\begin{table}[!thpb]
 		\begin{center}
 			\begin{tabular}{l l l}
@@ -63,7 +65,6 @@
 		\end{center}
 	\end{table}
 	
-	The overall mean of the RMSE of MAV is 0.0943 with a standard deviation of $\pm 0.0290$, where the highest mean of a regressor is 0.1088 and the highest standard deviation is $\pm 0.0366$. The overall mean of the RMSE of LogVar is 0.1107 with a standard deviation of $\pm 0.0298$, where the highest mean of a regressor is 0.1216 and the highest standard deviation is $\pm 0.0402$. MAV appears to yield a lower mean RMSE and a lower standard deviation than LogVar - both with the overall RMSE and for the movement with the highest RMSE.
 	
 	\begin{table}[!thpb]
 		\begin{center}
@@ -97,7 +98,8 @@
 			\caption{P-Values for comparison of the features}
 		\end{center}
 	\end{table}
-	It was found that the P-value of a Friedman's statistical test showed a significant difference (p = 0.0044) between the RMSE for the MAV and LogVar regressors with the training data as input, where LogVar has the higher mean. When examining the RMSE for the regressors with unknown test data consisting of 50\% contractions of all movements in all limb positions, it was shown that there is no significant difference (p = 0.1138) between the offline performance of the two regressors. When comparing the offline tests with training data and 50\% test data, it was shown that there's a significant difference for both LogVar (p = 0.000002) and LogVar (p = 0.0001), where the mean is higher for the unknown 50\% data in both cases.
+	
+	It was found that there is a significant difference (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
 	
 	\begin{figure}[!thpb]
 		\centering
@@ -137,7 +139,7 @@
 		\end{center}
 	\end{table}
 	
-	A one-sample Kolmogorov-Smirnov test was done on the scores from the MAV and LogVar respectively and showed no normality in both score sets(p = $7 * 10^{-20}$, $8 * 10^{-20}$ ). A Friedman's test was therefore applied for statistical analysis. The performance scores between the three limb positions prove not to be significantly different (p = 0.2359), when applying the LogVar trained regressors in the online test. For the MAV trained regressors the performance score between all limb positions can not be proven significantly different either (p = 0.8948). 
+	When comparing the score for different limb positions, no significant difference was found for either MAV (p = 0.8948) or LogVar (p = 0.2359).
 	
 	\begin{table}[!thpb]
 		\begin{center}
@@ -171,7 +173,7 @@
 		\end{center}
 	\end{table}
 	
-	The Friedman's statistical test shows a significant difference (p = 0.0212) between the number of targets reached in the different limb positions for the MAV regressor, where the worst performance was found when the test subjects pointed their arm forward (mean = 15.1111). There was no significant difference (p = 0.4220) between the limb positions for the LogVar regressor.
+	It was shown that there is a significant difference (p = 0.0212) between the number of targets reached in the different positions for MAV, where the limb pointed forward yielded worst results (mean = 15.1111, std = 1.0541). No significant difference (p = 0.4220) was found between the limb positions for LogVar.
 	
 	\begin{figure}[!thpb]
 		\centering
@@ -212,7 +214,7 @@
 		\end{center}
 	\end{table}
 	
-	The test with IMU data included shows a significant difference (p = 0.0319) between the test score in different limb positions for the MAV regressor with the worst performing position was with the arm pointed forward (mean = 6.1094), while there is no difference proven in the LogVar test (p = 0.4594).
+	A significant difference (p = 0.0319) was found between the test score in different limb positions for MAV with IMU included, where the worst performance was found with the arm pointed forward (mean = 6.1094, std = 3.3852). No significant difference (p = 0.4594) was found between limb positions for the LogVar regression model with IMU data included.
 	
 	\begin{table}[!thpb]
 		\begin{center}
@@ -246,7 +248,7 @@
 		\end{center}
 	\end{table}
 	
-	The number of targets reached in the different limb positions can be proven to be significantly different (p = 0.0037) for the LogVar feature with IMU data included, where the lowest number of targets reached (mean = 13.5556) was found when the subjects pointed their arm forward. There was no significant difference found for the MAV regressor with IMU data included (p = 0.2957).
+	There was no significant difference found for the MAV regressor with IMU data included (p = 0.2957). The number of targets reached in different limb positions was proven significantly different (p = 0.0037) for the LogVar feature with IMU data included, where the lowest number of targets reached was found with the arm pointed forward (mean = 13.5556, std = 2.1858).
 	
 	\begin{figure}[!thpb]
 		\centering
@@ -287,7 +289,7 @@
 		\end{center}
 	\end{table}
 	
-	When comparing all performance scores from the two feature trained regression control schemes without IMU, the Friedman's test proves no significant difference (LogVar: 7.1284 s, MAV: 6.5219 s; p = 0.0833). There is no significant difference to be found between LogVar and MAV with IMU data included (LogVar w/ IMU: 7.4646, MAV w/ IMU: 5.5066, p = 0.5637), and no difference was found between features with and without IMU for either MAV (w/o IMU: 6.5219, w/ IMU: 5.5066, p = 0.1779) or LogVar (w/o IMU: 7.1284, w/ IMU: 7.4646, p = 0.5637).
+	A significant difference (p = 0.5637) could not be proven between the scores of the target test for LogVar with IMU data and MAV with IMU data. There was no significant difference (p = 0.0833) between the score of LogVar without IMU data and MAV without IMU data. It was also found that there is no significant difference between regression models with and without IMU data for both MAV (p = 0.1179) and LogVar (p = 0.5637).
 	
 	\begin{figure}[!thpb]
 		\centering
@@ -328,7 +330,7 @@
 		\end{center}
 	\end{table}
 	
-	A significant difference was found between LogVar and MAV when IMU was included (LogVar w/ IMU: 14.1481, MAV w/ IMU: 15.5185, p = 0.0017), and the same was found when including IMU data for both MAV (w/o IMU: 15.2963, w/ IMU: 15.5185, p = 0.0124) and LogVar (w/o IMU: 15.2593, w/ IMU: 14.1481, p = 0.0016). The performance was similar when comparing the overall number of targets reached for LogVar and MAV (p = 1).
+	A significant difference (p = 0.0017) was found between targets reached when IMU was included, where LogVar (mean = 14.1481, std = 1.9156) was proven worse than MAV (mean = 15.5185, std = 1.5285). There was a significant difference (p = 0.0016) between LogVar with (mean = 14.1481, std = 1.9156) and without (mean = 15.2593, std = 1.2586) IMU data. The same significant difference (p = 0.0124) between MAV with (mean = 15.5185, std = 1.5285) and without (mean = 15.2963, std = 0.8689) IMU data. There was no difference (p = 1) between targets reached with LogVar and MAV when IMU was not included.
 	
 	
 	%	\subsection{Separability of the data} 
