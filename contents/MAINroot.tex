@@ -69,7 +69,7 @@ This is opposed to previous studies using classification as control scheme. Line
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-\section{INTRODUCTION}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{INTRODUCTION}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 %		\include{content/bIntroduction}
 In recent years the development of EMG controlled lower arm prosthetics has advanced considerably, due to an increased interest in the area along with higher demands for better prosthetics and more precise control. \cite{Fougner2012} In the early years most EMG prosthetics functioned by controlling one degree of freedom (DOF) with on-off control, mainly by linking antagonistic muscles to one DOF. This kind of prostheses change between states due to a switching impulse which cause a state machine to shift its present state. Usually a strong and fast muscle contraction from the users is employed to generate the switching signals. \cite{amsuess2014}
@@ -87,13 +87,13 @@ Even though the combination of EMG and Inertial Measurement Unit (IMU) data has 
 
 To the authors knowledge the combination of EMG recordings and IMU data has only been done with classification methods. A novel approach to further investigate the usability of combining EMG and IMU is to build a regression based control scheme for myoelectric prosthetics. This would enable both proportional and simultaneous control of several DOF's, where the inclusion of IMU data should provide more information on limb position to counter the effect of limb position.		
 	
-\section{METHODS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{METHODS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 %		\include{content/cMethods}
-\subsection{Subjects}
+\subsection*{Subjects}
 For the experiment 12 able-bodied subjects were recruited (10 male, 2 female - 11 right-handed, 1 left-handed) by contacting fellow undergraduate biomedical engineering students at Aalborg University. All subjects participated in the entire experiment, and were initially informed of the research aim, and instructed about the procedures during the experiment. Entire data sets from three subjects were excluded. The cause for exclusion for one subject was due to data that did not correspond with the instructed movements, and the remaining two was due to baseline data being similar in amplitude compared to EMG amplitude of high contraction movements. All subjects participated voluntarily, and did not receive any monetary reimbursement. 
 
-\subsection{Data acquisition}
+\subsection*{Data acquisition}
 EMG signals and inertial information were recorded with the Myo armband from Thalmic Labs - an 8 channel dry electrode armband with 200 Hz EMG sampling rate and 50 Hz IMU sampling rate. Only accelerometer data from the IMU was acquired for data processing. The Myo armband has been suggested as a suitable data acquisition system for pattern classification \cite{Mendez2017}, but not yet for a regression-based control scheme. 
 The armband was placed around the thickest part of the dominant forearm, approximately 1/4 of the length towards the wrist distal of the elbow. For a close contact between the forearm and armband, clips were used to tighten the fit if necessary. All data acquisition, processing, data analysis and testing was performed in MATLAB and MATLAB's Graphical User Interface Development Environment.
 
@@ -116,7 +116,7 @@ The recorded EMG data was filtered using a $2^{nd}$ order Butterworth high-pass 
 	\label{fig:limbpositions}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-\subsection{Feature extraction}
+\subsection*{Feature extraction}
 Features were extracted in a 200 ms window with a 50\% overlap, which is an acceptable segmentation for preserving information of the signal in static contractions \cite{Farfan2010}.
 The commonly used Mean Absolute Value (MAV) feature was additionally extracted, and calculated as given by equation \ref{eq:mav}: \cite{Zecca2002} 
 
@@ -138,7 +138,7 @@ The Mean Value (MV) was extracted from the accelerometer data, similarly to a pr
 
 The extracted EMG features for the individual wrist movements were examined through a Principal Component Analysis, to evaluate, whether the different movements were distinguishable or new training data should be acquired.
 
-\subsection{Regression model}
+\subsection*{Regression model}
 As applied in a study by Hwang et al. \cite{hwang2017} to achieve robust performance across variations in limb positions linear regression was used as control scheme. One regressor was trained for each wrist movement for both features; four regressors trained for each feature, and four for each feature where accelerometer data was included. Each regressor was trained based on multivariate linear regression and calculated as given by equation \ref{eq:linearregression}:
 
 \begin{equation} \label{eq:linearregression}
@@ -146,7 +146,7 @@ As applied in a study by Hwang et al. \cite{hwang2017} to achieve robust perform
 \end{equation}
 where $\hat{Y}$ is the estimated value, $X_i$ are the predictors, $\beta_i$ are the regression coefficients in the sampled population, and $\alpha$ is the predicted value of $Y$ at $X_{i} = 0$. $\beta_i$ and $\alpha$ were fitted for each regressor using the extracted feature data for each channel as predictors. The mean of the absolute values of the actual EMG across all channels scaled in relation to the MVC is set as estimator values. The features for all wrist movements in all limb positions were included as predictors in the training of each regressor. However, only the desired wrist movement the regressor was fitted for, was trained with the actual estimated values. The remaining predictors were given 0 as estimated values. This procedure was applied for the regressors to more precisely recognize the performed movement.
 
-\subsection{Offline testing}
+\subsection*{Offline testing}
 The accuracy of the regressors was examined both qualitatively and quantitatively when using both training and test data. A qualitative test was performed by superimposing the regressor output on the actual data. The superimposition illustrated whether the right regressor reacted on the performed movement, and how accurate it responded compared to the actual data. For the quantitative analysis the Root Mean Square Error (RMSE) was calculated to compare through statistical analysis, which feature had the lowest error, and whether the regressors were overfitted when tested with new input data. Furthermore, the accuracy of the regressors trained with inclusion of accelerometer data were compared to the regressors trained only using EMG feature data. The RMSE was calculated as given by equation \ref{eq:rmse}:
 
 \begin{equation} \label{eq:rmse}
@@ -156,7 +156,7 @@ where N is the length of the window, $y_i$ is the $i^{th}$ variable of the actua
 
 It was decided, which statistical analysis to apply, through a Kolmogorov-Smirnov test that assesses whether the data populations were normal distributed. An ANOVA test was applied if the data population belonged to a normal distribution, if not a Friedman's test was applied, which is the non-parametric correspondent to an ANOVA test.
 
-\subsection{Online testing}
+\subsection*{Online testing}
 To investigate the effect of limb position in the regression control scheme an online virtual environment was developed, depicted in figure \ref{fig:targets}
 
 \begin{figure}[H]
@@ -172,9 +172,9 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 \clearpage
 \end{multicols}
 
-\section{RESULTS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{RESULTS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Offline Results}
+\subsection*{Offline Results}
 
 
 \begin{figure}[H]
@@ -190,10 +190,10 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 
 A qualitative examination of the superimposition plots in figure \ref{fig:SuperPositionTraining} shows that each regressor reacts on the movement it is fitted for, and remains inactive when another movement is performed. This accounts for both features. However, both regressors has lower accuracy in the high intensities, especially for the regressors trained with LogVar, which outputs similar values for the 80 \% of MVC contractions as the 50 \% of MVC contractions.
 	
-	
+
 	\begin{center}
 		\scalebox{0.85}{
-			\begin{tabular}{l l l} \label{tab:RMSEtrain-test}
+			\begin{tabular}{l l l}
 				\toprule
 				\textbf{Feature} & \textbf{Mean error} & \textbf{Std}\\
 				\midrule
@@ -212,8 +212,10 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 				\bottomrule
 			\end{tabular}
 		}
+		 \label{tab:RMSEtrain-test}
 		\captionof{table}{RMSE for the implemented regression models for both training and test input data.}
 	\end{center}
+	
 	A Kolmogorov-Smirnov test was applied to all individual data sets in both offline and online test results, and indicated no data set to be normal distributed. Thus, a Friedman's test was applied for all statistical analysis.
 	
 	Analysing the RMSE of the regression models' response to the training data, it was found that there was a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.1059, std = 0.0306), as seen in table \ref{tab:RMSEtrain-test}. 
@@ -243,7 +245,7 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 	
 	\begin{center}
 		\scalebox{0.85}{
-			\begin{tabular}{l l} \label{tab:RMSEp-values}
+			\begin{tabular}{l l}
 				\toprule
 				\textbf{Compared features} & \textbf{P-Value}\\
 				\midrule
@@ -254,13 +256,14 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 				\bottomrule
 			\end{tabular}
 		}
+		 \label{tab:RMSEp-values}
 		\captionof{table}{P-Values for comparison of the features.}
 	\end{center}
 	
 	A significant difference was found (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar, as shown in table \ref{tab:RMSEp-values}. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
 	
-	\subsection{Online Results}
-
+	\subsection*{Online Results}
+\end{multicols}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/paperFigures/GotItTimeCol}  %<--but is not needed.
@@ -274,7 +277,7 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 	\caption{Figure A shows the bar chart of the overall performance scores for MAV and LogVar features without and with inclusion of IMU data. Figure B shows the overall number of targets reached for MAV and LogVar features without and with inclusion of IMU data.}
 	\label{fig:TargetScoresTargetsCol}  %<--give the figure a label, so you can reference!
 \end{figure}
-	
+	\begin{multicols}{2}
 %\newpage
 
 		\begin{center}
@@ -460,7 +463,7 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 	
 		\begin{center}
 			\scalebox{0.85}{
-			\begin{tabular}{l l l} \label{tab:averageNoTR}
+			\begin{tabular}{l l l}
 				\toprule
 				\textbf{Feature} & \textbf{Mean TR} & \textbf{Std}\\
 				\midrule
@@ -471,6 +474,7 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 				\bottomrule
 			\end{tabular}
 		}
+		 \label{tab:averageNoTR}
 			\captionof{table}{Average number of targets reached (TR) in the target reaching test for the four regressor designs.}
 		\end{center}
 	
@@ -493,7 +497,7 @@ A qualitative examination of the superimposition plots in figure \ref{fig:SuperP
 	
 	A significant difference (p = 0.0017) was found between targets reached when IMU was included, where LogVar (mean = 14.1481, std = 1.9156) was proven worse than MAV (mean = 15.5185, std = 1.5285). There was a significant difference (p = 0.0016) between LogVar with (mean = 14.1481, std = 1.9156) and without (mean = 15.2593, std = 1.2586) IMU data. The same significant difference (p = 0.0124) between MAV with (mean = 15.5185, std = 1.5285) and without (mean = 15.2963, std = 0.8689) IMU data. There was no difference (p = 1) between targets reached with LogVar and MAV when IMU was not included.
 	
-\section{DISCUSSION}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{DISCUSSION}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 %		\include{content/eDiscussion}
 \textbf{Comparison of features.}
@@ -523,7 +527,7 @@ To improve the validity of the findings more test subjects should be included in
 
 Using the Myo armband for data acquisition limited the sampling rate to 200 Hz. Only the 0-100 Hz spectrum of the EMG was represented correctly, where frequencies above 100 Hz was affected by aliasing. Along with frequency representation limitations, the Myo armband restricted the number and placement of electrodes to eight channels placed at the same distance distal to the elbow joint, where it might be possible to yield better results with a different electrode placement and number of channels. Further studies should implement conventional EMG electrodes and an ADC with a sufficient sample rate, enabling the entire frequency band of EMG signals to be acquired correctly.		
 	
-\section{CONCLUSIONS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{CONCLUSIONS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 % 		\include{content/fConclusion}
 In conclusion linear regression can be implemented as control scheme in myoelectric prosthetic control to yield performance with no significant difference across variations of limb position. This is opposed to previous studies using classification as control scheme.
