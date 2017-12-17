@@ -17,6 +17,10 @@
 %\usepackage{amsmath} % assumes amsmath package installed
 %\usepackage{amssymb}  % assumes amsmath package installed
 \usepackage{subfigure}
+\usepackage{float}
+
+\restylefloat{figure}
+
 \title{\LARGE \bf
 	The effect of limb position on myoelectric prosthetic control using linear regression
 }%final name
@@ -38,8 +42,15 @@
 
 \author{Simon Bruun, Oliver Thomsen Damsgaard, Martin Alexander Garenfeld, Irene Uriarte}% <-this % stops a space
 
-
 \begin{document}
+
+\setcounter{topnumber}{6}
+\setcounter{bottomnumber}{6}
+\setcounter{totalnumber}{10}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
 		
 	\maketitle
 	\thispagestyle{empty}
@@ -90,14 +101,14 @@ Additional 50\% of MVC EMG data was acquired for each wrist movement in all limb
 
 The recorded EMG data was filtered using a $2^{nd}$ order Butterworth high-pass filter with a 10 Hz cut-off to remove movement artefacts. 
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figures/wristmovement}  %<--but is not needed.
 	\caption{Illustration of the two DOF's used in the study (P1: flexion, P2: extension and P3: radial deviation, P4: ulnar deviation)}
 	\label{fig:wristmovement}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figures/limb_pos}  %<--but is not needed.
 	\caption{Illustration of the limb positions performed. P1: relaxed along the torso, P2: 90 degrees horizontally of the side of torso and P3: 135 degrees vertically in front of the torso}
@@ -144,12 +155,10 @@ where N is the length of the window, $y_i$ is the $i^{th}$ variable of the actua
 
 It was decided, which statistical analysis to apply, through a Kolmogorov-Smirnov test that assesses whether the data populations were normal distributed. An ANOVA test was applied if the data population belonged to a normal distribution, if not a Friedman's test was applied, which is the non-parametric correspondent to an ANOVA test.
 
-\newpage
-
 \subsection{Online testing}
 To investigate the effect of limb position in the regression control scheme an online virtual environment was developed, depicted in figure \ref{fig:targets}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{Figures/Target}
 	\caption{A vector originated from origo depicted the EMG signal, where the length of the vector represented the EMG intensity, and direction was based on the movement performed. The wrist flexion-extension DOF was mapped to the x-axis, and the radial-ulnar deviation DOF was mapped to y-axis. The vector returned to the target located around origo when no contraction was made. For the subject to reach the targets in the diagonals, a simultaneous movement had to be performed. One target was shown at a time. When a target was reached, the vector had to return to the centred target for a new to appear. This gave the subject the same starting point when reaching each outer target. The procedure was performed until all targets had appeared. If a target was not reached within 30 s, it would disappear, and the vector had to return to the centred target.}
@@ -159,52 +168,41 @@ To investigate the effect of limb position in the regression control scheme an o
 The time to complete a target-reaching task of sixteen targets was measured. 12 tests were performed by each subject; one in each limb position for each feature for the regressors trained with and without included accelerometer data. The performance score was calculated as the mean of time per reached target. Time to reach the centred target was not included in the performance score. Performance scores of the online test was compared between the different limb positions of the same feature, between all limb positions of the two features and between performance score obtained when using regressors trained with and without inclusion of accelerometer data. The same comparison was additionally applied for the amount of targets reached. The statistical analysis applied was again based on whether the populations were normal distributed or not. 
 
 \newpage
+\clearpage
+\end{multicol}
 
 \section{RESULTS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/NewSuperPositionTestDataMAV}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:SuperPositionTrainingMAV}  %<--give the figure a label, so you can reference!
+\end{figure*}
+
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/NewSuperPositionTestDataLogVar}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the LogVar features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:SuperPositionTrainingLogVar}  %<--give the figure a label, so you can reference!
+\end{figure*}
+
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/GotItTime}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:GotItTimeCol}  %<--give the figure a label, so you can reference!
+\end{figure*}
 	
-	\begin{figure*}[thpb]
-		\centering
-		\includegraphics[width=0.6\textwidth]{figures/NewSuperPositionTestDataMAV}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-		\label{fig:SuperPositionTrainingMAV}  %<--give the figure a label, so you can reference!
-	\end{figure*}
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/sumMoreBarsWithTargetsReachedForAllRegressors}  %<--but is not needed.
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
+	\label{fig:TargetScoresTargetsCol}  %<--give the figure a label, so you can reference!
+\end{figure*}
 	
-	\begin{figure*}[thpb]
-		\centering
-		\includegraphics[width=0.6\textwidth]{figures/NewSuperPositionTestDataLogVar}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the LogVar features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-		\label{fig:SuperPositionTrainingLogVar}  %<--give the figure a label, so you can reference!
-	\end{figure*}
-	
-	\begin{figure}[thpb]
-		\centering
-		\includegraphics[width=0.4\textwidth]{figures/GotItTime}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-		\label{fig:GotItTime}  %<--give the figure a label, so you can reference!
-	\end{figure}
-	
-	\begin{figure}[thpb]
-		\centering
-		\includegraphics[width=0.4\textwidth]{figures/GotItTimeIMU}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-		\label{fig:GotItTimeIMU}  %<--give the figure a label, so you can reference!
-	\end{figure}
-	
-	\begin{figure}[thpb]
-		\centering
-		\includegraphics[width=0.4\textwidth]{figures/sumMoreBarsWithTargetsReachedForAllRegressors}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-		\label{fig:TargetScoresTargets}  %<--give the figure a label, so you can reference!
-	\end{figure}
-	
-	\begin{figure}[thpb]
-		\centering
-		\includegraphics[width=0.4\textwidth]{figures/allRegressorBarzTimeScoreForTargetTest}  %<--but is not needed.
-		\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same ample size.}
-		\label{fig:TimeScoreTargets}  %<--give the figure a label, so you can reference!
-	\end{figure}
-	
-	\begin{table}[thpb]
+\begin{multicol}{2}
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -221,7 +219,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -240,7 +238,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	Analysing the RMSE of the regression models' response to the training data, it was found that there's a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.0159, std = 0.0306).
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -258,7 +256,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	\end{table}
 	
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -275,7 +273,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -293,7 +291,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	It was found that there is a significant difference (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
 	
-	\begin{table}![thpb]
+	\begin{table}![H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -310,7 +308,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 			\caption{Test scores for the different limb for MAV and LogVar regressors}
 		\end{center}
 	\end{table}
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -326,7 +324,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	When comparing the score for different limb positions, no significant difference was found for either MAV (p = 0.8948) or LogVar (p = 0.2359).
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -344,7 +342,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -362,7 +360,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -380,7 +378,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]	
+	\begin{table}[H]	
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -396,7 +394,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	A significant difference (p = 0.0319) was found between the test score in different limb positions for MAV with IMU included, where the worst performance was found with the arm pointed forward (mean = 6.1094, std = 3.3852). No significant difference (p = 0.4594) was found between limb positions for the LogVar regression model with IMU data included.
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -414,7 +412,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -431,7 +429,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	There was no significant difference found for the MAV regressor with IMU data included (p = 0.2957). The number of targets reached in different limb positions was proven significantly different (p = 0.0037) for the LogVar feature with IMU data included, where the lowest number of targets reached was found with the arm pointed forward (mean = 13.5556, std = 2.1858).
 	
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -447,7 +445,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline
@@ -465,7 +463,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 	
 	A significant difference (p = 0.5637) could not be proven between the scores of the target test for LogVar with IMU data and MAV with IMU data. There was no significant difference (p = 0.0833) between the score of LogVar without IMU data and MAV without IMU data. It was also found that there is no significant difference between regression models with and without IMU data for both MAV (p = 0.1179) and LogVar (p = 0.5637).	
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l l}
 				\hline
@@ -481,7 +479,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\end{center}
 	\end{table}
 	
-	\begin{table}[thpb]
+	\begin{table}[H]
 		\begin{center}
 			\begin{tabular}{l l}
 				\hline

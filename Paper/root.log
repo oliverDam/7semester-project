@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  16 DEC 2017 20:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 09:54
 entering extended mode
 **root.tex
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\Paper\root.tex
@@ -161,33 +161,43 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip51
 \subfig@bottom=\skip52
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count96
+\float@exts=\toks16
+\float@box=\box27
+\@float@everytoks=\toks17
+\@floatcapt=\box28
+)
+\@float@every@figure=\toks18
+
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\Paper\root.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count96
+\scratchcounter=\count97
 \scratchdimen=\dimen119
-\scratchbox=\box27
-\nofMPsegments=\count97
-\nofMParguments=\count98
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count99
+\scratchbox=\box29
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count100
 \MPscratchDim=\dimen120
-\MPnumerator=\count100
-\makeMPintoPDFobject=\count101
-\everyMPtoPDFconversion=\toks17
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks20
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -235,216 +245,238 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 )
 
-LaTeX Warning: Citation `fougner2012' on page 1 undefined on input line 52.
+LaTeX Warning: Citation `fougner2012' on page 1 undefined on input line 63.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--54
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-LaTeX Warning: Citation `Fougner2012' on page 1 undefined on input line 63.
+LaTeX Warning: Citation `Fougner2012' on page 1 undefined on input line 74.
 
 
-LaTeX Warning: Citation `amsuess2014' on page 1 undefined on input line 63.
+LaTeX Warning: Citation `amsuess2014' on page 1 undefined on input line 74.
 
 
-LaTeX Warning: Citation `Ison2016' on page 1 undefined on input line 64.
+LaTeX Warning: Citation `Ison2016' on page 1 undefined on input line 75.
 
 
-LaTeX Warning: Citation `hahne2014' on page 1 undefined on input line 66.
+LaTeX Warning: Citation `hahne2014' on page 1 undefined on input line 77.
 
 
-LaTeX Warning: Citation `jiang2010' on page 1 undefined on input line 66.
+LaTeX Warning: Citation `jiang2010' on page 1 undefined on input line 77.
 
 
-LaTeX Warning: Citation `hahne2014' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `hahne2014' on page 1 undefined on input line 80.
 
 
-LaTeX Warning: Citation `jiang2012' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `jiang2012' on page 1 undefined on input line 80.
 
 
-LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 80.
 
 
-LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 71.
+LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 82.
 
 
-LaTeX Warning: Citation `DeRugy2013' on page 1 undefined on input line 71.
+LaTeX Warning: Citation `DeRugy2013' on page 1 undefined on input line 82.
 
 
-LaTeX Warning: Citation `jiang2009' on page 1 undefined on input line 71.
+LaTeX Warning: Citation `jiang2009' on page 1 undefined on input line 82.
 
 
-LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 73.
+LaTeX Warning: Citation `Fougner2011' on page 1 undefined on input line 84.
 
 
-LaTeX Warning: Citation `Roy2010' on page 1 undefined on input line 74.
+LaTeX Warning: Citation `Roy2010' on page 1 undefined on input line 85.
 
 
-LaTeX Warning: Citation `Imtiaz2014' on page 1 undefined on input line 74.
+LaTeX Warning: Citation `Imtiaz2014' on page 1 undefined on input line 85.
 
 
-LaTeX Warning: Citation `jiang2012' on page 1 undefined on input line 74.
+LaTeX Warning: Citation `jiang2012' on page 1 undefined on input line 85.
 
 [1{C:/Users/Simon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
 
-LaTeX Warning: Citation `Mendez2017' on page 2 undefined on input line 85.
+LaTeX Warning: Citation `Mendez2017' on page 2 undefined on input line 96.
 
 
-LaTeX Warning: Citation `mobarak2014' on page 2 undefined on input line 88.
+LaTeX Warning: Citation `mobarak2014' on page 2 undefined on input line 99.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 91.
+(Font)              <5> on input line 102.
 <Figures/wristmovement.png, id=8, 292.4526pt x 171.5208pt>
 File: Figures/wristmovement.png Graphic file (type png)
 
 <use Figures/wristmovement.png>
-Package pdftex.def Info: Figures/wristmovement.png used on input line 95.
+Package pdftex.def Info: Figures/wristmovement.png used on input line 106.
 (pdftex.def)             Requested size: 202.3529pt x 118.68185pt.
 
 <Figures/limb_pos.png, id=10, 2354.7975pt x 1316.92pt>
 File: Figures/limb_pos.png Graphic file (type png)
 
 <use Figures/limb_pos.png>
-Package pdftex.def Info: Figures/limb_pos.png used on input line 102.
+Package pdftex.def Info: Figures/limb_pos.png used on input line 113.
 (pdftex.def)             Requested size: 202.3529pt x 113.15244pt.
 
 
-LaTeX Warning: Citation `Farfan2010' on page 2 undefined on input line 108.
+LaTeX Warning: Citation `Farfan2010' on page 2 undefined on input line 119.
 
 
-LaTeX Warning: Citation `Zecca2002' on page 2 undefined on input line 109.
+LaTeX Warning: Citation `Zecca2002' on page 2 undefined on input line 120.
 
 [2 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Paper/Figures/wri
 stmovement.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Pape
 r/Figures/limb_pos.png>]
 
-LaTeX Warning: Citation `rasool2012' on page 3 undefined on input line 116.
+LaTeX Warning: Citation `rasool2012' on page 3 undefined on input line 127.
 
 
-LaTeX Warning: Citation `hahne2014' on page 3 undefined on input line 118.
+LaTeX Warning: Citation `hahne2014' on page 3 undefined on input line 129.
 
 
-LaTeX Warning: Citation `Krasoulis2015' on page 3 undefined on input line 125.
+LaTeX Warning: Citation `Krasoulis2015' on page 3 undefined on input line 136.
 
 
-LaTeX Warning: Citation `hwang2017' on page 3 undefined on input line 130.
+LaTeX Warning: Citation `hwang2017' on page 3 undefined on input line 141.
 
-[3] <Figures/Target.png, id=26, 718.18312pt x 536.75531pt>
+<Figures/Target.png, id=19, 718.18312pt x 536.75531pt>
 File: Figures/Target.png Graphic file (type png)
 
 <use Figures/Target.png>
-Package pdftex.def Info: Figures/Target.png used on input line 154.
+Package pdftex.def Info: Figures/Target.png used on input line 163.
 (pdftex.def)             Requested size: 179.54533pt x 134.18849pt.
 
-<figures/NewSuperPositionTestDataMAV.png, id=27, 1252.68pt x 724.20563pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4
+
+ <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Paper/Figures/Targe
+t.png>]
+
+! LaTeX Error: \begin{document} ended by \end{multicol}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.172 \end{multicol}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.172 \end{multicol}
+                    
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/NewSuperPositionTestDataMAV.png, id=31, 1252.68pt x 724.20563pt>
 File: figures/NewSuperPositionTestDataMAV.png Graphic file (type png)
 
 <use figures/NewSuperPositionTestDataMAV.png>
 Package pdftex.def Info: figures/NewSuperPositionTestDataMAV.png used on input 
-line 167.
+line 178.
 (pdftex.def)             Requested size: 303.53708pt x 175.48152pt.
 
-<figures/NewSuperPositionTestDataLogVar.png, id=28, 1264.725pt x 739.26187pt>
+<figures/NewSuperPositionTestDataLogVar.png, id=32, 1264.725pt x 739.26187pt>
 File: figures/NewSuperPositionTestDataLogVar.png Graphic file (type png)
 
 <use figures/NewSuperPositionTestDataLogVar.png>
 Package pdftex.def Info: figures/NewSuperPositionTestDataLogVar.png used on inp
-ut line 174.
+ut line 185.
 (pdftex.def)             Requested size: 303.53708pt x 177.41519pt.
 
-<figures/GotItTime.png, id=29, 805.50937pt x 671.50874pt>
+<figures/GotItTime.png, id=33, 1665.22125pt x 760.34062pt>
 File: figures/GotItTime.png Graphic file (type png)
 
 <use figures/GotItTime.png>
-Package pdftex.def Info: figures/GotItTime.png used on input line 181.
-(pdftex.def)             Requested size: 202.3529pt x 168.68623pt.
+Package pdftex.def Info: figures/GotItTime.png used on input line 192.
+(pdftex.def)             Requested size: 202.3529pt x 92.38551pt.
 
-<figures/GotItTimeIMU.png, id=30, 805.50937pt x 671.50874pt>
-File: figures/GotItTimeIMU.png Graphic file (type png)
-
-<use figures/GotItTimeIMU.png>
-Package pdftex.def Info: figures/GotItTimeIMU.png used on input line 188.
-(pdftex.def)             Requested size: 202.3529pt x 168.68623pt.
-
-<figures/sumMoreBarsWithTargetsReachedForAllRegressors.png, id=31, 894.34125pt 
+<figures/sumMoreBarsWithTargetsReachedForAllRegressors.png, id=34, 894.34125pt 
 x 663.98062pt>
 File: figures/sumMoreBarsWithTargetsReachedForAllRegressors.png Graphic file (t
 ype png)
  <use figures/sumMoreBarsWithTargetsReachedForAllRegressors.png>
 Package pdftex.def Info: figures/sumMoreBarsWithTargetsReachedForAllRegressors.
-png used on input line 195.
+png used on input line 199.
 (pdftex.def)             Requested size: 202.3529pt x 150.2301pt.
 
-<figures/allRegressorBarzTimeScoreForTargetTest.png, id=32, 910.90312pt x 660.9
-6938pt>
-File: figures/allRegressorBarzTimeScoreForTargetTest.png Graphic file (type png
-)
- <use figures/allRegressorBarzTimeScoreForTargetTest.png>
-Package pdftex.def Info: figures/allRegressorBarzTimeScoreForTargetTest.png use
-d on input line 202.
-(pdftex.def)             Requested size: 202.3529pt x 146.82568pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 209.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 209.
 
-Overfull \hbox (3.23212pt too wide) in paragraph at lines 298--310
+! LaTeX Error: Environment multicol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204 \begin{multicol}
+                      {2}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 207.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 207.
+
+Overfull \hbox (3.23212pt too wide) in paragraph at lines 296--308
  [] 
  []
 
-[4 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Paper/Figures/Tar
-get.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Paper/figur
-es/GotItTime.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Pa
-per/figures/GotItTimeIMU.png>] [5 <C:/Users/Simon/Documents/aKandidat/STM1/7sem
-estre-project/Paper/figures/NewSuperPositionTestDataMAV.png> <C:/Users/Simon/Do
-cuments/aKandidat/STM1/7semestre-project/Paper/figures/NewSuperPositionTestData
-LogVar.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/Paper/fi
-gures/sumMoreBarsWithTargetsReachedForAllRegressors.png> <C:/Users/Simon/Docume
-nts/aKandidat/STM1/7semestre-project/Paper/figures/allRegressorBarzTimeScoreFor
-TargetTest.png>]
-Overfull \hbox (3.23212pt too wide) in paragraph at lines 331--343
+
+Overfull \hbox (3.23212pt too wide) in paragraph at lines 329--341
  [] 
  []
+
+[5
+
+]
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `hahne2014' on page 6 undefined on input line 504.
 
 [6]
 
-LaTeX Warning: Citation `hahne2014' on page 7 undefined on input line 506.
+LaTeX Warning: Citation `Hwang2017' on page 7 undefined on input line 512.
+
+
+LaTeX Warning: Citation `jiang2010' on page 7 undefined on input line 519.
 
 [7]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
 
-LaTeX Warning: Citation `Hwang2017' on page 8 undefined on input line 514.
-
-
-LaTeX Warning: Citation `jiang2010' on page 8 undefined on input line 521.
-
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-[8]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -456,38 +488,42 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[9
+[8
 
 ] (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\Paper\root.aux)
 
 LaTeX Warning: There were undefined references.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 204 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2333 strings out of 493921
- 37285 string characters out of 3144876
- 108499 words of memory out of 3000000
- 5609 multiletter control sequences out of 15000+200000
+ 2383 strings out of 493921
+ 37629 string characters out of 3144876
+ 105870 words of memory out of 3000000
+ 5657 multiletter control sequences out of 15000+200000
  38797 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 40i,8n,25p,1727b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on root.pdf (9 pages, 3731064 bytes).
+ 40i,9n,25p,1727b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
+enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on root.pdf (8 pages, 3319690 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
