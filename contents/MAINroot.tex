@@ -105,7 +105,7 @@ The recorded EMG data was filtered using a $2^{nd}$ order Butterworth high-pass 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures/paperFigures/wristmovement}  %<--but is not needed.
-	\caption{Illustration of the two DOF's used in the study (P1: flexion, P2: extension and P3: radial deviation, P4: ulnar deviation)}
+	\caption{Illustration of the two DOF's used in the study (M1: flexion, M2: extension and M3: radial deviation, M4: ulnar deviation)}
 	\label{fig:wristmovement}  %<--give the figure a label, so you can reference!
 \end{figure}
 
@@ -187,8 +187,8 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 
 \begin{multicols}{2}
 	
-	%text addressing the superpoisons
-	
+
+A qualitative examination of the superimposition plots in figure \ref{fig:SuperPositionTraining} shows that each regressor reacts on the movement it is fitted for, and remains inactive when another movement is performed. This accounts for both features. However, both regressors has lower accuracy in the high intensities, especially for the regressors trained with LogVar, which outputs similar values for the 80 \% of MVC contractions as the 50 \% of MVC contractions.
 	
 	
 	\begin{center}
@@ -214,9 +214,9 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		}
 		\captionof{table}{RMSE for the implemented regression models for both training and test input data.}
 	\end{center}
-	A Kolmogorov-Smirnov test was applied to all individual data sets, and indicated no data set to be normal distribued. Thus, a Friedman's test was applied for all statistical analysis.
+	A Kolmogorov-Smirnov test was applied to all individual data sets in both offline and online test results, and indicated no data set to be normal distributed. Thus, a Friedman's test was applied for all statistical analysis.
 	
-	Analysing the RMSE of the regression models' response to the training data, it was found that there's a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.1059, std = 0.0306), as seen in table \ref{tab:RMSEtrain-test}. 
+	Analysing the RMSE of the regression models' response to the training data, it was found that there was a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.1059, std = 0.0306), as seen in table \ref{tab:RMSEtrain-test}. 
 	
 	
 %	\begin{center}
@@ -257,7 +257,7 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 		\captionof{table}{P-Values for comparison of the features.}
 	\end{center}
 	
-	A significant difference were found (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar, as shown in table \ref{tab:RMSEp-values}. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
+	A significant difference was found (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar, as shown in table \ref{tab:RMSEp-values}. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
 	
 	\subsection{Online Results}
 
