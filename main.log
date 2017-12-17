@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 16:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 16:38
 entering extended mode
 **main.tex
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\main.tex
@@ -1265,6 +1265,30 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 \f@ncyO@olf=\skip93
 \f@ncyO@orf=\skip94
 )
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 143.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 145.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 146.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 148.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 149.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 150.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count194
@@ -1728,10 +1752,10 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count414
 ))
-Package hyperref Info: Option `plainpages' set `false' on input line 243.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 243.
+Package hyperref Info: Option `plainpages' set `false' on input line 244.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 244.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 243.
+Package hyperref Info: Option `colorlinks' set `true' on input line 244.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
@@ -3407,21 +3431,21 @@ File: siunitx-abbreviations.cfg 2015/09/14 v2.6l siunitx: Abbreviated units
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(99.58464pt, 644.05556pt, 101.40665pt)
+* modes: 
+* h-part:(L,W,R)=(36.98857pt, 523.53073pt, 36.98857pt)
+* v-part:(T,H,B)=(54.06023pt, 668.63977pt, 122.34685pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=644.05556pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-9.68535pt
+* \textwidth=523.53073pt
+* \textheight=668.63977pt
+* \oddsidemargin=-35.28142pt
+* \evensidemargin=-35.28142pt
+* \topmargin=-55.20976pt
 * \headheight=21.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=111.0pt
+* \marginparwidth=57.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -3429,8 +3453,8 @@ File: siunitx-abbreviations.cfg 2015/09/14 v2.6l siunitx: Abbreviated units
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -3500,13 +3524,30 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 37.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 38.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 39.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 39.
+
+
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\formalities/frontpag
 e.tex <figures/aaulogo-en.png, id=6, 230.8625pt x 151.56625pt>
 File: figures/aaulogo-en.png Graphic file (type png)
 
 <use figures/aaulogo-en.png>
 Package pdftex.def Info: figures/aaulogo-en.png used on input line 6.
-(pdftex.def)             Requested size: 91.04742pt x 59.77434pt.
+(pdftex.def)             Requested size: 104.70454pt x 68.74072pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -3527,6 +3568,23 @@ Package cleveref Info: loaded `english' language definitions on input line 3.
  [2
 
 ]
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 60.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 61.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 62.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 63.
+
+
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\contents/MAINroot.te
 x
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -3546,12 +3604,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
  []
 
-
-Underfull \hbox (badness 7168) in paragraph at lines 67--68
-[]\T1/lmr/bx/it/10 Keywords---\T1/lmr/m/n/10 surface elec-tromyo-g-ra-phy, in-e
-r-tial
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -3559,126 +3611,135 @@ been already used, duplicate ignored
 l.68 	\end{abstract}
                      [1]
 
-LaTeX Warning: Citation 'Fougner2012' on page 2 undefined on input line 75.
+LaTeX Warning: Citation 'Fougner2012' on page 1 undefined on input line 75.
 
 
-LaTeX Warning: Citation 'amsuess2014' on page 2 undefined on input line 75.
+LaTeX Warning: Citation 'amsuess2014' on page 1 undefined on input line 75.
 
 
-LaTeX Warning: Citation 'Ison2016' on page 2 undefined on input line 76.
+LaTeX Warning: Citation 'Ison2016' on page 1 undefined on input line 76.
 
 
-LaTeX Warning: Citation 'hahne2014' on page 2 undefined on input line 78.
+LaTeX Warning: Citation 'hahne2014' on page 1 undefined on input line 78.
 
 
-LaTeX Warning: Citation 'jiang2010' on page 2 undefined on input line 78.
+LaTeX Warning: Citation 'jiang2010' on page 1 undefined on input line 78.
 
 
-LaTeX Warning: Citation 'hahne2014' on page 2 undefined on input line 81.
+LaTeX Warning: Citation 'hahne2014' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'jiang2012' on page 2 undefined on input line 81.
+LaTeX Warning: Citation 'jiang2012' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 2 undefined on input line 81.
+LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 2 undefined on input line 83.
+LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 83.
 
 
-LaTeX Warning: Citation 'DeRugy2013' on page 2 undefined on input line 83.
+LaTeX Warning: Citation 'DeRugy2013' on page 1 undefined on input line 83.
 
 
-LaTeX Warning: Citation 'jiang2009' on page 2 undefined on input line 83.
+LaTeX Warning: Citation 'jiang2009' on page 1 undefined on input line 83.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 2 undefined on input line 85.
+LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 85.
 
 
-LaTeX Warning: Citation 'Roy2010' on page 2 undefined on input line 86.
+LaTeX Warning: Citation 'Roy2010' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'Imtiaz2014' on page 2 undefined on input line 86.
+LaTeX Warning: Citation 'Imtiaz2014' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'jiang2012' on page 2 undefined on input line 86.
+LaTeX Warning: Citation 'jiang2012' on page 1 undefined on input line 86.
 
-[2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.96 \subsection*{Data acquisition}
+                                    [1]
 
-LaTeX Warning: Citation 'Mendez2017' on page 3 undefined on input line 97.
+LaTeX Warning: Citation 'Mendez2017' on page 2 undefined on input line 97.
 
 
-LaTeX Warning: Citation 'mobarak2014' on page 3 undefined on input line 100.
+LaTeX Warning: Citation 'mobarak2014' on page 2 undefined on input line 100.
 
-<figures/paperFigures/wristmovement.png, id=50, 2007.5pt x 2007.5pt>
+<figures/paperFigures/wristmovement.png, id=39, 2007.5pt x 2007.5pt>
 File: figures/paperFigures/wristmovement.png Graphic file (type png)
 
 <use figures/paperFigures/wristmovement.png>
 Package pdftex.def Info: figures/paperFigures/wristmovement.png used on input l
 ine 107.
-(pdftex.def)             Requested size: 182.09486pt x 182.07626pt.
+(pdftex.def)             Requested size: 209.40909pt x 209.39996pt.
 
-<figures/paperFigures/limb_pos.png, id=51, 2354.7975pt x 1316.92pt>
+<figures/paperFigures/limb_pos.png, id=40, 2354.7975pt x 1316.92pt>
 File: figures/paperFigures/limb_pos.png Graphic file (type png)
 
 <use figures/paperFigures/limb_pos.png>
 Package pdftex.def Info: figures/paperFigures/limb_pos.png used on input line 1
 14.
-(pdftex.def)             Requested size: 182.09486pt x 101.8191pt.
- [3 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFig
-ures/wristmovement.png>]
-
-LaTeX Warning: Citation 'Farfan2010' on page 4 undefined on input line 120.
+(pdftex.def)             Requested size: 209.40909pt x 117.11107pt.
 
 
-LaTeX Warning: Citation 'Zecca2002' on page 4 undefined on input line 121.
+LaTeX Warning: Citation 'Farfan2010' on page 2 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'rasool2012' on page 4 undefined on input line 128.
+LaTeX Warning: Citation 'Zecca2002' on page 2 undefined on input line 121.
 
 
-LaTeX Warning: Citation 'hahne2014' on page 4 undefined on input line 130.
+LaTeX Warning: Citation 'rasool2012' on page 2 undefined on input line 128.
+
+[2 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
+res/wristmovement.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-proje
+ct/figures/paperFigures/limb_pos.png>]
+
+LaTeX Warning: Citation 'hahne2014' on page 3 undefined on input line 130.
 
 
-LaTeX Warning: Citation 'Krasoulis2015' on page 4 undefined on input line 137.
+LaTeX Warning: Citation 'Krasoulis2015' on page 3 undefined on input line 137.
 
 
-LaTeX Warning: Citation 'hwang2017' on page 4 undefined on input line 142.
+LaTeX Warning: Citation 'hwang2017' on page 3 undefined on input line 142.
 
-[4 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
-res/limb_pos.png>]
-<figures/paperFigures/Target.png, id=84, 718.18312pt x 536.75531pt>
+<figures/paperFigures/Target.png, id=63, 718.18312pt x 536.75531pt>
 File: figures/paperFigures/Target.png Graphic file (type png)
 
 <use figures/paperFigures/Target.png>
 Package pdftex.def Info: figures/paperFigures/Target.png used on input line 164
 .
 (pdftex.def)             Requested size: 179.54533pt x 134.18849pt.
- [5 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFig
-ures/Target.png>]
-<figures/paperFigures/NewSuperPositionTestDataMAV.png, id=93, 1252.68pt x 724.2
+ [3] [4 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/pape
+rFigures/Target.png>]
+<figures/paperFigures/NewSuperPositionTestDataMAV.png, id=78, 1252.68pt x 724.2
 0563pt>
 File: figures/paperFigures/NewSuperPositionTestDataMAV.png Graphic file (type p
 ng)
  <use figures/paperFigures/NewSuperPositionTestDataMAV.png>
 Package pdftex.def Info: figures/paperFigures/NewSuperPositionTestDataMAV.png u
 sed on input line 182.
-(pdftex.def)             Requested size: 432.48051pt x 250.02802pt.
+(pdftex.def)             Requested size: 497.35258pt x 287.53333pt.
 
-<figures/paperFigures/NewSuperPositionTestDataLogVar.png, id=94, 1264.725pt x 7
+<figures/paperFigures/NewSuperPositionTestDataLogVar.png, id=79, 1264.725pt x 7
 39.26187pt>
 File: figures/paperFigures/NewSuperPositionTestDataLogVar.png Graphic file (typ
 e png)
  <use figures/paperFigures/NewSuperPositionTestDataLogVar.png>
 Package pdftex.def Info: figures/paperFigures/NewSuperPositionTestDataLogVar.pn
 g used on input line 183.
-(pdftex.def)             Requested size: 432.48051pt x 252.78957pt.
+(pdftex.def)             Requested size: 497.35258pt x 290.71365pt.
 
-[6
+[5
 
- <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigure
-s/NewSuperPositionTestDataMAV.png> <C:/Users/Simon/Documents/aKandidat/STM1/7se
-mestre-project/figures/paperFigures/NewSuperPositionTestDataLogVar.png>]
+]
+Overfull \vbox (12.30724pt too high) has occurred while \output is active []
+
+
+[6 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
+res/NewSuperPositionTestDataMAV.png> <C:/Users/Simon/Documents/aKandidat/STM1/7
+semestre-project/figures/paperFigures/NewSuperPositionTestDataLogVar.png>]
 
 Package caption Warning: \label without proper \caption on input line 184.
 See the caption package documentation for explanation.
@@ -3693,27 +3754,33 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+Package hyperref Warning: Suppressing empty link on input line 221.
+
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 260.
 See the caption package documentation for explanation.
 
-<figures/paperFigures/GotItTimeCol.png, id=107, 1665.22125pt x 760.34062pt>
+
+Package hyperref Warning: Suppressing empty link on input line 263.
+
+<figures/paperFigures/GotItTimeCol.png, id=94, 1665.22125pt x 760.34062pt>
 File: figures/paperFigures/GotItTimeCol.png Graphic file (type png)
 
 <use figures/paperFigures/GotItTimeCol.png>
 Package pdftex.def Info: figures/paperFigures/GotItTimeCol.png used on input li
 ne 269.
-(pdftex.def)             Requested size: 455.24411pt x 207.85872pt.
+(pdftex.def)             Requested size: 523.53073pt x 239.04448pt.
 
-<figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png, id=108, 18
-05.24437pt x 663.98062pt>
+<figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png, id=95, 180
+5.24437pt x 663.98062pt>
 File: figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png Graphi
 c file (type png)
 
 <use figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png>
 Package pdftex.def Info: figures/paperFigures/allRegressorBarzTimeScoreForTarge
 tTestCol.png used on input line 276.
-(pdftex.def)             Requested size: 455.24411pt x 167.44354pt.
+(pdftex.def)             Requested size: 523.53073pt x 192.55957pt.
 
 [7 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
 res/GotItTimeCol.png>]
@@ -3760,6 +3827,9 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+Package hyperref Warning: Suppressing empty link on input line 424.
+
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 439.
 See the caption package documentation for explanation.
@@ -3786,15 +3856,14 @@ LaTeX Warning: Citation 'hahne2014' on page 10 undefined on input line 504.
 
 LaTeX Warning: Citation 'Hwang2017' on page 10 undefined on input line 512.
 
-[10]
 
-LaTeX Warning: Citation 'jiang2010' on page 11 undefined on input line 519.
+LaTeX Warning: Citation 'jiang2010' on page 10 undefined on input line 519.
 
-[11])
+[10])
 
 LaTeX Warning: Empty bibliography on input line 114.
 
-[12]
+[11]
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 58.
 See the caption package documentation for explanation.
@@ -3814,9 +3883,6 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 123.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
 (biblatex)                and rerun LaTeX afterwards.
@@ -3824,59 +3890,32 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 48840 strings out of 493921
- 1009970 string characters out of 3144876
- 1610411 words of memory out of 3000000
- 51346 multiletter control sequences out of 15000+200000
+ 48831 strings out of 493921
+ 1009865 string characters out of 3144876
+ 1610314 words of memory out of 3000000
+ 51347 multiletter control sequences out of 15000+200000
  120031 words of font info for 101 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,11n,92p,10453b,1798s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{equation.0.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.0.2.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.0.2.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.0.2.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.1} has been referenced but does not exist
-, replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program
- Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvi
-ps/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/lm/lmsy10.pfb>
-Output written on main.pdf (15 pages, 11705812 bytes).
+ 57i,11n,92p,10453b,1753s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmsy10.pfb>
+Output written on main.pdf (15 pages, 11702217 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

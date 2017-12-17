@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 09:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 16:38
 entering extended mode
 **root.tex
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\Paper\root.tex
@@ -396,14 +396,22 @@ Package pdftex.def Info: figures/NewSuperPositionTestDataLogVar.png used on inp
 ut line 185.
 (pdftex.def)             Requested size: 303.53708pt x 177.41519pt.
 
-<figures/GotItTime.png, id=33, 1665.22125pt x 760.34062pt>
-File: figures/GotItTime.png Graphic file (type png)
 
-<use figures/GotItTime.png>
-Package pdftex.def Info: figures/GotItTime.png used on input line 192.
-(pdftex.def)             Requested size: 202.3529pt x 92.38551pt.
+! LaTeX Error: File `figures/GotItTime' not found.
 
-<figures/sumMoreBarsWithTargetsReachedForAllRegressors.png, id=34, 894.34125pt 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 ...s[width=0.4\textwidth]{figures/GotItTime}
+                                                    %<--but is not needed.
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+<figures/sumMoreBarsWithTargetsReachedForAllRegressors.png, id=33, 894.34125pt 
 x 663.98062pt>
 File: figures/sumMoreBarsWithTargetsReachedForAllRegressors.png Graphic file (t
 ype png)
@@ -500,10 +508,10 @@ LaTeX Warning: There were undefined references.
 ### semi simple group (level 1) entered at line 204 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2383 strings out of 493921
- 37629 string characters out of 3144876
- 105870 words of memory out of 3000000
- 5657 multiletter control sequences out of 15000+200000
+ 2390 strings out of 493921
+ 37546 string characters out of 3144876
+ 105862 words of memory out of 3000000
+ 5652 multiletter control sequences out of 15000+200000
  38797 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  40i,9n,25p,1727b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -521,9 +529,9 @@ x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86
 9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on root.pdf (8 pages, 3319690 bytes).
+Output written on root.pdf (8 pages, 3319670 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
