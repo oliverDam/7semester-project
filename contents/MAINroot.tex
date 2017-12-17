@@ -7,7 +7,13 @@
 %\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
 % paper
 
-
+\setcounter{topnumber}{6}
+\setcounter{bottomnumber}{6}
+\setcounter{totalnumber}{10}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
 
 % The following packages can be found on http:\\www.ctan.org
 %\usepackage{graphics} % for pdf, bitmapped graphics files
@@ -21,9 +27,9 @@
 %
 %\restylefloat{figure}
 
-\title{\LARGE \bf
-	The effect of limb position on myoelectric prosthetic control using linear regression
-}%final name
+%\title{\LARGE \bf
+%	The effect of limb position on myoelectric prosthetic control using linear regression
+%}%final name
 
 %\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
 %         \thanks{*Use the $\backslash$thanks command to put information here}\\
@@ -40,32 +46,29 @@
 %         {\tt\small pmisra@cs.wright.edu}}
 %}
 
-\author{Simon Bruun, Oliver Thomsen Damsgaard, Martin Alexander Garenfeld, Irene Uriarte}% <-this % stops a space
+%\author{Simon Bruun, Oliver Thomsen Damsgaard, Martin Alexander Garenfeld, Irene Uriarte}% <-this % stops a space
 
 %\begin{document}
-
-\setcounter{topnumber}{6}
-\setcounter{bottomnumber}{6}
-\setcounter{totalnumber}{10}
-\renewcommand{\topfraction}{1}
-\renewcommand{\bottomfraction}{1}
-\renewcommand{\textfraction}{0}
-\renewcommand{\floatpagefraction}{1}
 		
-	\maketitle
-	\thispagestyle{empty}
-	\pagestyle{empty}
+%	\maketitle
+%	\thispagestyle{empty}
+%	\pagestyle{empty}
+\begin{center}	
+	{\huge\textbf{The effect of limb position on myoelectric prosthetic control using linear regression}}
+	
+	
+	{\large \textbf{Simon Bruun, Oliver Thomsen Damsgaard, Martin Alexander Garenfeld, Irene Uriarte}}
+\end{center}
 	
 	\begin{multicols}{2}
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{abstract}
+
 %		\include{content/aAbstract}
-Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{fougner2012}. Most previous studies testing the effect of limb position, have utilized classification for pattern recognition with a negative effect in performance. This study investigated the effect of limb position in a linear regression-based control scheme, when using Mean Absolute Value and Logarithmic Variance as features, and including IMU data to improve the performance of the regression models. 12 able-bodied subjects were recruited for data acquisition, performing four wrist movements in three different limb positions. One regression model was build to recognize the different wrist movements under study, taking into account both features. The regressors were tested online in a virtual environment. The results showed that changes in limb position do not affect the control when linear regression model.
-This is opposed to previous studies using classification as control scheme. Linear regression has the potential to be used in future control schemes for myoelectric prosthetics for use in daily life tasks.\\
+\textbf{\textit{Abstract ---} Electromyography (EMG) is widely used for controlling functional prosthetics. However, EMG signals for the same movements change with variations in limb position and lowers the accuracy in control schemes \cite{fougner2012}. Most previous studies testing the effect of limb position, have utilized classification for pattern recognition with a negative effect in performance. This study investigated the effect of limb position in a linear regression-based control scheme, when using Mean Absolute Value and Logarithmic Variance as features, and including IMU data to improve the performance of the regression models. 12 able-bodied subjects were recruited for data acquisition, performing four wrist movements in three different limb positions. One regression model was build to recognize the different wrist movements under study, taking into account both features. The regressors were tested online in a virtual environment. The results showed that changes in limb position do not affect the control when linear regression model.
+This is opposed to previous studies using classification as control scheme. Linear regression has the potential to be used in future control schemes for myoelectric prosthetics for use in daily life tasks.\\}
 		
-\textit{\textbf{Keywords---}}surface electromyography, inertial measurement units, simultaneous and proportional myoelectric control, linear regression, lower arm prosthetics.
-	\end{abstract}
+\textbf{\textit{Keywords---}surface electromyography, inertial measurement units, simultaneous and proportional myoelectric control, linear regression, lower arm prosthetics.}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	

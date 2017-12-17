@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  17 DEC 2017 17:56
 entering extended mode
 **main.tex
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\main.tex
@@ -13,8 +13,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\setup/preamble.tex
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+
+(C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\setup/preamblePaper.
+tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -305,6 +306,13 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -338,11 +346,11 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen104
 \extrarowheight=\dimen105
-\NC@list=\toks16
+\NC@list=\toks17
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
-\everycr=\toks17
+\everycr=\toks18
 \minrowclearance=\skip45
 )
 \rownum=\count90
@@ -385,7 +393,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@target=\dimen111
 \TX@delta=\dimen112
 \TX@cols=\count94
-\TX@ftn=\toks18
+\TX@ftn=\toks19
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen113
@@ -396,10 +404,6 @@ Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -509,6 +513,50 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip54
 \subfig@bottom=\skip55
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip56
+\cftbeforetoctitleskip=\skip57
+\cftaftertoctitleskip=\skip58
+\cftbeforepartskip=\skip59
+\cftpartnumwidth=\skip60
+\cftpartindent=\skip61
+\cftbeforechapskip=\skip62
+\cftchapindent=\skip63
+\cftchapnumwidth=\skip64
+\cftbeforesecskip=\skip65
+\cftsecindent=\skip66
+\cftsecnumwidth=\skip67
+\cftbeforesubsecskip=\skip68
+\cftsubsecindent=\skip69
+\cftsubsecnumwidth=\skip70
+\cftbeforesubsubsecskip=\skip71
+\cftsubsubsecindent=\skip72
+\cftsubsubsecnumwidth=\skip73
+\cftbeforeparaskip=\skip74
+\cftparaindent=\skip75
+\cftparanumwidth=\skip76
+\cftbeforesubparaskip=\skip77
+\cftsubparaindent=\skip78
+\cftsubparanumwidth=\skip79
+\cftbeforeloftitleskip=\skip80
+\cftafterloftitleskip=\skip81
+\cftbeforefigskip=\skip82
+\cftfigindent=\skip83
+\cftfignumwidth=\skip84
+\cftbeforelottitleskip=\skip85
+\cftafterlottitleskip=\skip86
+\cftbeforetabskip=\skip87
+\cfttabindent=\skip88
+\cfttabnumwidth=\skip89
+\cftbeforesubfigskip=\skip90
+\cftsubfigindent=\skip91
+\cftsubfignumwidth=\skip92
+\cftbeforesubtabskip=\skip93
+\cftsubtabindent=\skip94
+\cftsubtabnumwidth=\skip95
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\soul\soul.sty"
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks25
@@ -516,7 +564,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks27
 \SOUL@buffer=\toks28
 \SOUL@token=\toks29
-\SOUL@spaceskip=\skip56
+\SOUL@spaceskip=\skip96
 \SOUL@ttwidth=\dimen135
 \SOUL@uldp=\dimen136
 \SOUL@ulht=\dimen137
@@ -543,7 +591,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip57
+\OuterFrameSep=\skip97
 \fb@frw=\dimen151
 \fb@frh=\dimen152
 \FrameRule=\dimen153
@@ -551,10 +599,10 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip58
-\LTright=\skip59
-\LTpre=\skip60
-\LTpost=\skip61
+\LTleft=\skip98
+\LTright=\skip99
+\LTpre=\skip100
+\LTpost=\skip101
 \LTchunksize=\count108
 \LTcapwidth=\dimen155
 \LT@head=\box30
@@ -724,7 +772,7 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip62
+\@mathmargin=\skip102
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -774,8 +822,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen163
 \lineht@=\dimen164
 \@envbody=\toks34
-\multlinegap=\skip63
-\multlinetaggap=\skip64
+\multlinegap=\skip103
+\multlinetaggap=\skip104
 \mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -800,12 +848,12 @@ Package: ntheorem 2011/08/15 1.33
 \theorem@@style=\toks37
 \theorembodyfont=\toks38
 \theoremnumbering=\toks39
-\theorempreskipamount=\skip65
-\theorempostskipamount=\skip66
-\theoremframepreskipamount=\skip67
-\theoremframepostskipamount=\skip68
-\theoreminframepreskipamount=\skip69
-\theoreminframepostskipamount=\skip70
+\theorempreskipamount=\skip105
+\theorempostskipamount=\skip106
+\theoremframepreskipamount=\skip107
+\theoremframepostskipamount=\skip108
+\theoreminframepreskipamount=\skip109
+\theoreminframepostskipamount=\skip110
 \theorem@preskip=\toks40
 \theorem@postskip=\toks41
 \theorem@framepreskip=\toks42
@@ -824,12 +872,12 @@ Package: ntheorem 2011/08/15 1.33
 \qedsymbol=\toks51
 \theoremkeyword=\toks52
 \qedsymbol=\toks53
-\thm@topsep=\skip71
-\thm@topsepadd=\skip72
+\thm@topsep=\skip111
+\thm@topsepadd=\skip112
 Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
 \c@endNonectr=\count125
 \c@currNonectr=\count126
-\mysavskip=\skip73
+\mysavskip=\skip113
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
 \thm@amstmpdepth=\dimen169
@@ -885,12 +933,12 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \l_tmpb_dim=\dimen174
 \g_tmpa_dim=\dimen175
 \g_tmpb_dim=\dimen176
-\c_zero_skip=\skip74
-\c_max_skip=\skip75
-\l_tmpa_skip=\skip76
-\l_tmpb_skip=\skip77
-\g_tmpa_skip=\skip78
-\g_tmpb_skip=\skip79
+\c_zero_skip=\skip114
+\c_max_skip=\skip115
+\l_tmpa_skip=\skip116
+\l_tmpb_skip=\skip117
+\g_tmpa_skip=\skip118
+\g_tmpb_skip=\skip119
 \c_zero_muskip=\muskip11
 \c_max_muskip=\muskip12
 \l_tmpa_muskip=\muskip13
@@ -999,8 +1047,8 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \l__siunitx_unit_prefix_base_int=\count170
 \l__siunitx_unit_prefix_gram_int=\count171
 \l__siunitx_number_product_int=\count172
-\c__siunitx_one_fill_skip=\skip80
-\l__siunitx_table_unit_align_skip=\skip81
+\c__siunitx_one_fill_skip=\skip120
+\l__siunitx_table_unit_align_skip=\skip121
 \l__siunitx_table_exponent_dim=\dimen259
 \l__siunitx_table_integer_dim=\dimen260
 \l__siunitx_table_mantissa_dim=\dimen261
@@ -1014,8 +1062,8 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \l__siunitx_table_post_box=\box56
 \l__siunitx_table_mantissa_box=\box57
 \l__siunitx_table_result_box=\box58
-\l__siunitx_table_number_align_skip=\skip82
-\l__siunitx_table_text_align_skip=\skip83
+\l__siunitx_table_number_align_skip=\skip122
+\l__siunitx_table_text_align_skip=\skip123
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1220,8 +1268,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box59
-\beforetitleunit=\skip84
-\aftertitleunit=\skip85
+\beforetitleunit=\skip124
+\aftertitleunit=\skip125
 \ttl@plus=\dimen276
 \ttl@minus=\dimen277
 \ttl@toksa=\toks56
@@ -1255,39 +1303,39 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 \c@blind@pangrammax=\count193
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip86
-\f@ncyO@elh=\skip87
-\f@ncyO@erh=\skip88
-\f@ncyO@olh=\skip89
-\f@ncyO@orh=\skip90
-\f@ncyO@elf=\skip91
-\f@ncyO@erf=\skip92
-\f@ncyO@olf=\skip93
-\f@ncyO@orf=\skip94
+\fancy@headwidth=\skip126
+\f@ncyO@elh=\skip127
+\f@ncyO@erh=\skip128
+\f@ncyO@olh=\skip129
+\f@ncyO@orh=\skip130
+\f@ncyO@elf=\skip131
+\f@ncyO@erf=\skip132
+\f@ncyO@olf=\skip133
+\f@ncyO@orf=\skip134
 )
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 143.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 145.
-
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 146.
 
 
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 148.
 
 
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 149.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 150.
+less on input line 151.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 152.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 153.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
@@ -1393,14 +1441,14 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@parenlevel@text=\count315
 \blx@parenlevel@foot=\count316
 \blx@sectionciteorder@0=\count317
-\labelnumberwidth=\skip95
-\labelalphawidth=\skip96
-\biblabelsep=\skip97
-\bibitemsep=\skip98
-\bibnamesep=\skip99
-\bibinitsep=\skip100
-\bibparsep=\skip101
-\bibhang=\skip102
+\labelnumberwidth=\skip135
+\labelalphawidth=\skip136
+\biblabelsep=\skip137
+\bibitemsep=\skip138
+\bibnamesep=\skip139
+\bibinitsep=\skip140
+\bibparsep=\skip141
+\bibhang=\skip142
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \c@mincomprange=\count318
@@ -1480,12 +1528,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedlanguage=\count384
 \c@pageref=\count385
 \c@savedpageref=\count386
-\shorthandwidth=\skip103
-\shortjournalwidth=\skip104
-\shortserieswidth=\skip105
-\shorttitlewidth=\skip106
-\shortauthorwidth=\skip107
-\shorteditorwidth=\skip108
+\shorthandwidth=\skip143
+\shortjournalwidth=\skip144
+\shortserieswidth=\skip145
+\shorttitlewidth=\skip146
+\shortauthorwidth=\skip147
+\shorteditorwidth=\skip148
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1568,73 +1616,7 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \WF@everypar=\toks60
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
-Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip109
-\cftbeforetoctitleskip=\skip110
-\cftaftertoctitleskip=\skip111
-\cftbeforepartskip=\skip112
-\cftpartnumwidth=\skip113
-\cftpartindent=\skip114
-\cftbeforechapskip=\skip115
-\cftchapindent=\skip116
-\cftchapnumwidth=\skip117
-\cftbeforesecskip=\skip118
-\cftsecindent=\skip119
-\cftsecnumwidth=\skip120
-\cftbeforesubsecskip=\skip121
-\cftsubsecindent=\skip122
-\cftsubsecnumwidth=\skip123
-\cftbeforesubsubsecskip=\skip124
-\cftsubsubsecindent=\skip125
-\cftsubsubsecnumwidth=\skip126
-\cftbeforeparaskip=\skip127
-\cftparaindent=\skip128
-\cftparanumwidth=\skip129
-\cftbeforesubparaskip=\skip130
-\cftsubparaindent=\skip131
-\cftsubparanumwidth=\skip132
-\cftbeforeloftitleskip=\skip133
-\cftafterloftitleskip=\skip134
-\cftbeforefigskip=\skip135
-\cftfigindent=\skip136
-\cftfignumwidth=\skip137
-
-
-! LaTeX Error: Command \c@lofdepth already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.607   \newcounter{lofdepth}
-                             \setcounter{lofdepth}{1}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \c@lotdepth already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.608   \newcounter{lotdepth}
-                             \setcounter{lotdepth}{1}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\cftbeforelottitleskip=\skip138
-\cftafterlottitleskip=\skip139
-\cftbeforetabskip=\skip140
-\cfttabindent=\skip141
-\cfttabnumwidth=\skip142
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty"
@@ -1743,7 +1725,7 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip143
+\Hy@SectionHShift=\skip149
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
@@ -1752,10 +1734,10 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count414
 ))
-Package hyperref Info: Option `plainpages' set `false' on input line 244.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 244.
+Package hyperref Info: Option `plainpages' set `false' on input line 247.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 247.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 244.
+Package hyperref Info: Option `colorlinks' set `true' on input line 247.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
@@ -1771,8 +1753,8 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \page@free=\dimen289
 \premulticols=\dimen290
 \postmulticols=\dimen291
-\multicolsep=\skip144
-\multicolbaselineskip=\skip145
+\multicolsep=\skip150
+\multicolbaselineskip=\skip151
 \partial@page=\box62
 \last@line=\box63
 \mult@rightbox=\box64
@@ -1832,7 +1814,7 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip146
+\labelindent=\skip152
 \enit@outerparindent=\dimen299
 \enit@toks=\toks62
 \enit@inbox=\box89
@@ -2220,11 +2202,14 @@ File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 7.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 7.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count453
@@ -3462,8 +3447,8 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+(C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\main.bbl)
 Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
 \AtBeginShipoutBox=\box104
@@ -3472,6 +3457,7 @@ LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
 LaTeX Info: Redefining \nameref on input line 7.
 \c@lstlisting=\count459
+
 ABD: EveryShipout initializing macros
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
@@ -3548,12 +3534,20 @@ File: figures/aaulogo-en.png Graphic file (type png)
 <use figures/aaulogo-en.png>
 Package pdftex.def Info: figures/aaulogo-en.png used on input line 6.
 (pdftex.def)             Requested size: 104.70454pt x 68.74072pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 23.63593pt on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 23.63593pt on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 15.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 18.
 ) [1
@@ -3587,285 +3581,323 @@ less on input line 63.
 
 (C:\Users\Simon\Documents\aKandidat\STM1\7semestre-project\contents/MAINroot.te
 x
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 56.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 56.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 56.
- [1
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 19.70294pt on input line 57.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 57.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 19.70294pt on input line 57.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 60.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 60.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 69.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 69.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 69.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 69.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 9.49997pt on input line 69.
 
-]
 
-LaTeX Warning: Citation 'fougner2012' on page 1 undefined on input line 64.
+LaTeX Warning: Citation 'fougner2012' on page 1 undefined on input line 69.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68 	\end{abstract}
-                     [1]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 75.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 75.
 
-LaTeX Warning: Citation 'Fougner2012' on page 1 undefined on input line 75.
+LaTeX Warning: Citation 'Fougner2012' on page 1 undefined on input line 78.
 
 
-LaTeX Warning: Citation 'amsuess2014' on page 1 undefined on input line 75.
+LaTeX Warning: Citation 'amsuess2014' on page 1 undefined on input line 78.
 
 
-LaTeX Warning: Citation 'Ison2016' on page 1 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'hahne2014' on page 1 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'jiang2010' on page 1 undefined on input line 78.
+LaTeX Warning: Citation 'Ison2016' on page 1 undefined on input line 79.
 
 
 LaTeX Warning: Citation 'hahne2014' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'jiang2012' on page 1 undefined on input line 81.
+LaTeX Warning: Citation 'jiang2010' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 81.
+LaTeX Warning: Citation 'hahne2014' on page 1 undefined on input line 84.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 83.
+LaTeX Warning: Citation 'jiang2012' on page 1 undefined on input line 84.
 
 
-LaTeX Warning: Citation 'DeRugy2013' on page 1 undefined on input line 83.
+LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 84.
 
 
-LaTeX Warning: Citation 'jiang2009' on page 1 undefined on input line 83.
+LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'Fougner2011' on page 1 undefined on input line 85.
+LaTeX Warning: Citation 'DeRugy2013' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'Roy2010' on page 1 undefined on input line 86.
+LaTeX Warning: Citation 'jiang2009' on page 1 undefined on input line 86.
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 87.
+Package cleveref Info: loaded `english' language definitions on input line 87.
+[1
+
+]
+
+LaTeX Warning: Citation 'Fougner2011' on page 2 undefined on input line 88.
 
 
-LaTeX Warning: Citation 'Imtiaz2014' on page 1 undefined on input line 86.
+LaTeX Warning: Citation 'Roy2010' on page 2 undefined on input line 89.
 
 
-LaTeX Warning: Citation 'jiang2012' on page 1 undefined on input line 86.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.96 \subsection*{Data acquisition}
-                                    [1]
-
-LaTeX Warning: Citation 'Mendez2017' on page 2 undefined on input line 97.
+LaTeX Warning: Citation 'Imtiaz2014' on page 2 undefined on input line 89.
 
 
-LaTeX Warning: Citation 'mobarak2014' on page 2 undefined on input line 100.
+LaTeX Warning: Citation 'jiang2012' on page 2 undefined on input line 89.
 
-<figures/paperFigures/wristmovement.png, id=39, 2007.5pt x 2007.5pt>
+
+LaTeX Warning: Citation 'Mendez2017' on page 2 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'mobarak2014' on page 2 undefined on input line 103.
+
+<figures/paperFigures/wristmovement.png, id=32, 2007.5pt x 2007.5pt>
 File: figures/paperFigures/wristmovement.png Graphic file (type png)
 
 <use figures/paperFigures/wristmovement.png>
 Package pdftex.def Info: figures/paperFigures/wristmovement.png used on input l
-ine 107.
+ine 110.
 (pdftex.def)             Requested size: 209.40909pt x 209.39996pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 111.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 111.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 111.
+Package cleveref Info: loaded `english' language definitions on input line 114.
 
-<figures/paperFigures/limb_pos.png, id=40, 2354.7975pt x 1316.92pt>
+ [2]
+<figures/paperFigures/limb_pos.png, id=42, 2354.7975pt x 1316.92pt>
 File: figures/paperFigures/limb_pos.png Graphic file (type png)
 
 <use figures/paperFigures/limb_pos.png>
 Package pdftex.def Info: figures/paperFigures/limb_pos.png used on input line 1
-14.
+17.
 (pdftex.def)             Requested size: 209.40909pt x 117.11107pt.
 
 
-LaTeX Warning: Citation 'Farfan2010' on page 2 undefined on input line 120.
+LaTeX Warning: Citation 'Farfan2010' on page 3 undefined on input line 123.
 
 
-LaTeX Warning: Citation 'Zecca2002' on page 2 undefined on input line 121.
+LaTeX Warning: Citation 'Zecca2002' on page 3 undefined on input line 124.
 
 
-LaTeX Warning: Citation 'rasool2012' on page 2 undefined on input line 128.
+LaTeX Warning: Citation 'rasool2012' on page 3 undefined on input line 131.
 
-[2 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
+
+LaTeX Warning: Citation 'hahne2014' on page 3 undefined on input line 133.
+
+
+LaTeX Warning: Citation 'Krasoulis2015' on page 3 undefined on input line 140.
+
+
+LaTeX Warning: Citation 'hwang2017' on page 3 undefined on input line 145.
+
+Package cleveref Info: loaded `english' language definitions on input line 154.
+
+[3 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
 res/wristmovement.png> <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-proje
 ct/figures/paperFigures/limb_pos.png>]
-
-LaTeX Warning: Citation 'hahne2014' on page 3 undefined on input line 130.
-
-
-LaTeX Warning: Citation 'Krasoulis2015' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Citation 'hwang2017' on page 3 undefined on input line 142.
-
-<figures/paperFigures/Target.png, id=63, 718.18312pt x 536.75531pt>
+<figures/paperFigures/Target.png, id=62, 718.18312pt x 536.75531pt>
 File: figures/paperFigures/Target.png Graphic file (type png)
 
 <use figures/paperFigures/Target.png>
-Package pdftex.def Info: figures/paperFigures/Target.png used on input line 164
+Package pdftex.def Info: figures/paperFigures/Target.png used on input line 167
 .
 (pdftex.def)             Requested size: 179.54533pt x 134.18849pt.
- [3] [4 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/pape
-rFigures/Target.png>]
-<figures/paperFigures/NewSuperPositionTestDataMAV.png, id=78, 1252.68pt x 724.2
+Package cleveref Info: loaded `english' language definitions on input line 174.
+
+ [4 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFig
+ures/Target.png>]
+<figures/paperFigures/NewSuperPositionTestDataMAV.png, id=71, 1252.68pt x 724.2
 0563pt>
 File: figures/paperFigures/NewSuperPositionTestDataMAV.png Graphic file (type p
 ng)
  <use figures/paperFigures/NewSuperPositionTestDataMAV.png>
 Package pdftex.def Info: figures/paperFigures/NewSuperPositionTestDataMAV.png u
-sed on input line 182.
+sed on input line 185.
 (pdftex.def)             Requested size: 497.35258pt x 287.53333pt.
 
-<figures/paperFigures/NewSuperPositionTestDataLogVar.png, id=79, 1264.725pt x 7
+<figures/paperFigures/NewSuperPositionTestDataLogVar.png, id=72, 1264.725pt x 7
 39.26187pt>
 File: figures/paperFigures/NewSuperPositionTestDataLogVar.png Graphic file (typ
 e png)
  <use figures/paperFigures/NewSuperPositionTestDataLogVar.png>
 Package pdftex.def Info: figures/paperFigures/NewSuperPositionTestDataLogVar.pn
-g used on input line 183.
+g used on input line 186.
 (pdftex.def)             Requested size: 497.35258pt x 290.71365pt.
+Package cleveref Info: loaded `english' language definitions on input line 190.
+
 
 [5
 
 ]
-Overfull \vbox (12.30724pt too high) has occurred while \output is active []
+Overfull \vbox (2.0067pt too high) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 190.
 
 
 [6 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
 res/NewSuperPositionTestDataMAV.png> <C:/Users/Simon/Documents/aKandidat/STM1/7
 semestre-project/figures/paperFigures/NewSuperPositionTestDataLogVar.png>]
 
-Package caption Warning: \label without proper \caption on input line 184.
+Package caption Warning: \label without proper \caption on input line 187.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:SuperPositionTraining' on page 7 undefined on inp
-ut line 191.
+ut line 194.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 216.
+(caption)                particular \caption on input line 219.
 See the caption package documentation for explanation.
 
 
-Package hyperref Warning: Suppressing empty link on input line 221.
+Package hyperref Warning: Suppressing empty link on input line 224.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 260.
+(caption)                particular \caption on input line 263.
 See the caption package documentation for explanation.
 
 
-Package hyperref Warning: Suppressing empty link on input line 263.
+Package hyperref Warning: Suppressing empty link on input line 266.
 
-<figures/paperFigures/GotItTimeCol.png, id=94, 1665.22125pt x 760.34062pt>
+<figures/paperFigures/GotItTimeCol.png, id=90, 1665.22125pt x 760.34062pt>
 File: figures/paperFigures/GotItTimeCol.png Graphic file (type png)
 
 <use figures/paperFigures/GotItTimeCol.png>
 Package pdftex.def Info: figures/paperFigures/GotItTimeCol.png used on input li
-ne 269.
+ne 272.
 (pdftex.def)             Requested size: 523.53073pt x 239.04448pt.
 
-<figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png, id=95, 180
+<figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png, id=91, 180
 5.24437pt x 663.98062pt>
 File: figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png Graphi
 c file (type png)
 
 <use figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol.png>
 Package pdftex.def Info: figures/paperFigures/allRegressorBarzTimeScoreForTarge
-tTestCol.png used on input line 276.
+tTestCol.png used on input line 279.
 (pdftex.def)             Requested size: 523.53073pt x 192.55957pt.
+Package cleveref Info: loaded `english' language definitions on input line 285.
+
 
 [7 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
 res/GotItTimeCol.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 298.
+(caption)                particular \caption on input line 301.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 312.
+(caption)                particular \caption on input line 315.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 334.
+(caption)                particular \caption on input line 337.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 349.
+(caption)                particular \caption on input line 352.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 371.
+(caption)                particular \caption on input line 374.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 385.
+(caption)                particular \caption on input line 388.
 See the caption package documentation for explanation.
+
+Package cleveref Info: loaded `english' language definitions on input line 388.
 
 [8 <C:/Users/Simon/Documents/aKandidat/STM1/7semestre-project/figures/paperFigu
 res/allRegressorBarzTimeScoreForTargetTestCol.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 407.
+(caption)                particular \caption on input line 410.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 421.
+(caption)                particular \caption on input line 424.
 See the caption package documentation for explanation.
 
 
-Package hyperref Warning: Suppressing empty link on input line 424.
+Package hyperref Warning: Suppressing empty link on input line 427.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 439.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 457.
+(caption)                particular \caption on input line 442.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 478.
+(caption)                particular \caption on input line 460.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 495.
+(caption)                particular \caption on input line 481.
 See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 498.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Citation 'hahne2014' on page 9 undefined on input line 507.
+
+Package cleveref Info: loaded `english' language definitions on input line 508.
 
 [9]
 
-LaTeX Warning: Citation 'hahne2014' on page 10 undefined on input line 504.
+LaTeX Warning: Citation 'Hwang2017' on page 10 undefined on input line 515.
 
 
-LaTeX Warning: Citation 'Hwang2017' on page 10 undefined on input line 512.
+LaTeX Warning: Citation 'jiang2010' on page 10 undefined on input line 522.
 
-
-LaTeX Warning: Citation 'jiang2010' on page 10 undefined on input line 519.
+Package cleveref Info: loaded `english' language definitions on input line 529.
 
 [10])
 
 LaTeX Warning: Empty bibliography on input line 114.
 
+Package cleveref Info: loaded `english' language definitions on input line 115.
+
 [11]
 
-Package caption Warning: Unused \captionsetup[subfigure] on input line 58.
+Package caption Warning: Unused \captionsetup[subfigure] on input line 61.
 See the caption package documentation for explanation.
 
 \tf@thm=\write6
@@ -3890,32 +3922,30 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 48831 strings out of 493921
- 1009865 string characters out of 3144876
- 1610314 words of memory out of 3000000
- 51347 multiletter control sequences out of 15000+200000
- 120031 words of font info for 101 fonts, out of 3000000 for 9000
+ 48852 strings out of 493921
+ 1010090 string characters out of 3144876
+ 1610034 words of memory out of 3000000
+ 51361 multiletter control sequences out of 15000+200000
+ 91519 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,11n,92p,10453b,1753s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,92p,10458b,2398s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/
 fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/d
-vips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmsy10.pfb>
-Output written on main.pdf (15 pages, 11702217 bytes).
+vips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
+mex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy1
+0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (13 pages, 11570887 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
