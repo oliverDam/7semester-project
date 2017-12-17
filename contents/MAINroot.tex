@@ -176,160 +176,136 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/paperFigures/NewSuperPositionTestDataMAV}  %<--but is not needed.
-	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-	\label{fig:SuperPositionTrainingMAV}  %<--give the figure a label, so you can reference!
+	\subfigure[]{\includegraphics[width=0.95\textwidth]{figures/paperFigures/NewSuperPositionTestDataMAV}}
+	\subfigure[]{\includegraphics[width=0.95\textwidth]{figures/paperFigures/NewSuperPositionTestDataLogVar}}
+	\label{fig:SuperPositionTraining}
+	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features in (a) LogVar features in (b). The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
 \end{figure}
+
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/paperFigures/NewSuperPositionTestDataLogVar}  %<--but is not needed.
-	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the LogVar features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
-	\label{fig:SuperPositionTrainingLogVar}  %<--give the figure a label, so you can reference!
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\textwidth]{figures/paperFigures/GotItTimeCol}  %<--but is not needed.
+	\includegraphics[width=1\textwidth]{figures/paperFigures/GotItTimeCol}  %<--but is not needed.
 	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
 	\label{fig:GotItTimeCol}  %<--give the figure a label, so you can reference!
 \end{figure}
 	
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol}  %<--but is not needed.
+	\includegraphics[width=1\textwidth]{figures/paperFigures/allRegressorBarzTimeScoreForTargetTestCol}  %<--but is not needed.
 	\caption{Plot of the actual data, red plot, superimposed on the output of the regressors trained with the MAV features. The plot is divided into four segments, where each segment shows a different movement performed. Each segment has the same sample size.}
 	\label{fig:TargetScoresTargetsCol}  %<--give the figure a label, so you can reference!
 \end{figure}
 	
+\newpage
+
 \begin{multicols}{2}
-	\begin{table}[H]
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
-				Extension & 0.1030 & $\pm 0.0210$ \\
-				Flexion & 0.1102 & $\pm 0.0296$ \\
-				Radial Deviation & 0.1206 & $\pm 0.0298$ \\
-				Ulnar Deviation & 0.1143 & $\pm 0.0334$ \\
-				Overall & 0.1059 & $\pm 0.0306$ \\
-				\hline
+				\toprule
+				\textbf{Feature, movement} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
+				MAV, Extension & 0.1030 & $\pm 0.0210$ \\
+				MAV, Flexion & 0.1102 & $\pm 0.0296$ \\
+				MAV, Radial Dev. & 0.1206 & $\pm 0.0298$ \\
+				MAV, Ulnar Dev. & 0.1143 & $\pm 0.0334$ \\
+				MAV, Overall & 0.1059 & $\pm 0.0306$ \\
+				LogVar, Extension & 0.1157 & $\pm 0.0469$ \\
+				LogVar, Flexion & 0.1102 & $\pm 0.0241$ \\
+				LogVar, Radial Dev. & 0.1142 & $\pm 0.0256$ \\
+				LogVar, Ulnar Dev. & 0.1312 & $\pm 0.0310$ \\
+				LogVar, Overall & 0.1178 & $\pm 0.0272$ \\
+				\bottomrule
 			\end{tabular}
-			\caption{RMSE for the implemented MAV regressor}
+		}
+			\captionof{table}{RMSE for the implemented regression models}
 		\end{center}
-	\end{table}
+		
+	Analysing the RMSE of the regression models' response to the training data, it was found that there's a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.1059, std = 0.0306).
 	
-	\begin{table}[H]
+
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
-				Extension & 0.1157 & $\pm 0.0469$ \\
-				Flexion & 0.1102 & $\pm 0.0241$ \\
-				Radial Deviation & 0.1142 & $\pm 0.0256$ \\
-				Ulnar Deviation & 0.1312 & $\pm 0.0310$ \\
-				Overall & 0.1178 & $\pm 0.0272$ \\
-				\hline
+				\toprule
+				\textbf{Feature, movement} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
+				MAV, Extension & 0.1646 & $\pm 0.0753$ \\
+				MAV, Flexion & 0.1391 & $\pm 0.0841$ \\
+				MAV, Radial Dev. & 0.2018 & $\pm 0.0424$ \\
+				MAV, Ulnar Dev. & 0.1743 & $\pm 0.0905$ \\
+				MAV, Overall & 0.1700 & $\pm 0.0759$ \\
+				LogVar, Extension & 0.1552 & $\pm 0.0514$ \\
+				LogVar, Flexion & 0.1680 & $\pm 0.0508$ \\
+				LogVar, Radial Dev. & 0.1681 & $\pm 0.0540$ \\
+				LogVar, Ulnar Dev. & 0.2078 & $\pm 0.0621$ \\
+				LogVar, Overall & 0.1748 & $\pm 0.0563$ \\
+				\bottomrule
 			\end{tabular}
-			\caption{RMSE for the implemented LogVar regressor}
+		}
+			\captionof{table}{RMSE for test data input for the regression models}
 		\end{center}
-	\end{table}
 	
-	Analysing the RMSE of the regression models' response to the training data, it was found that there's a significant difference (p = 0.0044) between MAV and LogVar, where it was shown that LogVar (mean = 0.1178, std = 0.0272) has a higher mean than MAV (mean = 0.0159, std = 0.0306).
-	
-	\begin{table}[H]
 		\begin{center}
-			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
-				Extension & 0.1646 & $\pm 0.0753$ \\
-				Flexion & 0.1391 & $\pm 0.0841$ \\
-				Radial Deviation & 0.2018 & $\pm 0.0424$ \\
-				Ulnar Deviation & 0.1743 & $\pm 0.0905$ \\
-				Overall & 0.1700 & $\pm 0.0759$ \\
-				\hline
-			\end{tabular}
-			\caption{RMSE for the implemented MAV regressor}
-		\end{center}
-	\end{table}
-	
-	
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
-				Extension & 0.1552 & $\pm 0.0514$ \\
-				Flexion & 0.1680 & $\pm 0.0508$ \\
-				Radial Deviation & 0.1681 & $\pm 0.0540$ \\
-				Ulnar Deviation & 0.2078 & $\pm 0.0621$ \\
-				Overall & 0.1748 & $\pm 0.0563$ \\
-				\hline
-			\end{tabular}
-			\caption{RMSE for the implemented LogVar regressor}
-		\end{center}
-	\end{table}
-	
-	\begin{table}[H]
-		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Compared features} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				LogVar, MAV & 0.0044 \\
 				LogVar test data, MAV test data & 0.1138 \\
 				LogVar test data, LogVar & 0.0001 \\
 				MAV test data, MAV & 0.000002 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison of the features}
+		}
+			\captionof{table}{P-Values for comparison of the features}
 		\end{center}
-	\end{table}
 	
 	It was found that there is a significant difference (p = 0.0001) between the RMSE for test data (mean = 0.1748, std = 0.0563) and training data (mean = 0.1178, std = 0.0272) for LogVar. A significant difference (p = 0.000002) was also found for the test data (mean = 0.1700, std = 0.0759) and training data (mean = 0.1059, std = 0.0306) for the MAV based regression models. No significant difference (p = 0.1138) was found between MAV (mean = 0.1700, std = 0.0759) and LogVar (mean = 0.1748, std = 0.0563) regression models with test data.
 	
-	\begin{table}![H]
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Limb position, feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
+				\toprule
+				\textbf{Position, feature} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
 				Down, MAV & 5.3377 & $\pm 1.5696$ \\
 				Forward, MAV & 8.1791 & $\pm 4.7145$ \\
 				Side, MAV & 6.0490 & $\pm 2.0490$ \\
 				Down, LogVar & 6.5404 & $\pm 2.5315$ \\
 				Forward, LogVar & 7.9123 & $\pm 3.4572$ \\
 				Side, LogVar & 6.9325 & $\pm 2.3036$ \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{Test scores for the different limb for MAV and LogVar regressors}
+		}
+			\captionof{table}{Test scores for the different limb for MAV and LogVar regressors}
 		\end{center}
-	\end{table}
-	\begin{table}[H]
+
+
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Feature} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				MAV & 0.8948 \\
 				LogVar & 0.2359 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison of the score in different limb positions with MAV and LogVar}
+		}
+			\captionof{table}{P-Values for comparison of the score in different limb positions with MAV and LogVar}
 		\end{center}
-	\end{table}
 	
 	When comparing the score for different limb positions, no significant difference was found for either MAV (p = 0.8948) or LogVar (p = 0.2359).
 	
-	\begin{table}[H]
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
 				\hline
-				\textbf{Limb position, feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
+				\textbf{Position, feature} & \textbf{Mean error} & \textbf{Std}\\
 				\hline
 				Down, MAV & 15.5556 & $\pm 0.7265$ \\
 				Forward, MAV & 15.1111 & $\pm 1.0541$ \\
@@ -339,162 +315,171 @@ The time to complete a target-reaching task of sixteen targets was measured. 12 
 				Side, LogVar & 15.3333 & $\pm 1.1180$ \\
 				\hline
 			\end{tabular}
-			\caption{Targets reached in the target test with the MAV and LogVar regressors.}
+		}
+			\captionof{table}{Targets reached in the target test with the MAV and LogVar regressors.}
 		\end{center}
-	\end{table}
 	
-	\begin{table}[H]
+	
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Feature} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				MAV & 0.0212 \\
 				LogVar & 0.4220 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison of the number of reached targets in different limb positions with MAV and LogVar}
+		}
+			\captionof{table}{P-Values for comparison of the number of reached targets in different limb positions with MAV and LogVar}
 		\end{center}
-	\end{table}
 	
 	It was shown that there is a significant difference (p = 0.0212) between the number of targets reached in the different positions for MAV, where the limb pointed forward yielded worst results (mean = 15.1111, std = 1.0541). No significant difference (p = 0.4220) was found between the limb positions for LogVar.
 	
 	
 	
-	\begin{table}[H]
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Limb position,feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
+				\toprule
+				\textbf{Position,feature} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
 				Down, MAV & 4.8661 & $\pm 1.0839$ \\
 				Forward, MAV & 6.1094 & $\pm 3.3852$ \\
 				Side, MAV & 5.5442 & $\pm 3.5847$ \\
 				Down, LogVar & 6.6691 & $\pm 3.0798$ \\
 				Forward, LogVar & 8.7595 & $\pm 4.7969$ \\
 				Side, LogVar & 6.9652 & $\pm 2.9144$ \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{Test scores for the different limb for MAV and LogVar regressors with IMU included.}
+		}
+			\captionof{table}{Test scores for the different limb for MAV and LogVar regressors with IMU included.}
 		\end{center}
-	\end{table}
 	
-	\begin{table}[H]	
+		
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Feature} & \textbf{P-Value}\\
-				\hline
+				\toprule
 				MAV & 0.0319 \\
 				LogVar & 0.4594 \\
-				\hline
+				\toprule
 			\end{tabular}
-			\caption{P-Values for comparison of the score in different limb positions with MAV and LogVar with IMU data included}
+		}
+			\captionof{table}{P-Values for comparison of the score in different limb positions with MAV and LogVar with IMU data included}
 		\end{center}
-	\end{table}
 	
 	A significant difference (p = 0.0319) was found between the test score in different limb positions for MAV with IMU included, where the worst performance was found with the arm pointed forward (mean = 6.1094, std = 3.3852). No significant difference (p = 0.4594) was found between limb positions for the LogVar regression model with IMU data included.
 	
-	\begin{table}[H]
+	
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Limb position,feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
+				\toprule
+				\textbf{Position,feature} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
 				Down, MAV & 15.8889 & $\pm 0.3333$ \\
 				Forward, MAV & 15.1111 & $\pm 2.3154$ \\
 				Side, MAV & 15.5556 & $\pm 1.3333$ \\
 				Down, LogVar & 14.7778 & $\pm 1.7159$ \\
 				Forward, LogVar & 13.5556 & $\pm 2.1858$ \\
 				Side, LogVar & 14.1111 & $\pm 1.8333$ \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{RMSE for the implemented LogVar regressor}
+		}
+			\captionof{table}{RMSE for the implemented LogVar regressor}
 		\end{center}
-	\end{table}
-	
-	\begin{table}[H]
+		
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Compared Features} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				MAV & 0.2957 \\
 				LogVar & 0.0037 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison of the number of targets reached in different limb positions with MAV and LogVar with IMU data included}
+		}
+			\captionof{table}{P-Values for comparison of the number of targets reached in different limb positions with MAV and LogVar with IMU data included}
 		\end{center}
-	\end{table}
 	
 	There was no significant difference found for the MAV regressor with IMU data included (p = 0.2957). The number of targets reached in different limb positions was proven significantly different (p = 0.0037) for the LogVar feature with IMU data included, where the lowest number of targets reached was found with the arm pointed forward (mean = 13.5556, std = 2.1858).
 	
 	
-	\begin{table}[H]
+
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Mean score} & \textbf{Standard deviation}\\
-				\hline
+				\toprule
+				\textbf{Feature} & \textbf{Mean score} & \textbf{Std}\\
+				\midrule
 				MAV & 6.5219 & $\pm 3.2253$ \\
 				MAV w. IMU & 5.5066 & $\pm 2.8477$ \\
 				LogVar & 7.1284 & $\pm 2.7619$ \\
 				LogVar w. IMU & 7.4646 & $\pm 3.6740$ \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{Average score of the target test for the four regressor designs}
+		}
+			\captionof{table}{Average score of the target test for the four regressor designs}
 		\end{center}
-	\end{table}
+
 	
-	\begin{table}[H]
+
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Compared features} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				LogVar w/ IMU, MAV w/ IMU & 0.5637 \\
 				LogVar, MAV & 0.0833 \\
 				LogVar w/ IMU, LogVar & 0.5637 \\
 				MAV w/ IMU, MAV & 0.1779 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison of the overall scores of the target tests}
+		}
+			\captionof{table}{P-Values for comparison of the overall scores of the target tests}
 		\end{center}
-	\end{table}
+
 	
 	A significant difference (p = 0.5637) could not be proven between the scores of the target test for LogVar with IMU data and MAV with IMU data. There was no significant difference (p = 0.0833) between the score of LogVar without IMU data and MAV without IMU data. It was also found that there is no significant difference between regression models with and without IMU data for both MAV (p = 0.1179) and LogVar (p = 0.5637).	
 	
-	\begin{table}[H]
+	
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l l}
-				\hline
-				\textbf{Feature} & \textbf{Overall mean error} & \textbf{Standard deviation}\\
-				\hline
+				\toprule
+				\textbf{Feature} & \textbf{Mean error} & \textbf{Std}\\
+				\midrule
 				MAV & 15.2963 & $\pm 0.8689$ \\
 				MAV w/ IMU & 15.5185 & $\pm 1.5285$ \\
 				LogVar & 15.2593 & $\pm 1.2586$ \\
 				LogVar w/ IMU & 14.1481 & $\pm 1.9156$ \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{Average number of targets reached in the target test for the four regressor designs}
+		}
+			\captionof{table}{Average number of targets reached in the target test for the four regressor designs}
 		\end{center}
-	\end{table}
 	
-	\begin{table}[H]
+	
 		\begin{center}
+			\scalebox{0.85}{
 			\begin{tabular}{l l}
-				\hline
+				\toprule
 				\textbf{Compared Features} & \textbf{P-Value}\\
-				\hline
+				\midrule
 				LogVar w/ IMU, MAV w/ IMU & 0.0017 \\
 				LogVar, MAV & 1 \\
 				LogVar w/ IMU, LogVar & 0.0016 \\
 				MAV w/ IMU, MAV & 0.0124 \\
-				\hline
+				\bottomrule
 			\end{tabular}
-			\caption{P-Values for comparison targets reached in the target tests}
+		}
+			\captionof{table}{P-Values for comparison targets reached in the target tests}
 		\end{center}
-	\end{table}
 	
 	A significant difference (p = 0.0017) was found between targets reached when IMU was included, where LogVar (mean = 14.1481, std = 1.9156) was proven worse than MAV (mean = 15.5185, std = 1.5285). There was a significant difference (p = 0.0016) between LogVar with (mean = 14.1481, std = 1.9156) and without (mean = 15.2593, std = 1.2586) IMU data. The same significant difference (p = 0.0124) between MAV with (mean = 15.5185, std = 1.5285) and without (mean = 15.2963, std = 0.8689) IMU data. There was no difference (p = 1) between targets reached with LogVar and MAV when IMU was not included.
 	
