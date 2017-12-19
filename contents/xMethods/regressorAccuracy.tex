@@ -3,12 +3,9 @@
 %head
 This section will cover the test used to determine the accuracy of the trained regressors. Both methods are performed on the regressors trained with only EMG data and when IMU data is combined with the EMG data. 
 
-\subsection{Superimposition}
-To examine how well the regressors fit the actual data, the output of the regressors build for each feature is superimposed on the actual data. It can then be shown how the regressors perform at which intensities and which movements, and whether other regression methods should be considered to obtain a lower error.  
+To qualitatively examine how well the regressors fit the actual data, the output of the regressors build for each feature is superimposed on the actual data. It can then be shown how the regressors perform at which intensities and which movements, and whether other regression methods should be considered to obtain a lower error.
 
-
-\subsection{Root Mean Square Error}
-To measure the accuracy of the regressors the Root Mean Square Error(RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE is a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
+When measuring the accuracy of the regressors quantitatively, the Root Mean Square Error (RMSE) is calculated. RMSE is a measure to examine how much the regressors disagrees with the actual data. RMSE is a calculation of the standard deviation of the residuals, which is the difference between the estimated values and the actual values. The RMSE is calculated as follows:
 
 \begin{equation}
 RMSE = \sqrt{\frac{\sum\limits_{i=1}^N(y_i - \hat{y_i})^2}{N}}

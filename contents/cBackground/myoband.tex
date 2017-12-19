@@ -6,7 +6,7 @@
 %Sampling frequency
 
 %head
-The following section will contain a presentation of the Myo armband from Thalmic Labs, which will be used for data acquisition in this study and an explanation of acquiring EMG signals using surface electrodes.
+The following section will contain a presentation of the Myo armband from Thalmic Labs, which will be used for data acquisition in this study.
 
 \subsection{Myo armband}
 
@@ -16,7 +16,7 @@ The Myo armband is illustrated in \figref{fig:armband}.
 
 \begin{figure}[H]                    
 	\includegraphics[width=.5\textwidth]{figures/myob/armband}  %<--but is not needed.
-	\caption{Main components of the Myo armband. \textbf{SOURCE}}
+	\caption{Main components of the Myo armband. \cite{thalmic}}
 	\label{fig:armband}  %<--give the figure a label, so you can reference!
 \end{figure}
 
@@ -30,10 +30,9 @@ The Myo armband is illustrated in \figref{fig:armband}.
 %\end{itemize}
 %The systems counts with sizing clips, these small pieces give a tighter grip which is more appropriated for smaller arms.
 
-The Myo armband has eight medical grade stainless steel surface EMG sensors. %responsible of recognizing each gesture. 
-These electrodes are dry and therefore not covered in silver chloride gel to reduce impedance between the electrode and skin. However, it has been shown by Mendez et al. \cite{Mendez2017} that the EMG recorded with the Myo armband is a suitable acquisition system for mapping hand gestures compared to conventional EMG acquisition. The only mapping method used in that study was linear discriminant analysis, and it is noted that other mapping methods should be investigated to further validate the quality of mapping the EMG obtained by the Myo armband. The Myo armband is sampling sEMG data at a sample rate of 200 Hz. A low sample rate could result in problems of aliasing later on in the data processing, since the range of the sEMG signal is 10-500 Hz. \cite{cram2012} 
-
-In addition, it has a nine axis inertial measurement unit (IMU) which enable the detection of arm movement. An IMU is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The IMU's in the Myo armband comprises a three axis accelerometer, a three axis gyroscope and a three axis magnetometer. The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part where the Myo armband is placed. 
+The Myo armband has eight medical grade stainless steel surface EMG electrode channels. %responsible of recognizing each gesture. 
+These electrodes are dry and therefore not covered in silver chloride gel to reduce impedance between the electrode and skin. However, it has been shown by Mendez et al. \cite{Mendez2017} that the EMG recorded with the Myo armband is a suitable acquisition system for mapping hand gestures compared to conventional EMG acquisition. The only mapping method used in that study was linear discriminant analysis, and it is noted that other mapping methods should be investigated to further validate the quality of mapping the EMG obtained by the Myo armband. The Myo armband has a 200 Hz sample rate. A low sample rate could result in problems of aliasing later on in the data processing, since the range of the sEMG signal is 10-500 Hz. \cite{cram2012} \\
+In addition, it has a nine axis inertial measurement unit (IMU) which enable the detection of arm movement. An IMU is an electronic device that provides information concerning position and orientation for navigation and stabilization purposes. The IMU's in the Myo armband comprises a three axis accelerometer, a three axis gyroscope and a three axis magnetometer. The accelerometer measures the physical acceleration experienced by an object, where the object in this case is the body part where the Myo armband is placed. \\
 %It gives information about the acceleration experienced relative to free fall and expresses this in g-force. One g-force being when the accelerometer is at rest on the Earth's surface. That is since all points on the surface of the Earth is accelerating upwards relative to an object in free fall near the surface. For the g-force to change from one g-force the accelerometer must be exposed to motion. 
 The gyroscope has the property of measuring angluar velocity. The magnetometer has the property of a compass, measuring the earth's magnetic field. This enables the armband to provide data on orientation. IMU data is sampled at a sample rate of 50 Hz. The Myo armband communicates through Bluetooth 4.0 to a computer.
 %(something about the actual data the myoband provides and how many axes a magnometer actually has). \textbf{SOURCE}

@@ -1,22 +1,20 @@
 \section{Preprocessing of EMG}
 
 %HEAD
-Before recorded EMG signals can be utilized in control of prosthetics, the signals must be processed. This section will provide information on preprocessing of the signal with filtering and noise reduction, following with feature extraction.
-
-As mentioned in \secref{sec:myoband} sEMG is in a 10-500 Hz range. Thus it is recommended to implement a bandpass filter from $10$ to $500$ Hz in order to avoid low frequency movement artifacts in the recorded signal. 
+Before recorded EMG signals can be utilized in control of prosthetics, the signals must be processed. This section will provide information on preprocessing of the signal with filtering, noise reduction and feature extraction. \\
+As mentioned in \secref{sec:myoband} the frequency spectrum of EMG is 10-500 Hz. Thus it is recommended to implement a bandpass filter from $10$ to $500$ Hz in order to avoid low frequency movement artifacts in the recorded signal. \\
 %If the EMG is acquired from an area close to the heart, it would be preferable to filter from $100$ Hz in order to avoid recording artifacts from the heart. 
-A downside to this bandwidth is that fatigued muscles will fire at a lower rate, which means the performance of the system will be affected when the subject gets tired. \cite{cram2012} %Due to the frequency spectrum of the Myo band, it isn't required to implement a bandpass filter. Instead the signal will be subjected to a highpass filter from $5$ Hz. (The frequency spectrum should be mentioned in the Myo band section and not here I think)
-
-In order to achieve a higher signal to noise ratio (SNR) it is common practice to perform preprocessing of the signal%, including input impedance, differential amplification and filtering. 
-The raw EMG signals has to be preprocessed due to them being sensible to noise elements from the surroundings, since the range of the signal is in the order of millivolts to microvolts. To acquire a high SNR, the input impedance of the amplifier has to be between $10$ and $100$ times the impedance at the skin-electrode interface \cite{cram2012}.
-
+A downside to this bandwidth is that fatigued muscles will fire at a lower rate, which means the performance of the system will be affected when the subject gets tired. \cite{cram2012} \\
+ %Due to the frequency spectrum of the Myo band, it isn't required to implement a bandpass filter. Instead the signal will be subjected to a highpass filter from $5$ Hz. (The frequency spectrum should be mentioned in the Myo band section and not here I think)
+In order to achieve a higher signal to noise ratio (SNR) it is common practice to perform preprocessing of the signal due to it being sensible to noise elements from the surroundings, as the range of the signal is in the order of millivolts to microvolts. To acquire a high SNR, the input impedance of the amplifier has to be between $10$ and $100$ times the impedance at the skin-electrode interface \cite{cram2012}. \\
+%
 %Input impedance is determined by a simple rule in order to avoid defeating the common mode rejection of the EMG amplifier. The rule states that the input impedance of the EMG amplifier has to be between $10$ and $100$ times higher than the impedance of the skin-electrode interface. \cite{cram2012}
-
-Differential amplification is used in EMG in order to amplify the original signal and remove common signals from two or more electrodes, in order to avoid common noise from more electrodes in the amplified signal. The amplifier must have a built in gain as well which determines the final strength of the signal, and both of these features are implemented in order to maximize the SNR. 
+%
+Differential amplification is used in EMG in order to amplify the original signal and remove common signals from two or more electrodes, in order to avoid common noise from more electrodes in the amplified signal. The amplifier must have a built in gain as well which determines the final amplitude of the signal.
 %Basic filtering should be implemented in order to avoid electrical noise. 
 %This filter would be implemented as a notch filter, in order to reject the electrical noise and achieve a higher SNR. 
 %The low-pass filtering will ensure avoiding aliasing in the signal, because is will filter out frequencies higher than the used samplings frequency. The high-pass filter will filter out movement artifact, and thus stabilizing the baseline. \cite{cram2012}
-
+%
 %This is done in order to make sure the final signal does not contain irrelevant high and low frequencies.\cite{cram2012}
-
+%
 %feature extraction follows here as a sbusection

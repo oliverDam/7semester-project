@@ -1,21 +1,19 @@
 \section{Feature extraction}
-In this section it will be explained which features that are extracted from the EMG data.
-
-A commonly used feature in control of prosthetics is the Mean Absolute Value (MAV). The equation of MAV is as follows:
+In this section it will be explained which features that are extracted from the EMG data.\\
+A commonly used feature in control of prosthetics is the MAV. The equation of MAV is as follows:
 
 \begin{equation}
 MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
 \end{equation}
 
-As the equation and name indicates MAV is the average of the absolute values of the EMG signal, where N is the length of the sample window, and $x_i$ is the $i^th$ sample of the signal. MAV expresses the amplitude of the signal and posses linear properties. It will be use as a feature in this project.
-
-According to a study by \cite{hahne2014}, the variance of a signal has exponential properties, but taking the logarithm of it ($log(\sigma^2)$), makes it have linear properties similar to the mean absolute (root means squared). This linear property might yield a better estimation in the recognition of the hand gestures since linear regression is used to as the mapping tool of the hand gestures. The logarithmic variance (LogVar) is calculated as in \eqref{eq:logvar}:
+As the equation and name indicates MAV is the average of the absolute values of the EMG signal, where N is the length of the sample window, and $x_i$ is the $i^{th}$ sample of the signal. \\
+According to a study by Hahne et al. \cite{hahne2014}, the variance of a signal has exponential properties, but taking the logarithm of it ($log(\sigma^2)$), gives it linear properties. This linearity might yield a better estimation in the recognition of the hand gestures since linear regression is used to as the mapping tool of the hand gestures. The LogVar feature is calculated as in \eqref{eq:logvar}:
 
 \begin{equation} \label{eq:logvar}
 log(\sigma^2) = log(\frac{\sum\limits_{i=1}^N(x_i - \mu)^2}{N})
 \end{equation}
 
-$N$ is the length of the sample window, $x_i$ is the $i^th$ sample of the signal and $\mu$ is the mean. The logarithmic variance calculates the logarithm of the variance, which is the sum of the squared deviation of a variable from its mean. Thus, how spread the signal is from its average. In the study by \cite{hahne2014}, it is found that the variance behaves non-linearly. Taking the logarithm of the variance linearises the feature. This along with the MAV feature, which also show linear properties which is the reason these two features will be used in this project, since linear regression will be applied as control scheme. 
+where $N$ is the length of the sample window, $x_i$ is the $i^{th}$ sample of the signal and $\mu$ is the mean. The logarithmic variance calculates the logarithm of the variance, which is the sum of the squared deviation of a variable from its mean. Thus, how spread the signal is from its average.
 
 % for the logarithmic variance to be extracted as a feature in this project, along with the MAV. 
 

@@ -101,20 +101,20 @@ Additional 50\% of MVC EMG data was acquired for each wrist movement in all limb
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures/paperFigures/wristmovement}  %<--but is not needed.
-	\caption{Illustration of the two DOFs used in the study}
+	\caption{Illustration of the two DOFs used in the study.}
 	\label{fig:wristmovement}  %<--give the figure a label, so you can reference!
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\textwidth]{figures/paperFigures/limb_pos}  %<--but is not needed.
-	\caption{Illustration of the limb positions performed. P1: relaxed along the torso, P2: 90\textdegree horizontally of the side of torso and P3: 135\textdegree vertically in front of the torso}
+	\caption{Illustration of the limb positions performed. P1: relaxed along the torso, P2: 90\textdegree\  horizontally of the side of torso and P3: 135\textdegree\ vertically in front of the torso.}
 	\label{fig:limbpositions}  %<--give the figure a label, so you can reference!
 \end{figure}
 
 \subsubsection*{Feature extraction}
 The signals were segmented into 200 ms window with a 50\% overlap, which is an acceptable segmentation for preserving information of the signal in static contractions \cite{Farfan2010}.
-The commonly used Mean Absolute Value (MAV) feature was additionally extracted, and calculated as given by equation \ref{eq:mav}: \cite{Zecca2002} 
+The commonly used Mean Absolute Value (MAV) feature was additionally extracted, and calculated as given by equation \ref{eq:mav} \cite{Zecca2002}: 
 
 \begin{equation} \label{eq:mav}
 MAV = \frac{1}{N}\sum\limits_{i=1}^N|x_i|
@@ -519,7 +519,7 @@ Two other subjects were excluded as the recorded intensities were not high enoug
 To improve the validity of the findings more test subjects should be included in future studies within this field. Subjects with transradial amputations should also be taken into consideration if regression based control schemes were to be considered for future use in myoelectric prosthetic devices. 
 Using the Myo armband for data acquisition limited the sampling rate to 200 Hz. Only the 0-100 Hz spectrum of the EMG was represented correctly, where frequencies above 100 Hz was affected by aliasing, since an anti-aliasing filter was not implemented. Along with frequency representation limitations, the Myo armband restricted the number and placement of electrodes to eight channels placed at the same distance distal to the elbow joint, where it might be possible to yield better results with a different electrode placement and number of channels. Further studies should implement conventional EMG electrodes and an ADC with a sufficient sample rate, enabling the entire frequency band of EMG signals to be acquired correctly.		
 	
-\subsection*{CONCLUSIONS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{CONCLUSION}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 % 		\include{content/fConclusion}
 In conclusion linear regression can be implemented as control scheme in myoelectric prosthetic control to yield performance with no significant difference across variations of limb position. This is opposed to previous studies using classification as control scheme.
